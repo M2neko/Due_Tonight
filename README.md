@@ -3,10 +3,10 @@
 This is the final project for Team **OverCode**.
 
 # Main Role
-* Animation and Visuals :     Zheng Wang
+* Animation and Visuals :     Ruike Qiu
 * Game Logic :               Bingwei Wang
 * User Interface :            Jinghan Zhang
-* Input :                     Ruike Qiu
+* Input :                     Zheng Wang
 * Movement/Physics :          Jason Zhou
 
 # Sub-Role
