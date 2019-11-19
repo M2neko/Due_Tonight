@@ -2,12 +2,12 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resource/Script/UI_Script/Next1.cs">
     <Files>
       <File FileName="Assets/Resource/Script/UI_Script/MainMenu.cs" Line="4" Column="1" />
-      <File FileName="Assets/Resource/Script/UI_Script/Next1.cs" Line="12" Column="2" />
+      <File FileName="Assets/Resource/Script/UI_Script/Next1.cs" Line="18" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="046ee8af-e92b-4668-8a3d-37627a65e7f6" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c6d849f6-b495-45df-952b-b1872b6298a5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Next1 : MonoBehaviour
 {
-    public void PlayGame()
+    public void Next()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
