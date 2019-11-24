@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../../../Applications/Unity/Hub/Editor/2019.3.0b5/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ToggleGroup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Game.cs">
     <Files>
-      <File FileName="Assets/Resource/Script/UI_Script/Next1.cs" Line="19" Column="6" />
-      <File FileName="../../../../../../../../Applications/Unity/Hub/Editor/2019.3.0b5/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ToggleGroup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Game.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="07486713-238d-4afd-a640-ab664d2b1672" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c69882c9-5553-488c-acb4-9f7c862de8fb" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
