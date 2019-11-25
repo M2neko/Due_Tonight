@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GameObject Playground;
     [SerializeField] private float Speed;
     [SerializeField] private GameObject player2_1;
     [SerializeField] private GameObject player2_2;
+    private float xrange;
+    private float leftrange;
+    private float rightrange;
     private GameObject player2;
     private Vector3 Change;
     private Rigidbody2D PlayerRigidbody;
@@ -14,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        xrange = Playground.GetComponent<BoxCollider2D>().size.x * 15;
+        leftrange = Playground.transform.position.x - xrange;
+        rightrange = Playground.transform.position.x + xrange;
         if (player2_1.activeInHierarchy)
         {
             player2 = player2_1;
@@ -28,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player2.transform.position.x)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
@@ -43,6 +51,15 @@ public class PlayerController : MonoBehaviour
         Change.x = Input.GetAxisRaw("Horizontal");
         PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
         Move();
+        if (this.gameObject.transform.position.x <= leftrange)
+        {
+            targetposition = new Vector3(leftrange, targetposition.y, targetposition.z);
+        }
+        if (this.gameObject.transform.position.x >= rightrange)
+        {
+            targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
+        }
+        this.gameObject.transform.position = targetposition;
     }
 
     private void Move()

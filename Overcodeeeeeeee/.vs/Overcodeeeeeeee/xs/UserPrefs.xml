@@ -6,10 +6,9 @@
       <File FileName="Assets/Script/UI_Script/MainMenu.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/UI_Script/Next1.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/UI_Script/Next2.cs" Line="1" Column="1" />
-      <File FileName="Assets/Cameracontroller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="20" Column="45" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="29" Column="24" />
-      <File FileName="Assets/Script/Cameracontroller.cs" Line="7" Column="8" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="32" Column="10" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="46" Column="6" />
+      <File FileName="Assets/Script/Cameracontroller.cs" Line="15" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
