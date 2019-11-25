@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cameracontroller.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Script\Game.cs" />
+    <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\UI_Script\GameManager.cs" />
     <Compile Include="Assets\Script\UI_Script\MainMenu.cs" />
     <Compile Include="Assets\Script\UI_Script\Next1.cs" />
