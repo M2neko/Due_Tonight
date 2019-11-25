@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f)
+        {
+            PlayerRigidbody.AddForce(new Vector2(0f, 5000f));
+        }
         Change.x = Input.GetAxisRaw("Horizontal");
         PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
         Move();
