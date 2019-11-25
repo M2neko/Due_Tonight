@@ -1141,7 +1141,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 25
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1185,7 +1185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151862706e4b341eaa0f37e009ea29a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 15
+  player2_1: {fileID: 1618645503}
+  player2_2: {fileID: 1174205398}
 --- !u!1 &1082452055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1308,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 25
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1350,7 +1352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151862706e4b341eaa0f37e009ea29a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 15
+  player2_1: {fileID: 1618645503}
+  player2_2: {fileID: 1174205398}
 --- !u!1 &1174205398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1437,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -5326464929446258529, guid: 51e5d91c051ae43f8b8f1a34ce23a406,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.28, y: 1.28}
@@ -1471,7 +1475,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 25
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1515,7 +1519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21818c7f7e9844bb282ab01a602106af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 15
+  player1_1: {fileID: 1001785145}
+  player1_2: {fileID: 1082452055}
 --- !u!1 &1224240720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,7 +1793,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -8342253371693615161, guid: d303fa1ce1a5e48c187b691ecfcbd238,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.28, y: 1.28}
@@ -1869,7 +1875,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21818c7f7e9844bb282ab01a602106af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 15
+  player1_1: {fileID: 1001785145}
+  player1_2: {fileID: 1082452055}
 --- !u!1 &1694438942
 GameObject:
   m_ObjectHideFlags: 0

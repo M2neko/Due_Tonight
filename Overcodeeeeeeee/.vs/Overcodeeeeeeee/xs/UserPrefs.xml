@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player2Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Cameracontroller.cs">
     <Files>
       <File FileName="Assets/Script/Game.cs" Line="35" Column="1" />
       <File FileName="Assets/Script/UI_Script/GameManager.cs" Line="1" Column="1" />
@@ -7,8 +7,9 @@
       <File FileName="Assets/Script/UI_Script/Next1.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/UI_Script/Next2.cs" Line="1" Column="1" />
       <File FileName="Assets/Cameracontroller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="16" Column="6" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="20" Column="45" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="29" Column="24" />
+      <File FileName="Assets/Script/Cameracontroller.cs" Line="7" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +18,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
                 <Node name="UI_Script" expanded="True" />
-                <Node name="PlayerController.cs" selected="True" />
+                <Node name="Cameracontroller.cs" selected="True" />
               </Node>
             </Node>
           </Node>
