@@ -73,7 +73,4 @@ public class Next1 : MonoBehaviour
         Character2_2Btn.transform.GetComponent<Image>().color = Color.yellow;
         CheckIsNext();
     }
-
-
-
 }

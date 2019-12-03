@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player.Command;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float Speed;
     [SerializeField] private GameObject player2_1;
     [SerializeField] private GameObject player2_2;
+    [SerializeField] private GameObject Item;
+    private IPlayerCommand Skill1;
     private float xrange;
     private float leftrange;
     private float rightrange;
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        this.gameObject.AddComponent<PlayerSkill1>();
         xrange = Playground.GetComponent<BoxCollider2D>().size.x * 15;
         leftrange = Playground.transform.position.x - xrange;
         rightrange = Playground.transform.position.x + xrange;
@@ -31,6 +35,7 @@ public class PlayerController : MonoBehaviour
         }
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
+        Skill1 = this.gameObject.GetComponent<PlayerSkill1>();
     }
 
     private void Update()
@@ -46,7 +51,12 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f)
         {
-            PlayerRigidbody.AddForce(new Vector2(0f, 5000f));
+            PlayerRigidbody.AddForce(new Vector2(0f, 200f));
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            //if (player2 == player2_1)
+            Skill1.Execute(this.gameObject, this.Item);
         }
         Change.x = Input.GetAxisRaw("Horizontal");
         PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));

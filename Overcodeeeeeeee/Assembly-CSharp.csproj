@@ -71,8 +71,10 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Script\Cameracontroller.cs" />
+    <Compile Include="Assets\Script\IPlayerCommand.cs" />
     <Compile Include="Assets\Script\Player2Controller.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Script\PlayerSkill1.cs" />
     <Compile Include="Assets\Script\UI_Script\Game.cs" />
     <Compile Include="Assets\Script\UI_Script\GameManager.cs" />
     <Compile Include="Assets\Script\UI_Script\MainMenu.cs" />
@@ -80,46 +82,46 @@
     <Compile Include="Assets\Script\UI_Script\Next2.cs" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <Reference Include="Unity.XR.Management">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.0b5/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -296,7 +298,7 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.0b5/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>/Users/zhangjinghan/Documents/GitHub/des.github.io/des.github.io/ECS_189L_Final_Project/Overcodeeeeeeee/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>/Users/bingweiwang/Documents/GitHub/ECS_189L_Final_Project/Overcodeeeeeeee/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.0b5/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

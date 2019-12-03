@@ -46,7 +46,8 @@ public class Player2Controller : MonoBehaviour
         }
         if (Input.GetButtonDown("Player2Jump") && this.gameObject.transform.position.y <= -3.32f) 
         {
-            PlayerRigidbody.AddForce(new Vector2(0f, 5000f));
+            // TODO: Change Method!
+            PlayerRigidbody.AddForce(new Vector2(0f, 100f));
         }
         Change.x = Input.GetAxisRaw("Player2Horizontal");
         PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
