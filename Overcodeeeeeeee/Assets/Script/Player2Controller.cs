@@ -6,6 +6,8 @@ public class Player2Controller : MonoBehaviour
 {
     [SerializeField] private GameObject Playground;
     [SerializeField] private float Speed;
+    [SerializeField] private GameObject player2_1;
+    [SerializeField] private GameObject player2_2;
     [SerializeField] private GameObject player1_1;
     [SerializeField] private GameObject player1_2;
     private float xrange;
@@ -35,6 +37,14 @@ public class Player2Controller : MonoBehaviour
 
     private void Update()
     {
+        if (player2_1.activeInHierarchy)
+        {
+            if (Input.GetButtonDown("Fire3"))
+            {
+                this.GetComponent<ShootLaptop>().Shoot();
+                PlayerAnimator.SetBool("1", true);
+            }
+        }
         var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player1.transform.position.x)
         {
@@ -61,6 +71,11 @@ public class Player2Controller : MonoBehaviour
             targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
         }
         this.gameObject.transform.position = targetposition;
+    }
+
+    public GameObject OtherPlayer()
+    {
+        return player1;
     }
 
     private void Move()

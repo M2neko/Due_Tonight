@@ -72,6 +72,11 @@ public class PlayerController : MonoBehaviour
         this.gameObject.transform.position = targetposition;
     }
 
+    public GameObject OtherPlayer()
+    {
+        return player2;
+    }
+
     private void Move()
     {
         PlayerRigidbody.MovePosition(transform.position + Change * Speed * Time.deltaTime);
