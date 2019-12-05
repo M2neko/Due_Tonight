@@ -70,6 +70,7 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Script\BgMusic.cs" />
     <Compile Include="Assets\Script\Cameracontroller.cs" />
     <Compile Include="Assets\Script\IPlayerCommand.cs" />
     <Compile Include="Assets\Script\Player2Controller.cs" />
