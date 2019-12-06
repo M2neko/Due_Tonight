@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Player.Command;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject Playground;
     [SerializeField] private float Speed;
+    [SerializeField] private GameObject player1_1;
+    [SerializeField] private GameObject player1_2;
     [SerializeField] private GameObject player2_1;
     [SerializeField] private GameObject player2_2;
-    [SerializeField] private GameObject Item;
-    private IPlayerCommand Skill1;
     private float xrange;
     private float leftrange;
     private float rightrange;
@@ -21,7 +20,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        this.gameObject.AddComponent<PlayerSkill1>();
         xrange = Playground.GetComponent<BoxCollider2D>().size.x * 15;
         leftrange = Playground.transform.position.x - xrange;
         rightrange = Playground.transform.position.x + xrange;
@@ -35,11 +33,17 @@ public class PlayerController : MonoBehaviour
         }
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
-        Skill1 = this.gameObject.GetComponent<PlayerSkill1>();
     }
 
     private void Update()
     {
+        if (player1_2.activeInHierarchy)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                this.GetComponent<ShootCanvas>().Shoot();
+            }
+        }
         var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player2.transform.position.x)
         {
@@ -52,11 +56,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f)
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            //if (player2 == player2_1)
-            Skill1.Execute(this.gameObject, this.Item);
         }
         Change.x = Input.GetAxisRaw("Horizontal");
         PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));

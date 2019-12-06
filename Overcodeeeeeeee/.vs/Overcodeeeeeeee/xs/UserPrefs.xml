@@ -1,44 +1,24 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI_Script/NewBehaviourScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/ShootCanvas.cs">
     <Files>
-      <File FileName="Assets/Script/BgMusic.cs" Line="33" Column="1" />
-      <File FileName="Assets/Script/PlayerSkill1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/GameManager.cs" />
-      <File FileName="Assets/Script/UI_Script/Game.cs" />
-      <File FileName="Assets/Script/ShootLaptop.cs" Line="14" Column="9" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/IPlayerCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/Next2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="15" Column="29" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="19" Column="27" />
+      <File FileName="Assets/Script/PlayerSkill1.cs" Line="18" Column="21" />
+      <File FileName="Assets/Script/BgMusic.cs" Line="9" Column="6" />
+      <File FileName="Assets/Script/UI_Script/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ShootLaptop.cs" Line="18" Column="21" />
+      <File FileName="Assets/Script/UI_Script/Next2.cs" Line="12" Column="11" />
       <File FileName="Assets/Script/Cameracontroller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/NewBehaviourScript.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/ShootLaptop.cs">
-    <Files>
-      <File FileName="Assets/Script/Player2Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/BgMusic.cs" />
-      <File FileName="Assets/Script/PlayerSkill1.cs" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/GameManager.cs" />
-      <File FileName="Assets/Script/UI_Script/Game.cs" />
-      <File FileName="Assets/Script/ShootLaptop.cs" Line="8" Column="48" />
->>>>>>> c19b2eb6bdc46c1fca7bbd7cd667260752edb49d
+      <File FileName="Assets/Script/UI_Script/NewBehaviourScript.cs" Line="10" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Overcodeeeeeeee" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scenes" selected="True" />
               <Node name="Script" expanded="True">
-<<<<<<< HEAD
-                <Node name="UI_Script" expanded="True">
-                  <Node name="NewBehaviourScript.cs" selected="True" />
-                </Node>
-=======
                 <Node name="UI_Script" expanded="True" />
->>>>>>> c19b2eb6bdc46c1fca7bbd7cd667260752edb49d
+                <Node name="ShootCanvas.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -48,11 +28,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="410f4286-f3ff-4da2-8f17-72eddde3c36f" />
-=======
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2d9049a8-a38a-4577-9478-537aae6c1deb" />
->>>>>>> c19b2eb6bdc46c1fca7bbd7cd667260752edb49d
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootLaptop: MonoBehaviour
+public class ShootCanvas: MonoBehaviour
 {
-    [SerializeField] private GameObject Zee;
-    [SerializeField] private GameObject Laptop;
+    [SerializeField] private GameObject Mccoy;
+    [SerializeField] private GameObject Canvas;
     private GameObject proj;
     private GameObject player;
     private float track;
@@ -19,13 +19,13 @@ public class ShootLaptop: MonoBehaviour
         {
             return;
         }
-        pos = Zee.gameObject.transform.position;
-        proj = Instantiate(Laptop, pos, Quaternion.identity);
+        pos = Mccoy.gameObject.transform.position;
+        proj = Instantiate(Canvas, pos, Quaternion.identity);
         proj.SetActive(true);
         // Play audio sound
-        Zee.GetComponent<AudioSource>().Play();
-        player = Zee.GetComponent<Player2Controller>().OtherPlayer();
-        if (player.transform.position.x <= Zee.gameObject.transform.position.x)
+        Mccoy.GetComponent<AudioSource>().Play();
+        player = Mccoy.GetComponent<PlayerController>().OtherPlayer();
+        if (player.transform.position.x <= Mccoy.gameObject.transform.position.x)
         {
             left = true;
         }
@@ -43,7 +43,7 @@ public class ShootLaptop: MonoBehaviour
             track += Time.deltaTime * 5;
             if(track >= 5.0f)
             {
-                Zee.GetComponent<Animator>().SetBool("1", false);
+                //Mccoy.GetComponent<Animator>().SetBool("1", false);
             } 
             if (track <= 10.0f)
             {
