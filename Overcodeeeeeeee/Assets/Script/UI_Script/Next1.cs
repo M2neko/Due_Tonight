@@ -57,6 +57,7 @@ public class Next1 : MonoBehaviour
     {
         Character1Select = 2;
         Character1_2Btn.transform.GetComponent<Image>().color = Color.yellow;
+        Character1_2Btn.GetComponent<AudioSource>().Play();
         CheckIsNext();
     }
 
@@ -64,6 +65,7 @@ public class Next1 : MonoBehaviour
     {
         Character2Select = 1;
         Character2_1Btn.transform.GetComponent<Image>().color = Color.yellow;
+        Character2_1Btn.GetComponent<AudioSource>().Play();
         CheckIsNext();
     }
 
