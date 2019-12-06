@@ -6,7 +6,6 @@ public class ShootLaptop: MonoBehaviour
 {
     [SerializeField] private GameObject Zee;
     [SerializeField] private GameObject Laptop;
-    private float num = 0;
     private GameObject proj;
     private GameObject player;
     private float track;
@@ -22,7 +21,6 @@ public class ShootLaptop: MonoBehaviour
         }
         pos = Zee.gameObject.transform.position;
         proj = Instantiate(Laptop, pos, Quaternion.identity);
-        num++;
         proj.SetActive(true);
         player = Zee.GetComponent<Player2Controller>().OtherPlayer();
         if (player.transform.position.x <= Zee.gameObject.transform.position.x)
@@ -58,13 +56,10 @@ public class ShootLaptop: MonoBehaviour
             }
             else
             {
-                if(num > 1)
-                {
-                    Destroy(proj);
-                }
                 track = 0.0f;
                 proj.SetActive(false);
                 yesorno = false;
+                Destroy(proj);
             }
         }
     }
