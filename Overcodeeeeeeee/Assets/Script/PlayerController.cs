@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f)
         {
-            PlayerRigidbody.AddForce(new Vector2(0f, 200f));
+            PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
         if (Input.GetButtonDown("Fire2"))
         {
