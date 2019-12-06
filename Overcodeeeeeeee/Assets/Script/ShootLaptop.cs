@@ -22,6 +22,7 @@ public class ShootLaptop: MonoBehaviour
         pos = Zee.gameObject.transform.position;
         proj = Instantiate(Laptop, pos, Quaternion.identity);
         proj.SetActive(true);
+        Zee.GetComponent<AudioSource>().Play();
         player = Zee.GetComponent<Player2Controller>().OtherPlayer();
         if (player.transform.position.x <= Zee.gameObject.transform.position.x)
         {
