@@ -7,16 +7,16 @@
       <File FileName="Assets/Script/PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/UI_Script/GameManager.cs" />
       <File FileName="Assets/Script/UI_Script/Game.cs" />
-      <File FileName="Assets/Script/ShootLaptop.cs" Line="14" Column="9" />
+      <File FileName="Assets/Script/ShootLaptop.cs" Line="8" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Overcodeeeeeeee" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Scenes" selected="True" />
               <Node name="Script" expanded="True">
                 <Node name="UI_Script" expanded="True" />
-                <Node name="ShootLaptop.cs" selected="True" />
               </Node>
             </Node>
           </Node>
