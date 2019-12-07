@@ -14,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - HealthBar
+  - Health
   - 
   - 
   - 
@@ -41,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Health
+    uniqueID: 634255255
+    locked: 0
+  - name: HealthBar
+    uniqueID: 660176661
     locked: 0
