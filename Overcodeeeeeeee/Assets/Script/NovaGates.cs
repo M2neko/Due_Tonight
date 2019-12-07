@@ -5,7 +5,7 @@ using UnityEngine;
 public class NovaGates : MonoBehaviour
 {
     [SerializeField] private GameObject Butner;
-    [SerializeField] private float Duration = 1.0f;
+    [SerializeField] private float Duration = 2.0f;
     public static bool novaing = false;
     private Vector3 pos;
     private GameObject OtherPlayer;
@@ -55,7 +55,7 @@ public class NovaGates : MonoBehaviour
                 mtime = 0.0f;
                 foreach (var projectile in projectileList)
                 {
-                    Destroy(projectile, 1.0f);
+                    Destroy(projectile, 0.1f);
                 }
             }
         }

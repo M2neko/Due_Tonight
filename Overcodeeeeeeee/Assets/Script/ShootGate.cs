@@ -51,12 +51,12 @@ public class ShootGate : MonoBehaviour
                 break;
         }
         proj = Instantiate(Gate, pos, Quaternion.identity);
-        proj.transform.localScale = new Vector3(Random.Range(1.0f, 3.0f), Random.Range(1.0f, 3.0f), Random.Range(1.0f,3.0f));
+        proj.transform.localScale = new Vector3(Random.Range(1.0f, 2.0f), Random.Range(1.0f, 2.0f), Random.Range(1.0f,2.0f));
         //proj.transform.Rotate(new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f)));
         //proj.GetComponent<Renderer>().material.color = new Color(Random.value, Random.value, Random.value);
         proj.SetActive(true);
         // Play audio sound
-        //Zee.GetComponent<AudioSource>().Play();
+        //Butner.GetComponent<AudioSource>().Play();
         player = Butner.GetComponent<PlayerController>().OtherPlayer();
         if (player.transform.position.x <= Butner.gameObject.transform.position.x)
         {

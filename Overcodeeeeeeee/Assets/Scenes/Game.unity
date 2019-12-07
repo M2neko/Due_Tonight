@@ -1600,7 +1600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Butner: {fileID: 1001785145}
-  Duration: 1
+  Duration: 2
 --- !u!1 &1082452055
 GameObject:
   m_ObjectHideFlags: 0
