@@ -69,6 +69,10 @@ public class PlayerController : MonoBehaviour
             targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
         }
         this.gameObject.transform.position = targetposition;
+        if (Input.GetButtonDown("Jump"))
+        {
+            this.GetComponent<Light>().Pi(player2);
+        }
     }
 
     public GameObject OtherPlayer()
