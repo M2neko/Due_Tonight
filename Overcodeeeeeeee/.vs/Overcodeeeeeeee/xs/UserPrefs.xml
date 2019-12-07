@@ -1,12 +1,21 @@
-﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI_Script/MainMenu.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mccoy_Motions/Light.cs">
     <Files>
-      <File FileName="Assets/Script/UI_Script/MainMenu.cs" Line="27" Column="6" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="87" Column="6" />
+      <File FileName="Assets/Script/UI_Script/Game.cs" />
+      <File FileName="Assets/Script/PlayerController.cs" />
+      <File FileName="Assets/Script/Mccoy_Motions/Light.cs" Line="11" Column="36" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Overcodeeeeeeee" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="169c9726-24a9-40a1-b889-66b4d8fe39c1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

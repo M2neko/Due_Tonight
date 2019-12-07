@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Overcode.unity
+- path: /Users/fauna/.Trash/ECS_189L_Final_Project/Overcodeeeeeeee/Assets/Scenes/Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
