@@ -45,6 +45,7 @@ public class Light : MonoBehaviour
             }
             else if (track >= delay + range)
             {
+                this.GetComponent<Animator>().SetBool("2", false);
                 track = 0.0f;
                 timer = 0.0f;
                 proj.SetActive(false);
