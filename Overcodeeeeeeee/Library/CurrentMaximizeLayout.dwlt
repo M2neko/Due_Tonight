@@ -15,10 +15,15 @@ MonoBehaviour:
   m_Children:
   - {fileID: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 15}
   - {fileID: 17}
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+  - {fileID: 15}
+  - {fileID: 17}
+>>>>>>> parent of 6e3821e... animation thunder done
   m_Position:
     serializedVersion: 2
     x: 0
@@ -32,6 +37,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
     height: 805
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_MinSize: {x: 881, y: 613}
   m_MaxSize: {x: 18004, y: 18063}
@@ -50,6 +56,12 @@ MonoBehaviour:
 >>>>>>> parent of 771fdf2... add condition to thunder
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+  m_MinSize: {x: 879, y: 613}
+  m_MaxSize: {x: 18003, y: 18063}
+  vertical: 0
+  controlID: 5992
+>>>>>>> parent of 6e3821e... animation thunder done
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -76,22 +88,29 @@ MonoBehaviour:
     y: 196
     width: 750
     height: 392
+<<<<<<< HEAD
 =======
     x: 259
     y: 30
     width: 895
     height: 496
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
   m_ViewDataDictionary: {fileID: 0}
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 1319, y: 742}
 =======
   m_TargetSize: {x: 1600, y: 900}
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+  m_TargetSize: {x: 1319, y: 742}
+>>>>>>> parent of 6e3821e... animation thunder done
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -106,16 +125,22 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
     m_HBaseRangeMin: -329.75
     m_HBaseRangeMax: 329.75
     m_VBaseRangeMin: -185.5
     m_VBaseRangeMax: 185.5
+<<<<<<< HEAD
 =======
     m_HBaseRangeMin: -800
     m_HBaseRangeMax: 800
     m_VBaseRangeMin: -450
     m_VBaseRangeMax: 450
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -138,12 +163,15 @@ MonoBehaviour:
       height: 371
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 375, y: 185.5}
+<<<<<<< HEAD
 =======
       width: 895
       height: 475
     m_Scale: {x: 0.5277778, y: 0.5277778}
     m_Translation: {x: 447.5, y: 237.5}
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -158,6 +186,7 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1500, y: 784}
+<<<<<<< HEAD
 =======
       x: -847.8947
       y: -450
@@ -167,6 +196,8 @@ MonoBehaviour:
   m_defaultScale: 0.5277778
   m_LastWindowPixelSize: {x: 895, y: 496}
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -186,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,10 +259,14 @@ MonoBehaviour:
 >>>>>>> parent of 6e3821e... animation thunder done
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+  - {fileID: 12}
+>>>>>>> parent of 6e3821e... animation thunder done
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1440
     height: 517
@@ -243,17 +279,23 @@ MonoBehaviour:
 =======
   controlID: 10607
 =======
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
     width: 962
     height: 805
   m_MinSize: {x: 402, y: 613}
   m_MaxSize: {x: 10001, y: 18063}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 5950
 >>>>>>> parent of 6e3821e... animation thunder done
 =======
   controlID: 5746
 >>>>>>> parent of 771fdf2... add condition to thunder
+=======
+  controlID: 5950
+>>>>>>> parent of 6e3821e... animation thunder done
 --- !u!114 &4
 >>>>>>> 6e3821e8155b769258331816e1bf392317ee9581
 =======
@@ -279,9 +321,15 @@ MonoBehaviour:
     width: 962
     height: 534
   m_MinSize: {x: 402, y: 342}
+<<<<<<< HEAD
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 0
   controlID: 5709
+=======
+  m_MaxSize: {x: 8002, y: 8042}
+  vertical: 0
+  controlID: 5928
+>>>>>>> parent of 6e3821e... animation thunder done
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,10 +341,14 @@ MonoBehaviour:
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: 
 =======
   m_Name: SceneHierarchyWindow
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+  m_Name: 
+>>>>>>> parent of 6e3821e... animation thunder done
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -304,12 +356,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 210
     height: 534
 =======
     width: 259
     height: 517
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+    width: 210
+    height: 534
+>>>>>>> parent of 6e3821e... animation thunder done
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
@@ -334,10 +391,14 @@ MonoBehaviour:
   m_TitleContent:
     m_Text: Hierarchy
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000,
 =======
     m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+    m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000,
+>>>>>>> parent of 6e3821e... animation thunder done
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -347,6 +408,7 @@ MonoBehaviour:
     y: 75
     width: 209
     height: 513
+<<<<<<< HEAD
   m_ViewDataDictionary: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -359,13 +421,20 @@ MonoBehaviour:
     height: 496
   m_ViewDataDictionary: {fileID: 0}
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+  m_ViewDataDictionary: {fileID: 0}
+>>>>>>> parent of 6e3821e... animation thunder done
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: 5c4afeffe04afeffb04bfeff384ffefff051feff0652feffc252feffde52fefff053feffde54feff5a57feffbe59feff2c5afeffb65cfeff2a5efeff6e61feff8461feffa461feffb462feffda65fefff065feff506cfeffaa7afeff487bfeff5e7bfeff747bfeff1887feffa48afeffba8afeffbe92feff0497feff1a97feff4499feff38a0feff4ea0feff64a0feff42a2feffd0a2fefffea3feff94a4feff84a5feff68a7feff04aafeff8caafeff74abfeff9aaefeffb0aefeffc6aefeffdcaefeffc0c5feff44c7feff5ac7feff70c7feff86c7feff9cc7feffb2c7feff36cafeff00cbfeff40ccfeff90ccfeff2acdfeffe4cefeff62d2feff78d3feff3ad4feff3cd5feffded7feffa2d9feff7edefeff42dffeffc2dffeff4ce0feff62e0feff78e0feff8ee0feff28e1feffb8e1feffcee1feffe4e1feff6ee3fefff8e4feffa0e5feff20e6fefffce8feff12e9feff8eeafeffd2edfefffcbbffff14c2fffffac5ffff10c6ffff26c6ffff66c7ffff20cbffff1cccffff30ccffff5ccdffff72cdffff16ceffff80cfffff00d1ffffccd2ffffd2d3ffff94d5ffff48d6ffffc4d6ffff28d8ffff3ed8ffff60d9ffff82dafffffedaffff14dbffffd2dbffffe8dbfffffedbffff84dcffff00ddffff32ddffffd0ddffff4cdeffffa4dfffffbcdfffffd2dfffffe8dfffff96e0ffff12e1ffff28e1ffffa6e1ffff54e2ffffd0e2ffff22e4ffff38e4ffff88e4ffff04e5ffff1ae5ffffa8e6ffffbee6ffffa2e8ffff1ee9fffff4eaffff60ebffff2aeeffff74efffff4ef0ffff1af1ffffaef3ffff80f5ffffa4f5ffffb6f5ffffccf9ffff70fbffffdc500000c0c50000e0c50000eec50000f8c50000c00f0100f89801001899010046990100589901008e9a01001ca301006ca30100b4a401008cc00100c8c901001aca010088cf0100dacf0100ace801009aec0100
+=======
+      m_ExpandedIDs: 34e7ffff14e9ffff02eaffff82eaffff70ebffff62edffff52eeffff02f0ffff60f0ffff20f3ffff3af8ffffe2f8ffffc8f9fffff2f9ffff18fbffff1859000028590000b2590000
+>>>>>>> parent of 6e3821e... animation thunder done
 =======
       m_ExpandedIDs: 34e7ffff14e9ffff02eaffff82eaffff70ebffff62edffff52eeffff02f0ffff60f0ffff20f3ffff3af8ffffe2f8ffffc8f9fffff2f9ffff18fbffff1859000028590000b2590000
 >>>>>>> parent of 6e3821e... animation thunder done
@@ -392,6 +461,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WindowGUID: 9d390790daa9e29469f7989fe27ea370
 --- !u!114 &7
 <<<<<<< HEAD
@@ -402,6 +472,8 @@ MonoBehaviour:
 --- !u!114 &6
 >>>>>>> 6e3821e8155b769258331816e1bf392317ee9581
 =======
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
   m_WindowGUID: 5791f44e0eda84518b00665d1c544c23
 --- !u!114 &7
 MonoBehaviour:
@@ -424,6 +496,7 @@ MonoBehaviour:
     y: 0
     width: 752
     height: 534
+<<<<<<< HEAD
   m_MinSize: {x: 201, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
@@ -432,6 +505,13 @@ MonoBehaviour:
 >>>>>>> parent of 6e3821e... animation thunder done
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+  m_MinSize: {x: 202, y: 342}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+  controlID: 5929
+--- !u!114 &8
+>>>>>>> parent of 6e3821e... animation thunder done
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,6 +526,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
     y: 0
@@ -481,6 +562,16 @@ MonoBehaviour:
   - {fileID: 2}
   - {fileID: 8}
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+    x: 0
+    y: 0
+    width: 752
+    height: 121
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 9}
+  m_Panes:
+>>>>>>> parent of 6e3821e... animation thunder done
   - {fileID: 9}
   m_Selected: 0
   m_LastSelected: 1
@@ -604,6 +695,7 @@ MonoBehaviour:
 =======
   m_LastSelected: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &7
 >>>>>>> 6e3821e8155b769258331816e1bf392317ee9581
 =======
@@ -611,6 +703,9 @@ MonoBehaviour:
 >>>>>>> parent of 6e3821e... animation thunder done
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+--- !u!114 &9
+>>>>>>> parent of 6e3821e... animation thunder done
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -632,16 +727,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
     x: 209
     y: 75
     width: 750
     height: 100
+<<<<<<< HEAD
 =======
     x: 201
     y: 30
     width: 953
     height: 497
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -651,6 +752,9 @@ MonoBehaviour:
     - {fileID: 2476302328487938025, guid: 7e45d3b15f681e34a946a66667c2d6a5, type: 2}
     m_ValueSerializationHelper:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
     - e00: 0.49195597
       e01: 0
       e02: 0
@@ -659,6 +763,7 @@ MonoBehaviour:
       e11: 0.49195597
       e12: 0
       e13: 20.648933
+<<<<<<< HEAD
 =======
     - e00: 1
       e01: 0
@@ -669,6 +774,8 @@ MonoBehaviour:
       e12: 0
       e13: 0
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
       e20: 0
       e21: 0
       e22: 1
@@ -710,6 +817,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     - e00: 0.18235295
       e01: 0
       e02: 0
@@ -728,6 +836,16 @@ MonoBehaviour:
       e12: 0
       e13: 0
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+    - e00: 0.18235295
+      e01: 0
+      e02: 0
+      e03: 129.26471
+      e10: 0
+      e11: 0.18235295
+      e12: 0
+      e13: 15
+>>>>>>> parent of 6e3821e... animation thunder done
       e20: 0
       e21: 0
       e22: 1
@@ -756,8 +874,11 @@ MonoBehaviour:
     m_SelectedLayerIndex: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &8
 =======
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
 --- !u!114 &10
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
 MonoBehaviour:
@@ -767,6 +888,7 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: InspectorWindow
@@ -848,6 +970,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: GameView
@@ -859,8 +983,13 @@ MonoBehaviour:
     y: 121
     width: 752
     height: 413
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 6e3821e... animation thunder done
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -913,6 +1042,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
     y: 534
     width: 962
     height: 271
@@ -924,6 +1056,7 @@ MonoBehaviour:
   - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 1
+<<<<<<< HEAD
 =======
     y: 517
     width: 1440
@@ -936,6 +1069,8 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+>>>>>>> parent of 6e3821e... animation thunder done
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -988,6 +1123,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
     scrollPos: {x: 0, y: 128}
@@ -997,6 +1133,9 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
     scrollPos: {x: 0, y: 174}
+=======
+    scrollPos: {x: 0, y: 154}
+>>>>>>> parent of 6e3821e... animation thunder done
 =======
     scrollPos: {x: 0, y: 154}
 >>>>>>> parent of 6e3821e... animation thunder done
@@ -1062,6 +1201,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
     m_SelectedInstanceIDs: 80380000
@@ -1088,6 +1228,12 @@ MonoBehaviour:
 >>>>>>> parent of 6e3821e... animation thunder done
 =======
 >>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
+=======
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000e03c0000ee3c0000fc3c00004c3b0000a23c0000203a00005a3a0000
+>>>>>>> parent of 6e3821e... animation thunder done
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1161,8 +1307,13 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 805
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 6e3821e... animation thunder done
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -1345,7 +1496,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 14456
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
 =======
   m_DirectoriesAreaWidth: 168
