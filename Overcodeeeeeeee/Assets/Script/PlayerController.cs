@@ -37,11 +37,26 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (player1_2.activeInHierarchy)
+        if (Input.GetButtonDown("Fire2"))
         {
-            if (Input.GetButtonDown("Fire2"))
+            if (player1_1.activeInHierarchy)
+            {
+                this.GetComponent<ShootGate>().Shoot();
+            }
+            if (player1_2.activeInHierarchy)
             {
                 this.GetComponent<ShootCanvas>().Shoot();
+            }
+        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (player1_1.activeInHierarchy)
+            {
+                this.GetComponent<NovaGates>().Nova();
+            }
+            if (player1_2.activeInHierarchy)
+            {
+                //this.GetComponent<NovaGates>().Nova();
             }
         }
         var targetposition = this.gameObject.transform.position;
