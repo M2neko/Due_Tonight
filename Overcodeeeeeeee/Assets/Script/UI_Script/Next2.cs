@@ -30,4 +30,5 @@ public class Next2 : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
 }

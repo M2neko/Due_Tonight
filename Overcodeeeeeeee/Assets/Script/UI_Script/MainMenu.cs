@@ -15,4 +15,14 @@ public class MainMenu : MonoBehaviour
         Debug.Log("QUIT");
         Application.Quit();
     }
+
+     public void BackToMain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4);
+    }
+
+    public void Overcode()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+    }
 }
