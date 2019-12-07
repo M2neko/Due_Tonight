@@ -39,8 +39,12 @@ MonoBehaviour:
   m_MinSize: {x: 879, y: 613}
   m_MaxSize: {x: 18003, y: 18063}
   vertical: 0
+<<<<<<< HEAD
   controlID: 5992
 >>>>>>> parent of 6e3821e... animation thunder done
+=======
+  controlID: 5788
+>>>>>>> parent of 771fdf2... add condition to thunder
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,8 +202,12 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 613}
   m_MaxSize: {x: 10001, y: 18063}
   vertical: 1
+<<<<<<< HEAD
   controlID: 5950
 >>>>>>> parent of 6e3821e... animation thunder done
+=======
+  controlID: 5746
+>>>>>>> parent of 771fdf2... add condition to thunder
 --- !u!114 &4
 >>>>>>> 6e3821e8155b769258331816e1bf392317ee9581
 MonoBehaviour:
@@ -223,9 +231,9 @@ MonoBehaviour:
     width: 962
     height: 534
   m_MinSize: {x: 402, y: 342}
-  m_MaxSize: {x: 8002, y: 8042}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 0
-  controlID: 5928
+  controlID: 5709
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,10 +354,10 @@ MonoBehaviour:
     y: 0
     width: 752
     height: 534
-  m_MinSize: {x: 202, y: 342}
+  m_MinSize: {x: 201, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 5929
+  controlID: 5710
 --- !u!114 &8
 >>>>>>> parent of 6e3821e... animation thunder done
 MonoBehaviour:
@@ -741,8 +749,8 @@ MonoBehaviour:
     y: 121
     width: 752
     height: 413
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -920,6 +928,7 @@ MonoBehaviour:
   m_ListAreaState:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 80380000
     m_LastClickedInstanceID: 14464
     m_HadKeyboardFocusLastEvent: 0
@@ -934,6 +943,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
+=======
+    m_SelectedInstanceIDs: 78380000
+    m_LastClickedInstanceID: 14456
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> parent of 771fdf2... add condition to thunder
     m_ExpandedInstanceIDs: c6230000e03c0000ee3c0000fc3c00004c3b0000a23c0000203a00005a3a0000
 >>>>>>> parent of 6e3821e... animation thunder done
     m_RenameOverlay:
@@ -1008,8 +1022,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 805
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -1192,5 +1206,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 14456
   m_LastVerticalScrollValue: 0
