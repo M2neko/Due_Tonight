@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 Change;
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
+    private bool IsDown = false;
 
     private void Start()
     {
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !IsHold())
         {
             if (player1_1.activeInHierarchy)
             {
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
                 this.GetComponent<Light>().Pi(player2);
             }
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && !IsHold())
         {
             if (player1_1.activeInHierarchy)
             {
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
                 this.GetComponent<ShootCanvas>().Shoot();
             }
         }
-        if (Input.GetButtonDown("Player1Skill1"))
+        if (Input.GetButtonDown("Player1Skill1") && !IsHold())
         {
             if (player1_1.activeInHierarchy)
             {
@@ -88,10 +89,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Player1Down"))
         {
             PlayerAnimator.SetBool("Down", true);
+            IsDown = true;
         }
         else
         {
             PlayerAnimator.SetBool("Down", false);
+            IsDown = false;
         }
         Change.x = Input.GetAxisRaw("Horizontal");
 
@@ -126,6 +129,6 @@ public class PlayerController : MonoBehaviour
 
     private bool IsHold()
     {
-        return RushBike.IsRush || Light.IsLight;
+        return RushBike.IsRush || Light.IsLight || this.IsDown;
     }
 }

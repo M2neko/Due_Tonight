@@ -17,6 +17,7 @@ public class Player2Controller : MonoBehaviour
     private Vector3 Change;
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
+    private bool IsDown = false;
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class Player2Controller : MonoBehaviour
     {
         if (player2_1.activeInHierarchy)
         {
-            if (Input.GetButtonDown("Fire3"))
+            if (Input.GetButtonDown("Fire3") && !IsHold())
             {
                 this.GetComponent<ShootLaptop>().Shoot();
                 PlayerAnimator.SetBool("1", true);
@@ -48,27 +49,35 @@ public class Player2Controller : MonoBehaviour
         var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player1.transform.position.x)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            if (!IsHold())
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            if (!IsHold())
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        if (Input.GetButtonDown("Player2Jump") && this.gameObject.transform.position.y <= -3.32f) 
+        if (Input.GetButtonDown("Player2Jump") && this.gameObject.transform.position.y <= -3.32f && !IsHold()) 
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
         if (Input.GetButton("Player2Down"))
         {
             PlayerAnimator.SetBool("Down", true);
+            IsDown = true;
         }
         else
         {
             PlayerAnimator.SetBool("Down", false);
+            IsDown = false;
         }
         Change.x = Input.GetAxisRaw("Player2Horizontal");
-        PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
+
+        if (!IsHold())
+            PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
+
         Move();
+
         if (this.gameObject.transform.position.x <= leftrange)
         {
             targetposition = new Vector3(leftrange, targetposition.y, targetposition.z);
@@ -87,6 +96,14 @@ public class Player2Controller : MonoBehaviour
 
     private void Move()
     {
+        if (IsHold())
+            return;
+
         PlayerRigidbody.MovePosition(transform.position + Change * Speed * Time.deltaTime);
+    }
+
+    private bool IsHold()
+    {
+        return this.IsDown;
     }
 }
