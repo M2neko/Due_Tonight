@@ -47,8 +47,8 @@ public class Light : MonoBehaviour
             {
                 track = 0.0f;
                 timer = 0.0f;
-                proj.gameObject.transform.localScale = new Vector3(1, 1, 1);
                 proj.SetActive(false);
+                proj.gameObject.transform.localScale = new Vector3(1, 1, 1);
                 yesorno = false;
                 spawn = false;
             }
