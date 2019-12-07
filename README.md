@@ -42,8 +42,8 @@ This is the final project for Team **OverCode**.
 
 
 # Logic
-0. HealthBar
-0.0. Damage
+-1. HealthBar
+0. Damage
 1. 登场动画 3s不动
 2. ⌛️停止 or 输赢 胜者
 3. die animator
