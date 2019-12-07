@@ -58,6 +58,14 @@ public class Player2Controller : MonoBehaviour
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
+        if (Input.GetButton("Player2Down"))
+        {
+            PlayerAnimator.SetBool("Down", true);
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Down", false);
+        }
         Change.x = Input.GetAxisRaw("Player2Horizontal");
         PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
         Move();

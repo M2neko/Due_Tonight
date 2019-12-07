@@ -85,6 +85,14 @@ public class PlayerController : MonoBehaviour
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
+        if (Input.GetButton("Player1Down"))
+        {
+            PlayerAnimator.SetBool("Down", true);
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Down", false);
+        }
         Change.x = Input.GetAxisRaw("Horizontal");
 
         if (!IsHold())
