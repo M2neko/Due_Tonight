@@ -68,9 +68,12 @@ public class PlayerController : MonoBehaviour
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f)
+        if (player1_2.activeInHierarchy)
         {
-            PlayerRigidbody.AddForce(Vector2.up * 3000);
+            if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f)
+            {
+                PlayerRigidbody.AddForce(Vector2.up * 3000);
+            }
         }
         Change.x = Input.GetAxisRaw("Horizontal");
         PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
@@ -84,6 +87,11 @@ public class PlayerController : MonoBehaviour
             targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
         }
         this.gameObject.transform.position = targetposition;
+        if (Input.GetButtonDown("Jump"))
+        {
+            this.GetComponent<Light>().Pi(player2);
+            PlayerAnimator.SetBool("2", true);
+        }
     }
 
     public GameObject OtherPlayer()
