@@ -19,6 +19,9 @@ public class NovaGates : MonoBehaviour
             return;
         }
         novaing = true;
+
+        Butner.GetComponent<AudioSource>().Play();
+
         projectileList = GameObject.FindGameObjectsWithTag("ButtAttack");
 
         pos = Butner.gameObject.transform.position;
