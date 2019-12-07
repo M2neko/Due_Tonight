@@ -848,7 +848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &519263716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -952,6 +952,8 @@ MonoBehaviour:
   HP2_1: {fileID: 519263715}
   HP1_2: {fileID: 1224240720}
   HP2_2: {fileID: 928867953}
+  HPBar_1: {fileID: 622113652}
+  HPBar_2: {fileID: 891748858}
   Character1_1: {fileID: 1001785145}
   Character1_2: {fileID: 1082452055}
   Character2_1: {fileID: 1618645503}
@@ -1044,7 +1046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &533456551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1117,7 +1119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &622113653
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1256,7 +1258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &891748859
 RectTransform:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class Game : MonoBehaviour
     public GameObject HP1_2;
     public GameObject HP2_2;
 
+    public GameObject HPBar_1;
+    public GameObject HPBar_2;
+
     public GameObject Character1_1;
     public GameObject Character1_2;
     public GameObject Character2_1;
@@ -67,6 +70,8 @@ public class Game : MonoBehaviour
             Character2_2.SetActive(true);
         }
 
+        HPBar_1.SetActive(true);
+        HPBar_2.SetActive(true);
     }
 
 
