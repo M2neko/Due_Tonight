@@ -90,7 +90,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             this.GetComponent<Light>().Pi(player2);
-            PlayerAnimator.SetBool("2", true);
         }
     }
 
