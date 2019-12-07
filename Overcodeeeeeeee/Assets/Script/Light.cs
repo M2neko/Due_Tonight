@@ -10,26 +10,28 @@ public class Light : MonoBehaviour
     [SerializeField] private float range; //0.4f
     private GameObject otherplayer;
     private Vector3 location;
-    private bool yesorno = false;
+    public static bool IsLight = false;
     private bool spawn = false;
     private float track = 0.0f;
     private float timer = 0.0f;
 
     public void Pi(GameObject player)
     {
-        if (yesorno)
+        if (IsLight)
         {
             return;
         }
+        this.GetComponent<Animator>().SetBool("2", true);
+        this.GetComponents<AudioSource>()[1].Play();
         otherplayer = player;
         location = new Vector3(player.gameObject.transform.position.x, 4, player.gameObject.transform.position.z);
-        yesorno = true;
+        IsLight = true;
 
     }
 
     private void Update()
     {
-        if (yesorno)
+        if (IsLight)
         {
             track += Time.deltaTime;
             if (track >= delay && track <= delay + range && !spawn)
@@ -51,8 +53,9 @@ public class Light : MonoBehaviour
                 timer = 0.0f;
                 proj.SetActive(false);
                 proj.gameObject.transform.localScale = new Vector3(1, 1, 1);
-                yesorno = false;
+                IsLight = false;
                 spawn = false;
+                //this.GetComponents<AudioSource>()[1].Stop();
             }
         }
     }

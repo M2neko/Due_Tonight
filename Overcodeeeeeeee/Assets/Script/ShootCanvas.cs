@@ -23,7 +23,7 @@ public class ShootCanvas: MonoBehaviour
         proj = Instantiate(Canvas, pos, Quaternion.identity);
         proj.SetActive(true);
         // Play audio sound
-        Mccoy.GetComponent<AudioSource>().Play();
+        Mccoy.GetComponents<AudioSource>()[0].Play();
         player = Mccoy.GetComponent<PlayerController>().OtherPlayer();
         if (player.transform.position.x <= Mccoy.gameObject.transform.position.x)
         {

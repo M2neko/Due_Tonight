@@ -6,7 +6,7 @@ public class NovaGates : MonoBehaviour
 {
     [SerializeField] private GameObject Butner;
     [SerializeField] private float Duration = 2.0f;
-    public static bool novaing = false;
+    public static bool IsNova = false;
     private Vector3 pos;
     private GameObject OtherPlayer;
     private GameObject[] projectileList;
@@ -14,17 +14,17 @@ public class NovaGates : MonoBehaviour
 
     public void Nova()
     {
-        if (novaing)
+        if (IsNova || RushBike.IsRush || ShootGate.IsShoot)
         {
             return;
         }
-        novaing = true;
+        IsNova = true;
 
         projectileList = GameObject.FindGameObjectsWithTag("ButtAttack");
 
         if (projectileList.Length != 0)
         {
-            Butner.GetComponent<AudioSource>().Play();
+            Butner.GetComponents<AudioSource>()[0].Play();
         }
 
         pos = Butner.gameObject.transform.position;
@@ -47,17 +47,16 @@ public class NovaGates : MonoBehaviour
                 projectile.GetComponent<Rigidbody>().velocity = Vector3.up * Random.Range(3.0f, 7.0f) + Vector3.left * Random.Range(3.0f, 7.0f);
             }
         }
-
     }
 
     private void Update()
     {
-        if (novaing)
+        if (IsNova)
         {
             mtime += Time.deltaTime;
             if (mtime > Duration)
             {
-                novaing = false;
+                IsNova = false;
                 mtime = 0.0f;
                 foreach (var projectile in projectileList)
                 {

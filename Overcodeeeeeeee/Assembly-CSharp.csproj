@@ -77,6 +77,7 @@
     <Compile Include="Assets\Script\NovaGates.cs" />
     <Compile Include="Assets\Script\Player2Controller.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Script\RushBike.cs" />
     <Compile Include="Assets\Script\ShootCanvas.cs" />
     <Compile Include="Assets\Script\ShootGate.cs" />
     <Compile Include="Assets\Script\ShootLaptop.cs" />

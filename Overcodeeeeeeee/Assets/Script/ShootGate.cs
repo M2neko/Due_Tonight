@@ -16,12 +16,12 @@ public class ShootGate : MonoBehaviour
     private GameObject player;
     private float track;
     private bool left;
-    private bool yesorno;
+    public static bool IsShoot;
     private Vector3 pos;
 
     public void Shoot()
     {
-        if (yesorno)
+        if (IsShoot || RushBike.IsRush || NovaGates.IsNova)
         {
             return;
         }
@@ -68,12 +68,12 @@ public class ShootGate : MonoBehaviour
             left = false;
             proj.GetComponent<SpriteRenderer>().flipX = false;
         }
-        yesorno = true;
+        IsShoot = true;
     }
 
     private void Update()
     {
-        if (yesorno)
+        if (IsShoot)
         {
             track += Time.deltaTime * 5;
             if (track >= 5.0f)
@@ -95,7 +95,7 @@ public class ShootGate : MonoBehaviour
             {
                 track = 0.0f;
                 proj.GetComponent<SpriteRenderer>().enabled = false;
-                yesorno = false;
+                IsShoot = false;
                 //Destroy(proj);
             }
         }

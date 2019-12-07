@@ -37,6 +37,17 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (player1_1.activeInHierarchy)
+            {
+                this.GetComponent<NovaGates>().Nova();
+            }
+            if (player1_2.activeInHierarchy)
+            {
+                this.GetComponent<Light>().Pi(player2);
+            }
+        }
         if (Input.GetButtonDown("Fire2"))
         {
             if (player1_1.activeInHierarchy)
@@ -48,34 +59,39 @@ public class PlayerController : MonoBehaviour
                 this.GetComponent<ShootCanvas>().Shoot();
             }
         }
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Player1Skill1"))
         {
             if (player1_1.activeInHierarchy)
             {
-                this.GetComponent<NovaGates>().Nova();
+                this.GetComponent<RushBike>().Rush();
             }
             if (player1_2.activeInHierarchy)
             {
-                this.GetComponent<Light>().Pi(player2);
-                PlayerAnimator.SetBool("2", true);
+                //this.GetComponent<ShootCanvas>().Shoot();
             }
         }
         var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player2.transform.position.x)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            if (!IsHold())
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            if (!IsHold())
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f)
+        if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f && !IsHold())
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
         Change.x = Input.GetAxisRaw("Horizontal");
-        PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
+
+        if (!IsHold())
+            PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
+
         Move();
+
         if (this.gameObject.transform.position.x <= leftrange)
         {
             targetposition = new Vector3(leftrange, targetposition.y, targetposition.z);
@@ -94,6 +110,14 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+        if (IsHold())
+            return;
+
         PlayerRigidbody.MovePosition(transform.position + Change * Speed * Time.deltaTime);
+    }
+
+    private bool IsHold()
+    {
+        return RushBike.IsRush || Light.IsLight;
     }
 }
