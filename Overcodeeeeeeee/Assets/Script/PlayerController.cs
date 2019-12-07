@@ -56,7 +56,8 @@ public class PlayerController : MonoBehaviour
             }
             if (player1_2.activeInHierarchy)
             {
-                //this.GetComponent<NovaGates>().Nova();
+                this.GetComponent<Light>().Pi(player2);
+                PlayerAnimator.SetBool("2", true);
             }
         }
         var targetposition = this.gameObject.transform.position;
@@ -84,13 +85,6 @@ public class PlayerController : MonoBehaviour
             targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
         }
         this.gameObject.transform.position = targetposition;
-<<<<<<< HEAD
-        if (Input.GetButtonDown("Jump"))
-        {
-            this.GetComponent<Light>().Pi(player2);
-        }
-=======
->>>>>>> parent of d95a141... Merge branch 'master' of https://github.com/M2neko/ECS_189L_Final_Project
     }
 
     public GameObject OtherPlayer()

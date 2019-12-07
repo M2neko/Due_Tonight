@@ -29,7 +29,8 @@ public class Light : MonoBehaviour
 
     private void Update()
     {
-        if (yesorno) {
+        if (yesorno)
+        {
             track += Time.deltaTime;
             if (track >= delay && track <= delay + range && !spawn)
             {
@@ -45,6 +46,7 @@ public class Light : MonoBehaviour
             }
             else if (track >= delay + range)
             {
+                this.GetComponent<Animator>().SetBool("2", false);
                 track = 0.0f;
                 timer = 0.0f;
                 proj.SetActive(false);

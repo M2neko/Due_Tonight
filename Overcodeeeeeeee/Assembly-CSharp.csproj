@@ -72,6 +72,7 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Script\BgMusic.cs" />
     <Compile Include="Assets\Script\Cameracontroller.cs" />
+    <Compile Include="Assets\Script\Light.cs" />
     <Compile Include="Assets\Script\NovaGates.cs" />
     <Compile Include="Assets\Script\Player2Controller.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
