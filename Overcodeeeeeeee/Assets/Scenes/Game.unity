@@ -3133,7 +3133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Zee: {fileID: 1618645503}
-  Duration: 3
+  Duration: 0.9
 --- !u!1 &1694438942
 GameObject:
   m_ObjectHideFlags: 0

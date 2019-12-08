@@ -5,7 +5,7 @@ using UnityEngine;
 public class PerformSword : MonoBehaviour
 {
     [SerializeField] private GameObject Zee;
-    [SerializeField] private float Duration = 3.0f;
+    [SerializeField] private float Duration = 0.9f;
     private Vector3 pos;
     private GameObject OtherPlayer;
     private float mtime = 0.0f;
@@ -18,27 +18,36 @@ public class PerformSword : MonoBehaviour
             return;
         }
         IsSword = true;
-        pos = Zee.transform.position;
-        //Zee.GetComponent<Animator>().SetBool("Sword", true);
+        Zee.GetComponent<Animator>().SetBool("Sword", true);
         //Zee.GetComponents<AudioSource>()[1].Play();
         OtherPlayer = Zee.GetComponent<Player2Controller>().OtherPlayer();
 
-        Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 1000);
+        //Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 1000);
 
-        //StartCoroutine(OnBike());
+        StartCoroutine(OnSword());
         //Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 2000);
     }
 
-    private IEnumerator OnBike()
+    private IEnumerator OnSword()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.2f);
         if (OtherPlayer.transform.position.x >= Zee.gameObject.transform.position.x)
         {
-            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 1000);
+            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3000);
+            for (int i = 0; i < 15; i++)
+            {
+                yield return new WaitForSeconds(0.2f / 15.0f);
+                Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 150);
+            }
         }
         else
         {
-            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 1000);
+            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3000);
+            for (int i = 0; i < 15; i++)
+            {
+                yield return new WaitForSeconds(0.2f / 15.0f);
+                Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 150);
+            }
         }
     }
 
@@ -51,7 +60,7 @@ public class PerformSword : MonoBehaviour
             if (mtime >= Duration)
             {
                 IsSword = false;
-                //Zee.GetComponent<Animator>().SetBool("Sword", false);
+                Zee.GetComponent<Animator>().SetBool("Sword", false);
                 mtime = 0.0f;
             }
         }
