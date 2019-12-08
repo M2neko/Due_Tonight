@@ -19,33 +19,26 @@ This is the final project for Team **OverCode**.
 ## Task
 
 # Menu
-~~1. Team Credit~~
+1. Quit 界面
+
 
 # Mccoy
-1. Skill Punch
-2. Shield
+
 
 # Butner
-1. 音效少
+1. RushBike 音效
 
 # Zee
-1. 扔laptop 动画延时
-2. 舞剑
-3. Shield
+
 
 # Student
-~~1. move🈚️animator~~
-2. 音效少
-~~3. Gun 扔canvas~~
-4. 光波
-
 
 
 # Logic
-~~0. HealthBar~~
 1. Damage
-2. 登场动画 3s不动
-3. ⌛️停止 or 输赢 胜者
-4. die animator
-5. quit
+2. Improve HealthBar
+3. 登场动画 improve
+4. ⌛️停止 or 输赢 胜者
+5. die animator
+6. quit
 
