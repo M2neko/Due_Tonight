@@ -1,14 +1,13 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI_Script/Game.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player2Controller.cs">
     <Files>
       <File FileName="Assets/Script/Zee_Motions/PerformSword.cs" Line="19" Column="10" />
-      <File FileName="Assets/Script/HealthbarController.cs" />
-      <File FileName="Assets/Script/LeftHealthBar.cs" />
-      <File FileName="Assets/Script/Student_Motions/ControlWave.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Student_Motions/ControlWave.cs" Line="82" Column="10" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="72" Column="45" />
-      <File FileName="Assets/Script/Mccoy_Motions/SpeedPunch.cs" Line="56" Column="14" />
-      <File FileName="Assets/Script/UI_Script/Game.cs" Line="38" Column="1" />
+      <File FileName="Assets/Script/Zee_Motions/PerformSword.cs" Line="68" Column="1" />
+      <File FileName="Assets/Script/HealthbarController.cs" Line="17" Column="9" />
+      <File FileName="Assets/Script/LeftHealthBar.cs" Line="18" Column="42" />
+      <File FileName="Assets/Script/Mccoy_Motions/SpeedPunch.cs" Line="22" Column="10" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="95" Column="43" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="93" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,10 +18,9 @@
                 <Node name="Butner_Motions" expanded="True" />
                 <Node name="Mccoy_Motions" expanded="True" />
                 <Node name="Student_Motions" expanded="True" />
-                <Node name="UI_Script" expanded="True">
-                  <Node name="Game.cs" selected="True" />
-                </Node>
+                <Node name="UI_Script" expanded="True" />
                 <Node name="Zee_Motions" expanded="True" />
+                <Node name="Player2Controller.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -32,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="51db4779-4277-4714-8e6f-facd5af29efa" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9fe79af1-266c-4f89-9e41-bff9d4daa5b8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

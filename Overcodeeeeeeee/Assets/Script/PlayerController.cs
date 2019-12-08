@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
     private bool IsDown = false;
+    private bool IsShield = false;
 
     private void Start()
     {
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             if (player1_1.activeInHierarchy)
             {
-                this.GetComponent<NovaGates>().Nova();
+                this.GetComponent<ShootGate>().Shoot();
             }
             if (player1_2.activeInHierarchy)
             {
@@ -56,12 +57,18 @@ public class PlayerController : MonoBehaviour
         {
             if (player1_1.activeInHierarchy)
             {
-                this.GetComponent<ShootGate>().Shoot();
+                this.GetComponent<NovaGates>().Nova();
             }
-            if (player1_2.activeInHierarchy)
-            {
-                //this.GetComponent<ShootCanvas>().Shoot();
-            }
+        }
+        if (Input.GetButton("Player1Shield") && ((!IsHold()) || IsShield))
+        {
+            PlayerAnimator.SetBool("Shield", true);
+            IsShield = true;
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Shield", false);
+            IsShield = false;
         }
         if (Input.GetButtonDown("Player1Skill1") && !IsHold())
         {
@@ -77,19 +84,19 @@ public class PlayerController : MonoBehaviour
         var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player2.transform.position.x)
         {
-            if (!IsHold())
+            if ((!IsHold()) || IsShield)
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
-            if (!IsHold())
+            if ((!IsHold()) || IsShield)
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         if (Input.GetButtonDown("Player1Jump") && this.gameObject.transform.position.y <= -3.32f && !IsHold())
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
-        if (Input.GetButton("Player1Down"))
+        if (Input.GetButton("Player1Down") && ((!IsHold()) || IsDown))
         {
             PlayerAnimator.SetBool("Down", true);
             IsDown = true;
@@ -132,7 +139,8 @@ public class PlayerController : MonoBehaviour
 
     private bool IsHold()
     {
-        return RushBike.IsRush || Light.IsLight || this.IsDown || this.IsStart || SpeedPunch.IsRush;
+        return RushBike.IsRush || Light.IsLight || this.IsDown || this.IsStart
+            || SpeedPunch.IsRush || this.IsShield;
     }
 
     private IEnumerator StartAnimator()

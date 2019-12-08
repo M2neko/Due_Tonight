@@ -41,7 +41,7 @@ public class Player2Controller : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Player2Skill3") && !IsHold())
+        if (Input.GetButtonDown("Player2Skill2") && !IsHold())
         {
             if (player2_1.activeInHierarchy)
             {
@@ -65,7 +65,7 @@ public class Player2Controller : MonoBehaviour
                 this.GetComponent<ControlWave>().Control();
             }
         }
-        if (Input.GetButton("Player2Skill2") && ((!IsHold()) || IsShield))
+        if (Input.GetButton("Player2Shield") && ((!IsHold()) || IsShield))
         {
             PlayerAnimator.SetBool("Shield", true);
             IsShield = true;
