@@ -2274,6 +2274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mccoy: {fileID: 1082452055}
   Speed: 0.5
+  RushSpeed: 1000
 --- !u!82 &1082452063
 AudioSource:
   m_ObjectHideFlags: 0
