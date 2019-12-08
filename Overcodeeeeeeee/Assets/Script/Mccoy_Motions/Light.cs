@@ -24,7 +24,7 @@ public class Light : MonoBehaviour
         this.GetComponent<Animator>().SetBool("2", true);
         this.GetComponents<AudioSource>()[1].Play();
         otherplayer = player;
-        location = new Vector3(player.gameObject.transform.position.x, 0.5f, player.gameObject.transform.position.z);
+        location = new Vector3(player.gameObject.transform.position.x, 0.48f, player.gameObject.transform.position.z);
         IsLight = true;
 
     }
@@ -37,8 +37,10 @@ public class Light : MonoBehaviour
             if (track >= delay && track <= delay + range && !spawn)
             {
                 proj.SetActive(true);
+                proj.AddComponent<CollisionController>();
+                proj.AddComponent<BoxCollider>();
                 proj.gameObject.transform.position = location;
-                proj.gameObject.transform.localScale = new Vector3(2.0f, 5.5f, 1.0f);
+                proj.gameObject.transform.localScale = new Vector3(2.0f, 5.7f, 1.0f);
                 spawn = true;
             }
             else if (track >= delay && track <= delay + range)
@@ -63,11 +65,13 @@ public class Light : MonoBehaviour
                 proj.GetComponent<SpriteRenderer>().flipY = false;
                 timer = 0.0f;
                 proj.SetActive(false);
+                otherplayer.GetComponent<Player2Controller>().SetFreeze(false);
                 proj.gameObject.transform.localScale = new Vector3(1, 1, 1);
                 IsLight = false;
                 spawn = false;
                 //this.GetComponents<AudioSource>()[1].Stop();
             }
         }
+
     }
 }

@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/CollisionController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mccoy_Motions/Light.cs">
     <Files>
       <File FileName="Assets/Script/Player2Controller.cs" Line="114" Column="6" />
-      <File FileName="Assets/Script/UI_Script/Game.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="135" Column="1" />
-      <File FileName="Assets/Script/Mccoy_Motions/Light.cs" Line="72" Column="1" />
-      <File FileName="Assets/Script/CollisionController.cs" Line="7" Column="1" />
-      <File FileName="Assets/Script/HealthbarController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/UI_Script/Game.cs" />
+      <File FileName="Assets/Script/PlayerController.cs" />
+      <File FileName="Assets/Script/Mccoy_Motions/Light.cs" Line="27" Column="76" />
+      <File FileName="Assets/Script/CollisionController.cs" Line="5" Column="21" />
+      <File FileName="Assets/Script/HealthbarController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +14,9 @@
           <Node name="Overcodeeeeeeee" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="CollisionController.cs" selected="True" />
+                <Node name="Mccoy_Motions" expanded="True">
+                  <Node name="Light.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

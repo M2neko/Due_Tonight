@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collison : MonoBehaviour
+public class CollisionController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        other.GetComponent<Player2Controller>().SetFreeze(true);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
