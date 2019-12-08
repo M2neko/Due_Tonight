@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Mccoy_Motions/Light.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Student_Motions/ShootCanvas.cs">
     <Files>
       <File FileName="Assets/Script/Zee_Motions/PerformSword.cs" Line="19" Column="10" />
       <File FileName="Assets/Script/Zee_Motions/PerformSword.cs" Line="68" Column="1" />
       <File FileName="Assets/Script/HealthbarController.cs" Line="17" Column="9" />
       <File FileName="Assets/Script/LeftHealthBar.cs" Line="18" Column="42" />
-      <File FileName="Assets/Script/Mccoy_Motions/SpeedPunch.cs" Line="25" Column="76" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="100" Column="10" />
+      <File FileName="Assets/Script/Mccoy_Motions/Light.cs" Line="53" Column="18" />
+      <File FileName="Assets/Script/Mccoy_Motions/SpeedPunch.cs" Line="33" Column="6" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="64" Column="10" />
       <File FileName="Assets/Script/Player2Controller.cs" Line="22" Column="28" />
-      <File FileName="Assets/Script/Mccoy_Motions/Light.cs" Line="31" Column="26" />
+      <File FileName="Assets/Script/Student_Motions/ControlWave.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,10 +18,10 @@
           <Node name="Overcodeeeeeeee" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="Mccoy_Motions" expanded="True">
-                  <Node name="Light.cs" selected="True" />
+                <Node name="Mccoy_Motions" expanded="True" />
+                <Node name="Student_Motions" expanded="True">
+                  <Node name="ShootCanvas.cs" selected="True" />
                 </Node>
-                <Node name="Zee_Motions" expanded="True" />
               </Node>
             </Node>
           </Node>

@@ -10,7 +10,8 @@ public class ControlWave : MonoBehaviour
     private GameObject player;
     private float track;
     private bool left;
-    public static bool IsWave;
+    public static bool IsWave = false;
+    private bool IsExist = false;
     private Vector3 pos;
 
     public void Control()
@@ -33,11 +34,7 @@ public class ControlWave : MonoBehaviour
             left = false;
             pos += Vector3.right * 2.3f;
         }
-        Debug.Log(left);
-
-        // Play audio sound
-        //Student.GetComponents<AudioSource>()[0].Play();
-
+        IsWave = true;
         StartCoroutine(OnWave());
     }
 
@@ -46,14 +43,14 @@ public class ControlWave : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         proj = Instantiate(Wave, pos, Quaternion.identity);
         proj.SetActive(true);
-        IsWave = true;
+        IsExist = true;
         yield return new WaitForSeconds(0.3f);
         Student.GetComponents<AudioSource>()[1].Play();
     }
 
     private void Update()
     {
-        if (IsWave)
+        if (IsWave && IsExist)
         {
             track += Time.deltaTime * 5;
             var projScale = proj.gameObject.transform.localScale;
@@ -76,6 +73,7 @@ public class ControlWave : MonoBehaviour
                 track = 0.0f;
                 proj.SetActive(false);
                 IsWave = false;
+                IsExist = false;
                 Student.GetComponent<Animator>().SetBool("Wave", false);
                 Destroy(proj);
             }
