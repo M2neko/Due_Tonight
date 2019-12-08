@@ -26,6 +26,7 @@ public class ShootGate : MonoBehaviour
             return;
         }
         pos = Butner.gameObject.transform.position;
+        Butner.GetComponents<AudioSource>()[2].Play();
         switch (Random.Range(1, 7))
         {
             case 1:

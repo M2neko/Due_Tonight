@@ -33,7 +33,7 @@ public class ShootCanvas : MonoBehaviour
         StartCoroutine(Shoot2());
         StartCoroutine(Shoot3());
         // Play audio sound
-        //Student.GetComponents<AudioSource>()[0].Play();
+        Student.GetComponents<AudioSource>()[0].Play();
         player = Student.GetComponent<Player2Controller>().OtherPlayer();
         if (player.transform.position.x <= Student.gameObject.transform.position.x)
         {

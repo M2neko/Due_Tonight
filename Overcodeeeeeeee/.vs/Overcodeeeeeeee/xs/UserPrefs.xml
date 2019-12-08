@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Student_Motions/ShootCanvas.cs">
     <Files>
-      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="117" Column="25" />
-      <File FileName="Assets/Script/Zee_Motions/NewClass.cs" Line="26" Column="71" />
-      <File FileName="Assets/Script/Butner_Motions/RushBike.cs" Line="30" Column="47" />
-      <File FileName="Assets/Script/Zee_Motions/ShootLaptop.cs" Line="7" Column="45" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="57" Column="1" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Zee_Motions/NewClass.cs" Line="20" Column="24" />
+      <File FileName="Assets/Script/Zee_Motions/ShootLaptop.cs" Line="26" Column="28" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="57" Column="56" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="67" Column="40" />
+      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="34" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,10 +15,11 @@
               <Node name="Script" expanded="True">
                 <Node name="Butner_Motions" expanded="True" />
                 <Node name="Mccoy_Motions" expanded="True" />
-                <Node name="Student_Motions" expanded="True" />
+                <Node name="Student_Motions" expanded="True">
+                  <Node name="ShootCanvas.cs" selected="True" />
+                </Node>
                 <Node name="UI_Script" expanded="True" />
                 <Node name="Zee_Motions" expanded="True" />
-                <Node name="PlayerController.cs" selected="True" />
               </Node>
             </Node>
           </Node>

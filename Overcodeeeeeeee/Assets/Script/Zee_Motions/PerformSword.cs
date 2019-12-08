@@ -19,7 +19,7 @@ public class PerformSword : MonoBehaviour
         }
         IsSword = true;
         Zee.GetComponent<Animator>().SetBool("Sword", true);
-        //Zee.GetComponents<AudioSource>()[1].Play();
+        Zee.GetComponents<AudioSource>()[1].Play();
         OtherPlayer = Zee.GetComponent<Player2Controller>().OtherPlayer();
 
         //Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 1000);
@@ -50,7 +50,6 @@ public class PerformSword : MonoBehaviour
             }
         }
     }
-
 
     private void Update()
     {
