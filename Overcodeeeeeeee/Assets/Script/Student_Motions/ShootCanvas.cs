@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootCanvas: MonoBehaviour
+public class ShootCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject Student;
     [SerializeField] private GameObject Canvas;
-    private GameObject proj;
+    private GameObject[] proj;
     private GameObject player;
     private float track;
     private bool left;
     public static bool IsShoot;
-    private Vector3 pos;
+    private Vector3[] pos;
+    private bool[] IsFinish;
 
     public void Shoot()
     {
@@ -19,9 +20,15 @@ public class ShootCanvas: MonoBehaviour
         {
             return;
         }
-        pos = Student.gameObject.transform.position;
-        proj = Instantiate(Canvas, pos, Quaternion.identity);
-        proj.SetActive(true);
+        proj = new GameObject[3];
+        IsFinish = new bool[3];
+        pos = new Vector3[3];
+        IsFinish[0] = false;
+        IsFinish[1] = false;
+        IsFinish[2] = false;
+        StartCoroutine(Shoot1());
+        StartCoroutine(Shoot2());
+        StartCoroutine(Shoot3());
         // Play audio sound
         //Student.GetComponents<AudioSource>()[0].Play();
         player = Student.GetComponent<Player2Controller>().OtherPlayer();
@@ -36,33 +43,113 @@ public class ShootCanvas: MonoBehaviour
         IsShoot = true;
     }
 
+    private IEnumerator Shoot1()
+    {
+        yield return new WaitForSeconds(0.2f);
+        pos[0] = Student.gameObject.transform.position;
+        proj[0] = Instantiate(Canvas, pos[0], Quaternion.identity);
+        proj[0].SetActive(true);
+        IsFinish[0] = true;
+    }
+
+    private IEnumerator Shoot2()
+    {
+        yield return new WaitForSeconds(0.7f);
+        pos[1] = Student.gameObject.transform.position;
+        proj[1] = Instantiate(Canvas, pos[1], Quaternion.identity);
+        proj[1].SetActive(true);
+        IsFinish[1] = true;
+    }
+
+    private IEnumerator Shoot3()
+    {
+        yield return new WaitForSeconds(1.2f);
+        pos[2] = Student.gameObject.transform.position;
+        proj[2] = Instantiate(Canvas, pos[2], Quaternion.identity);
+        proj[2].SetActive(true);
+        IsFinish[2] = true;
+    }
+
     private void Update()
     {
         if (IsShoot)
         {
             track += Time.deltaTime * 5;
-            if(track >= 5.0f)
+
+            if (track >= 5.0f)
             {
                 //Mccoy.GetComponent<Animator>().SetBool("1", false);
-            } 
-            if (track <= 10.0f)
+            }
+
+            if (IsFinish[0])
             {
-                if (left)
+                if (track <= 10.0f)
                 {
-                    proj.gameObject.transform.position = new Vector3(pos.x - track, pos.y, pos.z);
+                    if (left)
+                    {
+                        proj[0].gameObject.transform.position = new Vector3(pos[0].x - track, pos[0].y, pos[0].z);
+                    }
+                    else
+                    {
+                        proj[0].gameObject.transform.position = new Vector3(pos[0].x + track, pos[0].y, pos[0].z);
+                    }
                 }
                 else
                 {
-                    proj.gameObject.transform.position = new Vector3(pos.x + track, pos.y, pos.z);
+                    //track = 0.0f;
+                    proj[0].SetActive(false);
+                    IsFinish[0] = false;
+                    //IsShoot = false;
                 }
             }
-            else
+
+            if (IsFinish[1])
             {
-                track = 0.0f;
-                proj.SetActive(false);
-                IsShoot = false;
-                Destroy(proj);
+                if (track <= 14.0f)
+                {
+                    if (left)
+                    {
+                        proj[1].gameObject.transform.position = new Vector3(pos[1].x - track + 3.0f, pos[1].y, pos[1].z);
+                    }
+                    else
+                    {
+                        proj[1].gameObject.transform.position = new Vector3(pos[1].x + track - 3.0f, pos[1].y, pos[1].z);
+                    }
+                }
+                else
+                {
+                    //track = 0.0f;
+                    proj[1].SetActive(false);
+                    IsFinish[1] = false;
+                    //IsShoot = false;
+                }
             }
+
+            if (IsFinish[2])
+            {
+                if (track <= 18.0f)
+                {
+                    if (left)
+                    {
+                        proj[2].gameObject.transform.position = new Vector3(pos[2].x - track + 2 * 3.0f, pos[2].y, pos[2].z);
+                    }
+                    else
+                    {
+                        proj[2].gameObject.transform.position = new Vector3(pos[2].x + track - 2 * 3.0f, pos[2].y, pos[2].z);
+                    }
+                }
+                else
+                {
+                    track = 0.0f;
+                    proj[2].SetActive(false);
+                    IsShoot = false;
+                    IsFinish[2] = false;
+                    Destroy(proj[0]);
+                    Destroy(proj[1]);
+                    Destroy(proj[2]);
+                }
+            }
+
         }
     }
 }
