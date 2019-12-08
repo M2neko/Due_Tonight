@@ -13,9 +13,9 @@ public class LeftHealthBar : MonoBehaviour
         Healthbar = this.gameObject.transform;
     }
 
-    public void setHPRation(float HPRatio)
+    public void setHPRation(float CurrentHp)
     {
-        this.HPRatio = HPRatio;
+        this.HPRatio = CurrentHp/100;
     }
 
 //    Update is called once per frame

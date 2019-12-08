@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RightHealhBar : MonoBehaviour
 {
-    private float HPRatio = 0.6f;
+    private float HPRatio = 1.0f;
     private float TempRatio = 1.0f;
     private Transform Healthbar;
     // Start is called before the first frame update
@@ -13,10 +13,10 @@ public class RightHealhBar : MonoBehaviour
         Healthbar = this.gameObject.transform;
     }
 
-    //public void setHPRation(float HPRatio)
-    //{
-    //    this.HPRatio = HPRatio;
-    //}
+    public void setHPRation(float CurrentHp)
+    {
+        this.HPRatio = CurrentHp/100;
+    }
 
     // Update is called once per frame
     void Update()
