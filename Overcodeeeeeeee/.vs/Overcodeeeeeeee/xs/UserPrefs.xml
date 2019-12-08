@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Student_Motions/ShootCanvas.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player2Controller.cs">
     <Files>
-      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="33" Column="39" />
+      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="15" Column="29" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="111" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,11 +12,10 @@
               <Node name="Script" expanded="True">
                 <Node name="Butner_Motions" expanded="True" />
                 <Node name="Mccoy_Motions" expanded="True" />
-                <Node name="Student_Motions" expanded="True">
-                  <Node name="ShootCanvas.cs" selected="True" />
-                </Node>
+                <Node name="Student_Motions" expanded="True" />
                 <Node name="UI_Script" expanded="True" />
                 <Node name="Zee_Motions" expanded="True" />
+                <Node name="Player2Controller.cs" selected="True" />
               </Node>
             </Node>
           </Node>

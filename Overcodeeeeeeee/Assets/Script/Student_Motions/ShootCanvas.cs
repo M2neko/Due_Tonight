@@ -23,6 +23,9 @@ public class ShootCanvas : MonoBehaviour
         proj = new GameObject[3];
         IsFinish = new bool[3];
         pos = new Vector3[3];
+
+        Student.GetComponent<Animator>().SetBool("Shoot", true);
+
         IsFinish[0] = false;
         IsFinish[1] = false;
         IsFinish[2] = false;
@@ -45,7 +48,7 @@ public class ShootCanvas : MonoBehaviour
 
     private IEnumerator Shoot1()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         pos[0] = Student.gameObject.transform.position;
         proj[0] = Instantiate(Canvas, pos[0], Quaternion.identity);
         proj[0].SetActive(true);
@@ -54,7 +57,7 @@ public class ShootCanvas : MonoBehaviour
 
     private IEnumerator Shoot2()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.8f);
         pos[1] = Student.gameObject.transform.position;
         proj[1] = Instantiate(Canvas, pos[1], Quaternion.identity);
         proj[1].SetActive(true);
@@ -63,7 +66,7 @@ public class ShootCanvas : MonoBehaviour
 
     private IEnumerator Shoot3()
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.3f);
         pos[2] = Student.gameObject.transform.position;
         proj[2] = Instantiate(Canvas, pos[2], Quaternion.identity);
         proj[2].SetActive(true);
@@ -105,7 +108,7 @@ public class ShootCanvas : MonoBehaviour
 
             if (IsFinish[1])
             {
-                if (track <= 14.0f)
+                if (track <= 12.5f)
                 {
                     if (left)
                     {
@@ -127,7 +130,7 @@ public class ShootCanvas : MonoBehaviour
 
             if (IsFinish[2])
             {
-                if (track <= 18.0f)
+                if (track <= 15.0f)
                 {
                     if (left)
                     {
@@ -142,8 +145,9 @@ public class ShootCanvas : MonoBehaviour
                 {
                     track = 0.0f;
                     proj[2].SetActive(false);
-                    IsShoot = false;
+                    Student.GetComponent<Animator>().SetBool("Shoot", false);
                     IsFinish[2] = false;
+                    IsShoot = false;
                     Destroy(proj[0]);
                     Destroy(proj[1]);
                     Destroy(proj[2]);

@@ -108,6 +108,6 @@ public class Player2Controller : MonoBehaviour
 
     private bool IsHold()
     {
-        return this.IsDown;
+        return this.IsDown || ShootCanvas.IsShoot;
     }
 }
