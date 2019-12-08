@@ -19,6 +19,7 @@ public class Player2Controller : MonoBehaviour
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
     private bool IsDown = false;
+    private bool IsShield = false;
 
     private void Start()
     {
@@ -64,46 +65,42 @@ public class Player2Controller : MonoBehaviour
                 //this.GetComponent<ShootCanvas>().Shoot();
             }
         }
-        if (Input.GetButtonDown("Player2Skill2") && !IsHold())
+        if (Input.GetButton("Player2Skill2") && ((!IsHold()) || IsShield))
         {
-            if (player2_1.activeInHierarchy)
-            {
-                //this.GetComponent<ShootLaptop>().Shoot();
-            }
-
-            if (player2_2.activeInHierarchy)
-            {
-                //this.GetComponent<ShootCanvas>().Shoot();
-            }
+            PlayerAnimator.SetBool("Shield", true);
+            IsShield = true;
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Shield", false);
+            IsShield = false;
         }
         var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player1.transform.position.x)
         {
-            if (!IsHold())
+            if ((!IsHold()) || IsShield)
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
-            if (!IsHold())
+            if ((!IsHold()) || IsShield)
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         if (Input.GetButtonDown("Player2Jump") && this.gameObject.transform.position.y <= -3.32f && !IsHold()) 
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
-        if (Input.GetButton("Player2Down") && !IsHold())
+        if (Input.GetButton("Player2Down") && ((!IsHold()) || IsDown))
         {
             PlayerAnimator.SetBool("Down", true);
             IsDown = true;
         }
         else
         {
-            if (!IsHold())
-            {
-                PlayerAnimator.SetBool("Down", false);
-                IsDown = false;
-            }
+            PlayerAnimator.SetBool("Down", false);
+            IsDown = false;
         }
+
         Change.x = Input.GetAxisRaw("Player2Horizontal");
 
         if (!IsHold())
@@ -137,7 +134,7 @@ public class Player2Controller : MonoBehaviour
 
     private bool IsHold()
     {
-        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword || this.IsStart;
+        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword || this.IsStart || this.IsShield;
     }
 
     private IEnumerator StartAnimator()

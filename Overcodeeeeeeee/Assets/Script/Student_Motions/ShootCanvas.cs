@@ -51,7 +51,7 @@ public class ShootCanvas : MonoBehaviour
     private IEnumerator Shoot1()
     {
         yield return new WaitForSeconds(0.3f);
-        pos[0] = Student.gameObject.transform.position;
+        pos[0] = Student.gameObject.transform.position - new Vector3(0, 0.5f, 0);
         proj[0] = Instantiate(Canvas, pos[0], Quaternion.identity);
         proj[0].SetActive(true);
         IsFinish[0] = true;
@@ -60,7 +60,7 @@ public class ShootCanvas : MonoBehaviour
     private IEnumerator Shoot2()
     {
         yield return new WaitForSeconds(0.8f);
-        pos[1] = Student.gameObject.transform.position;
+        pos[1] = Student.gameObject.transform.position - new Vector3(0, 0.5f, 0);
         proj[1] = Instantiate(Canvas, pos[1], Quaternion.identity);
         proj[1].SetActive(true);
         IsFinish[1] = true;
@@ -69,7 +69,7 @@ public class ShootCanvas : MonoBehaviour
     private IEnumerator Shoot3()
     {
         yield return new WaitForSeconds(1.3f);
-        pos[2] = Student.gameObject.transform.position;
+        pos[2] = Student.gameObject.transform.position - new Vector3(0, 0.5f, 0);
         proj[2] = Instantiate(Canvas, pos[2], Quaternion.identity);
         proj[2].SetActive(true);
         IsFinish[2] = true;
