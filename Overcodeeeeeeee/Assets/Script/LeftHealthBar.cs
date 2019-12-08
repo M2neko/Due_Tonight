@@ -15,13 +15,13 @@ public class LeftHealthBar : MonoBehaviour
 
     public void setHPRation(float CurrentHp)
     {
-        this.HPRatio = CurrentHp/100;
+        this.HPRatio = CurrentHp / 100.0f;
     }
 
-//    Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
-        if(TempRatio > HPRatio)
+        if (TempRatio > HPRatio)
         {
             TempRatio -= 0.01f;
         }

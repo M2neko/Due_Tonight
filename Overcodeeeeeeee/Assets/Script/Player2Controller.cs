@@ -62,7 +62,7 @@ public class Player2Controller : MonoBehaviour
 
             if (player2_2.activeInHierarchy)
             {
-                //this.GetComponent<ShootCanvas>().Shoot();
+                this.GetComponent<ControlWave>().Control();
             }
         }
         if (Input.GetButton("Player2Skill2") && ((!IsHold()) || IsShield))
@@ -134,7 +134,8 @@ public class Player2Controller : MonoBehaviour
 
     private bool IsHold()
     {
-        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword || this.IsStart || this.IsShield;
+        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword
+            || this.IsStart || this.IsShield || ControlWave.IsWave;
     }
 
     private IEnumerator StartAnimator()

@@ -15,7 +15,7 @@ public class RightHealhBar : MonoBehaviour
 
     public void setHPRation(float CurrentHp)
     {
-        this.HPRatio = CurrentHp/100;
+        this.HPRatio = CurrentHp / 100.0f;
     }
 
     // Update is called once per frame
