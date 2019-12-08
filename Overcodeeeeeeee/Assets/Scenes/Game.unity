@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 31728847}
   - component: {fileID: 31728846}
   m_Layer: 0
-  m_Name: drjam_attack1sprite_0
+  m_Name: student_attack1sprite_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1113,6 +1113,7 @@ GameObject:
   - component: {fileID: 622113653}
   - component: {fileID: 622113655}
   - component: {fileID: 622113654}
+  - component: {fileID: 622113656}
   m_Layer: 8
   m_Name: LeftHB
   m_TagString: Untagged
@@ -1175,6 +1176,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622113652}
   m_CullTransparentMesh: 0
+--- !u!114 &622113656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622113652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395387853d622452ba63210e1f3cc823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &741255878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1265,7 @@ GameObject:
   - component: {fileID: 891748859}
   - component: {fileID: 891748861}
   - component: {fileID: 891748860}
+  - component: {fileID: 891748862}
   m_Layer: 8
   m_Name: RightHB
   m_TagString: Untagged
@@ -1314,6 +1328,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891748858}
   m_CullTransparentMesh: 0
+--- !u!114 &891748862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891748858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd084165e0394d1ebce99c5abc45b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923763587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,7 +1999,6 @@ GameObject:
   - component: {fileID: 1082452059}
   - component: {fileID: 1082452060}
   - component: {fileID: 1082452061}
-  - component: {fileID: 1082452062}
   - component: {fileID: 1082452064}
   - component: {fileID: 1082452063}
   - component: {fileID: 1082452065}
@@ -2133,20 +2158,6 @@ MonoBehaviour:
   player1_2: {fileID: 1082452055}
   player2_1: {fileID: 1618645503}
   player2_2: {fileID: 1174205398}
---- !u!114 &1082452062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082452055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab5de9fe5e864644a0c5292b6ef142b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mccoy: {fileID: 1082452055}
-  Canvas: {fileID: 31728845}
 --- !u!82 &1082452063
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2368,13 +2379,14 @@ GameObject:
   - component: {fileID: 1174205402}
   - component: {fileID: 1174205403}
   - component: {fileID: 1174205404}
+  - component: {fileID: 1174205405}
   m_Layer: 0
   m_Name: Character2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1174205399
 Animator:
   serializedVersion: 3
@@ -2524,6 +2536,20 @@ MonoBehaviour:
   player2_2: {fileID: 1174205398}
   player1_1: {fileID: 1001785145}
   player1_2: {fileID: 1082452055}
+--- !u!114 &1174205405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174205398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9a27d24e8ce482ea900689c0632482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Student: {fileID: 1174205398}
+  Canvas: {fileID: 31728845}
 --- !u!1 &1224240720
 GameObject:
   m_ObjectHideFlags: 0

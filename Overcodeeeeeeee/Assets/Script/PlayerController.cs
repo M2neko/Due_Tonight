@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
             }
             if (player1_2.activeInHierarchy)
             {
-                this.GetComponent<ShootCanvas>().Shoot();
+                //this.GetComponent<ShootCanvas>().Shoot();
             }
         }
         if (Input.GetButtonDown("Player1Skill1") && !IsHold())

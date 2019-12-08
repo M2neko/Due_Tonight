@@ -19,6 +19,7 @@ public class ShootLaptop: MonoBehaviour
         {
             return;
         }
+        Zee.GetComponent<Animator>().SetBool("1", true);
         pos = Zee.gameObject.transform.position;
         proj = Instantiate(Laptop, pos, Quaternion.identity);
         proj.SetActive(true);

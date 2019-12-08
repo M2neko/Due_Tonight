@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RightHealhBar : MonoBehaviour
+{
+    private float HPRatio = 0.6f;
+    private float TempRatio = 1.0f;
+    private Transform Healthbar;
+    // Start is called before the first frame update
+    void Start()
+    {
+        Healthbar = this.gameObject.transform;
+    }
+
+    //public void setHPRation(float HPRatio)
+    //{
+    //    this.HPRatio = HPRatio;
+    //}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (TempRatio > HPRatio)
+        {
+            TempRatio -= 0.01f;
+        }
+        Healthbar.localScale = new Vector3(TempRatio, 1.0f);
+    }
+}
