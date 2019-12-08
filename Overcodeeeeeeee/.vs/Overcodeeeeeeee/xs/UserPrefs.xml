@@ -1,8 +1,12 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player2Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="15" Column="29" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="111" Column="27" />
+      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="117" Column="25" />
+      <File FileName="Assets/Script/Zee_Motions/NewClass.cs" Line="26" Column="71" />
+      <File FileName="Assets/Script/Butner_Motions/RushBike.cs" Line="30" Column="47" />
+      <File FileName="Assets/Script/Zee_Motions/ShootLaptop.cs" Line="7" Column="45" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="57" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +19,7 @@
                 <Node name="Student_Motions" expanded="True" />
                 <Node name="UI_Script" expanded="True" />
                 <Node name="Zee_Motions" expanded="True" />
-                <Node name="Player2Controller.cs" selected="True" />
+                <Node name="PlayerController.cs" selected="True" />
               </Node>
             </Node>
           </Node>

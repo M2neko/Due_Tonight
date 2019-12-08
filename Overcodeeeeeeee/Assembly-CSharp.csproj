@@ -88,6 +88,7 @@
     <Compile Include="Assets\Script\UI_Script\Next1.cs" />
     <Compile Include="Assets\Script\UI_Script\Next2.cs" />
     <Compile Include="Assets\Script\UI_Script\Shake.cs" />
+    <Compile Include="Assets\Script\Zee_Motions\PerformSword.cs" />
     <Compile Include="Assets\Script\Zee_Motions\ShootLaptop.cs" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <Reference Include="Unity.XR.Management">

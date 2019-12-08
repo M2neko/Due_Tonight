@@ -50,6 +50,30 @@ public class Player2Controller : MonoBehaviour
                 this.GetComponent<ShootCanvas>().Shoot();
             }
         }
+        if (Input.GetButtonDown("Player2Skill1") && !IsHold())
+        {
+            if (player2_1.activeInHierarchy)
+            {
+                this.GetComponent<PerformSword>().Perform();
+            }
+
+            if (player2_2.activeInHierarchy)
+            {
+                //this.GetComponent<ShootCanvas>().Shoot();
+            }
+        }
+        if (Input.GetButtonDown("Player2Skill2") && !IsHold())
+        {
+            if (player2_1.activeInHierarchy)
+            {
+                //this.GetComponent<ShootLaptop>().Shoot();
+            }
+
+            if (player2_2.activeInHierarchy)
+            {
+                //this.GetComponent<ShootCanvas>().Shoot();
+            }
+        }
         var targetposition = this.gameObject.transform.position;
         if (this.gameObject.transform.position.x >= player1.transform.position.x)
         {
