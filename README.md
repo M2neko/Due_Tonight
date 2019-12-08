@@ -19,7 +19,7 @@ This is the final project for Team **OverCode**.
 ## Task
 
 # Menu
-1. Team Credit
+~~1. Team Credit~~
 
 # Mccoy
 1. Skill Punch
@@ -34,18 +34,18 @@ This is the final project for Team **OverCode**.
 3. Shield
 
 # Student
-1. move🈚️animator
+~~1. move🈚️animator~~
 2. 音效少
-3. Gun 扔canvas
+~~3. Gun 扔canvas~~
 4. 光波
 
 
 
 # Logic
--1. HealthBar
-0. Damage
-1. 登场动画 3s不动
-2. ⌛️停止 or 输赢 胜者
-3. die animator
-4. quit
+~~0. HealthBar~~
+1. Damage
+2. 登场动画 3s不动
+3. ⌛️停止 or 输赢 胜者
+4. die animator
+5. quit
 
