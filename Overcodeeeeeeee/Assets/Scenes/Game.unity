@@ -2101,6 +2101,7 @@ GameObject:
   - component: {fileID: 1082452064}
   - component: {fileID: 1082452063}
   - component: {fileID: 1082452065}
+  - component: {fileID: 1082452062}
   m_Layer: 0
   m_Name: Character1_2
   m_TagString: Untagged
@@ -2259,6 +2260,20 @@ MonoBehaviour:
   player2_2: {fileID: 1174205398}
   Welcome_Slogan: {fileID: 1353621580}
   IsStart: 1
+--- !u!114 &1082452062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082452055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a05a69733e5242e8b07bdc145e4b91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mccoy: {fileID: 1082452055}
+  Speed: 0.5
 --- !u!82 &1082452063
 AudioSource:
   m_ObjectHideFlags: 0
