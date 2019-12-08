@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class ShootCanvas: MonoBehaviour
 {
-    [SerializeField] private GameObject Mccoy;
+    [SerializeField] private GameObject Student;
     [SerializeField] private GameObject Canvas;
     private GameObject proj;
     private GameObject player;
     private float track;
     private bool left;
-    private bool yesorno;
+    public static bool IsShoot;
     private Vector3 pos;
 
     public void Shoot()
     {
-        if (yesorno)
+        if (IsShoot)
         {
             return;
         }
-        pos = Mccoy.gameObject.transform.position;
+        pos = Student.gameObject.transform.position;
         proj = Instantiate(Canvas, pos, Quaternion.identity);
         proj.SetActive(true);
         // Play audio sound
-        Mccoy.GetComponents<AudioSource>()[0].Play();
-        player = Mccoy.GetComponent<PlayerController>().OtherPlayer();
-        if (player.transform.position.x <= Mccoy.gameObject.transform.position.x)
+        //Student.GetComponents<AudioSource>()[0].Play();
+        player = Student.GetComponent<Player2Controller>().OtherPlayer();
+        if (player.transform.position.x <= Student.gameObject.transform.position.x)
         {
             left = true;
         }
@@ -33,12 +33,12 @@ public class ShootCanvas: MonoBehaviour
         {
             left = false;
         }
-        yesorno = true;
+        IsShoot = true;
     }
 
     private void Update()
     {
-        if (yesorno)
+        if (IsShoot)
         {
             track += Time.deltaTime * 5;
             if(track >= 5.0f)
@@ -60,7 +60,7 @@ public class ShootCanvas: MonoBehaviour
             {
                 track = 0.0f;
                 proj.SetActive(false);
-                yesorno = false;
+                IsShoot = false;
                 Destroy(proj);
             }
         }

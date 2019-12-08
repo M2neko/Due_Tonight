@@ -38,12 +38,16 @@ public class Player2Controller : MonoBehaviour
 
     private void Update()
     {
-        if (player2_1.activeInHierarchy)
+        if (Input.GetButtonDown("Fire3") && !IsHold())
         {
-            if (Input.GetButtonDown("Fire3") && !IsHold())
+            if (player2_1.activeInHierarchy)
             {
                 this.GetComponent<ShootLaptop>().Shoot();
-                PlayerAnimator.SetBool("1", true);
+            }
+
+            if (player2_2.activeInHierarchy)
+            {
+                this.GetComponent<ShootCanvas>().Shoot();
             }
         }
         var targetposition = this.gameObject.transform.position;
