@@ -12,26 +12,29 @@ public class SpeedPunch : MonoBehaviour
     private float check;
     private bool left;
     private bool punch = false;
-    public static bool IsRush = false;
+    private bool IsMusic = false;
+    public static bool IsPunch = false;
 
-    public void Rush()
+    public void Punch()
     {
-        if (IsRush)
+        if (IsPunch)
         {
             return;
         }
         punch = false;
-        IsRush = true;
+        IsPunch = true;
+        IsMusic = false;
         OtherPlayer = Mccoy.GetComponent<PlayerController>().OtherPlayer();
         pos = Mccoy.gameObject.transform.position;
         check = 0.0f;
         left |= OtherPlayer.gameObject.transform.position.x <= Mccoy.gameObject.transform.position.x;
         Mccoy.gameObject.GetComponent<Animator>().SetBool("Punch", true);
+        this.GetComponents<AudioSource>()[1].Play();
     }
 
     private void Update()
     {
-        if (IsRush)
+        if (IsPunch)
         {
             check += Time.deltaTime;
             if (!left)
@@ -40,14 +43,19 @@ public class SpeedPunch : MonoBehaviour
                 {
                     Mccoy.gameObject.transform.position = new Vector3(pos.x + Speed * 0.5f, pos.y, pos.z);
                 }
-                else if (check >= 0.5f && !punch)
+                else if (check > 0.5f && !punch)
                 {
                     punch = true;
                     Mccoy.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * RushSpeed);
                 }
+                else if (check >= 1.2f && check < 1.7f && !IsMusic)
+                {
+                    this.GetComponents<AudioSource>()[2].Play();
+                    IsMusic = true;
+                }
                 else if (check >= 1.7f)
                 {
-                    IsRush = false;
+                    IsPunch = false;
                     check = 0.0f;
                     Mccoy.GetComponent<Animator>().SetBool("Punch", false);
                 }
@@ -58,15 +66,20 @@ public class SpeedPunch : MonoBehaviour
                 {
                     Mccoy.gameObject.transform.position = new Vector3(pos.x - Speed * 0.5f, pos.y, pos.z);
                 }
-                else if (check >= 0.5f && !punch)
+                else if (check > 0.5f && !punch)
                 {
                     punch = true;
                     Mccoy.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.left * RushSpeed);
                 }
+                else if (check >= 1.2f && check < 1.7f && !IsMusic)
+                {
+                    this.GetComponents<AudioSource>()[2].Play();
+                    IsMusic = true;
+                }
                 else if (check >= 1.7f)
                 {
                     punch = false;
-                    IsRush = false;
+                    IsPunch = false;
                     check = 0.0f;
                     Mccoy.GetComponent<Animator>().SetBool("Punch", false);
                 }

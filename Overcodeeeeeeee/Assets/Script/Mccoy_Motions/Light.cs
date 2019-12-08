@@ -35,7 +35,7 @@ public class Light : MonoBehaviour
             track += Time.deltaTime;
             if (track >= delay && track <= delay + range && !spawn)
             {
-                this.GetComponents<AudioSource>()[1].Play();
+                this.GetComponents<AudioSource>()[0].Play();
                 proj.SetActive(true);
                 proj.gameObject.transform.position = location;
                 proj.gameObject.transform.localScale = new Vector3(2.0f, 5.5f, 1.0f);

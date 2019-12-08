@@ -76,9 +76,9 @@ public class PlayerController : MonoBehaviour
             {
                 this.GetComponent<RushBike>().Rush();
             }
-            if (player1_2.activeInHierarchy)
+            if (player1_2.activeInHierarchy && this.gameObject.transform.position.y <= -3.32f)
             {
-                this.GetComponent<SpeedPunch>().Rush();
+                this.GetComponent<SpeedPunch>().Punch();
             }
         }
         var targetposition = this.gameObject.transform.position;
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
     private bool IsHold()
     {
         return RushBike.IsRush || Light.IsLight || this.IsDown || this.IsStart
-            || SpeedPunch.IsRush || this.IsShield;
+            || SpeedPunch.IsPunch || this.IsShield;
     }
 
     private IEnumerator StartAnimator()
