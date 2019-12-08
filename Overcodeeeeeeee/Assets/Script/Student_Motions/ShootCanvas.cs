@@ -10,7 +10,8 @@ public class ShootCanvas : MonoBehaviour
     private GameObject player;
     private float track;
     private bool left;
-    public static bool IsShoot;
+    private bool IsShoot = false;
+    public static bool IsBullet = false;
     private Vector3[] pos;
     private bool[] IsFinish;
 
@@ -44,6 +45,7 @@ public class ShootCanvas : MonoBehaviour
             left = false;
         }
         IsShoot = true;
+        IsBullet = true;
     }
 
     private IEnumerator Shoot1()
@@ -128,6 +130,13 @@ public class ShootCanvas : MonoBehaviour
                 }
             }
 
+            if (track >= 12.5f)
+            {
+                IsBullet = false;
+                Student.GetComponent<Animator>().SetBool("Shoot", false);
+
+            }
+
             if (IsFinish[2])
             {
                 if (track <= 15.0f)
@@ -145,7 +154,6 @@ public class ShootCanvas : MonoBehaviour
                 {
                     track = 0.0f;
                     proj[2].SetActive(false);
-                    Student.GetComponent<Animator>().SetBool("Shoot", false);
                     IsFinish[2] = false;
                     IsShoot = false;
                     Destroy(proj[0]);

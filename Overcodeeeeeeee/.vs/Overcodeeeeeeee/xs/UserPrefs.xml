@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Student_Motions/ShootCanvas.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Butner_Motions/ShootGate.cs">
     <Files>
-      <File FileName="Assets/Script/Zee_Motions/NewClass.cs" Line="20" Column="24" />
+      <File FileName="Assets/Script/Zee_Motions/NewClass.cs" Line="19" Column="10" />
       <File FileName="Assets/Script/Zee_Motions/ShootLaptop.cs" Line="26" Column="28" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="57" Column="56" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="67" Column="40" />
-      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="34" Column="34" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="129" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="55" Column="14" />
+      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="16" Column="29" />
+      <File FileName="Assets/Script/Butner_Motions/NovaGates.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Butner_Motions/RushBike.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Butner_Motions/ShootGate.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,11 +16,11 @@
           <Node name="Overcodeeeeeeee" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="Butner_Motions" expanded="True" />
-                <Node name="Mccoy_Motions" expanded="True" />
-                <Node name="Student_Motions" expanded="True">
-                  <Node name="ShootCanvas.cs" selected="True" />
+                <Node name="Butner_Motions" expanded="True">
+                  <Node name="ShootGate.cs" selected="True" />
                 </Node>
+                <Node name="Mccoy_Motions" expanded="True" />
+                <Node name="Student_Motions" expanded="True" />
                 <Node name="UI_Script" expanded="True" />
                 <Node name="Zee_Motions" expanded="True" />
               </Node>
