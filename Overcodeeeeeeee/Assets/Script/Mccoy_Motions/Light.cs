@@ -24,7 +24,7 @@ public class Light : MonoBehaviour
         this.GetComponent<Animator>().SetBool("2", true);
         this.GetComponents<AudioSource>()[1].Play();
         otherplayer = player;
-        location = new Vector3(player.gameObject.transform.position.x, 0.48f, player.gameObject.transform.position.z);
+        location = new Vector3(player.gameObject.transform.position.x, 4, player.gameObject.transform.position.z);
         IsLight = true;
 
     }
@@ -37,41 +37,26 @@ public class Light : MonoBehaviour
             if (track >= delay && track <= delay + range && !spawn)
             {
                 proj.SetActive(true);
-                proj.AddComponent<CollisionController>();
-                proj.AddComponent<BoxCollider>();
                 proj.gameObject.transform.position = location;
-                proj.gameObject.transform.localScale = new Vector3(2.0f, 5.7f, 1.0f);
                 spawn = true;
             }
             else if (track >= delay && track <= delay + range)
             {
-                if (proj.GetComponent<SpriteRenderer>().flipX == true)
-                {
-                    timer += Time.deltaTime;
-                    proj.GetComponent<SpriteRenderer>().flipX = false;
-                    proj.GetComponent<SpriteRenderer>().flipY = false;
-                }
-                else
-                {
-                    proj.GetComponent<SpriteRenderer>().flipX = true;
-                    proj.GetComponent<SpriteRenderer>().flipY = true;
-                }
+                timer += Time.deltaTime;
+                proj.gameObject.transform.position = new Vector3(proj.gameObject.transform.position.x, proj.gameObject.transform.position.y - 3 / range);
+                proj.gameObject.transform.localScale = new Vector3(proj.gameObject.transform.localScale.x + 1 / range, proj.gameObject.transform.localScale.y + 4.6f / range);
             }
             else if (track >= delay + range)
             {
                 this.GetComponent<Animator>().SetBool("2", false);
                 track = 0.0f;
-                proj.GetComponent<SpriteRenderer>().flipX = false;
-                proj.GetComponent<SpriteRenderer>().flipY = false;
                 timer = 0.0f;
                 proj.SetActive(false);
-                otherplayer.GetComponent<Player2Controller>().SetFreeze(false);
                 proj.gameObject.transform.localScale = new Vector3(1, 1, 1);
                 IsLight = false;
                 spawn = false;
                 //this.GetComponents<AudioSource>()[1].Stop();
             }
         }
-
     }
 }

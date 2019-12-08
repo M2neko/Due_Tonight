@@ -11,7 +11,6 @@ public class Player2Controller : MonoBehaviour
     [SerializeField] private GameObject player1_1;
     [SerializeField] private GameObject player1_2;
     private float xrange;
-    private bool freeze = false;
     private float leftrange;
     private float rightrange;
     private GameObject player1;
@@ -103,14 +102,8 @@ public class Player2Controller : MonoBehaviour
         PlayerRigidbody.MovePosition(transform.position + Change * Speed * Time.deltaTime);
     }
 
-    public void SetFreeze(bool temp)
-    {
-        freeze = temp;
-    }
-
     private bool IsHold()
     {
-        return this.IsDown || this.freeze;
+        return this.IsDown;
     }
-
 }
