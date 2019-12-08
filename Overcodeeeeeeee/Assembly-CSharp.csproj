@@ -74,6 +74,7 @@
     <Compile Include="Assets\Script\Butner_Motions\RushBike.cs" />
     <Compile Include="Assets\Script\Butner_Motions\ShootGate.cs" />
     <Compile Include="Assets\Script\Cameracontroller.cs" />
+    <Compile Include="Assets\Script\CollisionController.cs" />
     <Compile Include="Assets\Script\HealthbarController.cs" />
     <Compile Include="Assets\Script\Mccoy_Motions\Light.cs" />
     <Compile Include="Assets\Script\Mccoy_Motions\ShootCanvas.cs" />
