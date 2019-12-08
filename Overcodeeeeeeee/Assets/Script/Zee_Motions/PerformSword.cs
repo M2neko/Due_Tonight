@@ -19,7 +19,6 @@ public class PerformSword : MonoBehaviour
         }
         IsSword = true;
         Zee.GetComponent<Animator>().SetBool("Sword", true);
-        Zee.GetComponents<AudioSource>()[1].Play();
         OtherPlayer = Zee.GetComponent<Player2Controller>().OtherPlayer();
 
         //Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 1000);
@@ -33,24 +32,25 @@ public class PerformSword : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if (OtherPlayer.transform.position.x >= Zee.gameObject.transform.position.x)
         {
-            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3000);
+            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
             for (int i = 0; i < 15; i++)
             {
                 yield return new WaitForSeconds(0.2f / 15.0f);
-                Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 150);
+                Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 30);
             }
+            Zee.GetComponents<AudioSource>()[1].Play();
         }
         else
         {
-            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3000);
+            Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
             for (int i = 0; i < 15; i++)
             {
                 yield return new WaitForSeconds(0.2f / 15.0f);
-                Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 150);
+                Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 30);
             }
+            Zee.GetComponents<AudioSource>()[1].Play();
         }
     }
-
     private void Update()
     {
         if (IsSword)

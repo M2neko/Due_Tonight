@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 9948
+  controlID: 10748
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 9949
+  controlID: 10726
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 9950
+  controlID: 10727
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -677,8 +677,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 68380000
-    m_LastClickedInstanceID: 14440
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000e03c0000ee3c0000fc3c00004c3b0000a23c0000203a00005a3a0000ce360000283b0000
     m_RenameOverlay:
@@ -796,5 +796,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 14440
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
