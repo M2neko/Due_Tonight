@@ -10,6 +10,7 @@ public class Player2Controller : MonoBehaviour
     [SerializeField] private GameObject player2_2;
     [SerializeField] private GameObject player1_1;
     [SerializeField] private GameObject player1_2;
+    [SerializeField] private bool IsStart = true;
     private float xrange;
     private float leftrange;
     private float rightrange;
@@ -34,6 +35,7 @@ public class Player2Controller : MonoBehaviour
         }
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
+        StartCoroutine(StartAnimator());
     }
 
     private void Update()
@@ -89,15 +91,18 @@ public class Player2Controller : MonoBehaviour
         {
             PlayerRigidbody.AddForce(Vector2.up * 3000);
         }
-        if (Input.GetButton("Player2Down"))
+        if (Input.GetButton("Player2Down") && !IsHold())
         {
             PlayerAnimator.SetBool("Down", true);
             IsDown = true;
         }
         else
         {
-            PlayerAnimator.SetBool("Down", false);
-            IsDown = false;
+            if (!IsHold())
+            {
+                PlayerAnimator.SetBool("Down", false);
+                IsDown = false;
+            }
         }
         Change.x = Input.GetAxisRaw("Player2Horizontal");
 
@@ -132,6 +137,14 @@ public class Player2Controller : MonoBehaviour
 
     private bool IsHold()
     {
-        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword;
+        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword || this.IsStart;
+    }
+
+    private IEnumerator StartAnimator()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        yield return new WaitForSeconds(3.0f);
+        this.GetComponent<Animator>().SetBool("Start", false);
+        this.IsStart = false;
     }
 }

@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject player1_2;
     [SerializeField] private GameObject player2_1;
     [SerializeField] private GameObject player2_2;
+    [SerializeField] private GameObject Welcome_Slogan;
+    [SerializeField] private bool IsStart = true;
     private float xrange;
     private float leftrange;
     private float rightrange;
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
         }
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
+        StartCoroutine(StartAnimator());
     }
 
     private void Update()
@@ -129,6 +132,19 @@ public class PlayerController : MonoBehaviour
 
     private bool IsHold()
     {
-        return RushBike.IsRush || Light.IsLight || this.IsDown;
+        return RushBike.IsRush || Light.IsLight || this.IsDown || this.IsStart;
+    }
+
+    private IEnumerator StartAnimator()
+    {
+        yield return new WaitForSeconds(0.2f);
+        if (player1_2.activeInHierarchy)
+            this.Welcome_Slogan.SetActive(true);
+
+        yield return new WaitForSeconds(2.8f);
+        this.GetComponent<Animator>().SetBool("Start", false);
+        if (player1_2.activeInHierarchy)
+            this.Welcome_Slogan.SetActive(false);
+        this.IsStart = false;
     }
 }
