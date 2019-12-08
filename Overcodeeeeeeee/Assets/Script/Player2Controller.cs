@@ -41,7 +41,7 @@ public class Player2Controller : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire3") && !IsHold())
+        if (Input.GetButtonDown("Player2Skill3") && !IsHold())
         {
             if (player2_1.activeInHierarchy)
             {

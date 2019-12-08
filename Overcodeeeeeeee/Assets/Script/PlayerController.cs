@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && !IsHold())
+        if (Input.GetButtonDown("Player1Skill2") && !IsHold())
         {
             if (player1_1.activeInHierarchy)
             {
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
                 this.GetComponent<Light>().Pi(player2);
             }
         }
-        if (Input.GetButtonDown("Fire2") && !IsHold())
+        if (Input.GetButtonDown("Player1Skill3") && !IsHold())
         {
             if (player1_1.activeInHierarchy)
             {
