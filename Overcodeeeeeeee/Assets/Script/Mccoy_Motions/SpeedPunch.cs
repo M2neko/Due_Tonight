@@ -10,7 +10,7 @@ public class SpeedPunch : MonoBehaviour
     private Vector3 pos;
     private GameObject OtherPlayer;
     private float check;
-    private bool left;
+    private bool left = false;
     private bool punch = false;
     private bool IsMusic = false;
     public static bool IsPunch = false;
@@ -80,6 +80,7 @@ public class SpeedPunch : MonoBehaviour
                 {
                     punch = false;
                     IsPunch = false;
+                    left = false;
                     check = 0.0f;
                     Mccoy.GetComponent<Animator>().SetBool("Punch", false);
                 }
