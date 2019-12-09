@@ -76,6 +76,7 @@ public class Game : MonoBehaviour
         HPBar_2.SetActive(true);
 
         Button.SetActive(false);
+        EndGame.IsEnd = false;
     }
 
 
@@ -90,7 +91,6 @@ public class Game : MonoBehaviour
         yield return new WaitForSeconds(1);
         Timer.gameObject.SetActive(false);
         isStart = true;
-
     }
 
     void Update()

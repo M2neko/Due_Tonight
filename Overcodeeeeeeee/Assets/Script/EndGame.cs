@@ -7,13 +7,16 @@ public class EndGame : MonoBehaviour
 
     [SerializeField] private GameObject Button;
 
-    public static bool IsEnd;
+    public static bool IsEnd = false;
 
 
     private void Update()
     {
         if (IsEnd)
+        {
             StartCoroutine(StartButton());
+            IsEnd = false;
+        }
     }
 
     private IEnumerator StartButton()
