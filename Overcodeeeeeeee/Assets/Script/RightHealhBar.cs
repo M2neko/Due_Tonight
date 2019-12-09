@@ -2,20 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RightHealhBar : MonoBehaviour
+public class RightHealthBar : MonoBehaviour
 {
+    [SerializeField] private float MaximumHp = 100.0f;
     private float HPRatio = 1.0f;
     private float TempRatio = 1.0f;
+    private float CurrentHp;
     private Transform Healthbar;
     // Start is called before the first frame update
     void Start()
     {
         Healthbar = this.gameObject.transform;
+        CurrentHp = MaximumHp;
     }
 
-    public void setHPRation(float CurrentHp)
+    public void TakeDamage(float Damage)
     {
-        this.HPRatio = CurrentHp / 100.0f;
+        this.CurrentHp = Damage > this.CurrentHp ? 0.0f : this.CurrentHp - Damage;
+        SetHpRatio();
+    }
+
+    private void SetHpRatio()
+    {
+        this.HPRatio = this.CurrentHp / 100.0f;
+    }
+
+    public bool IsDead()
+    {
+        return CurrentHp <= 0.0f;
     }
 
     // Update is called once per frame
