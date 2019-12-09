@@ -7,7 +7,7 @@ public class LeftHealthBar : MonoBehaviour
     [SerializeField] private float MaximumHp = 100.0f;
     private float HPRatio = 1.0f;
     private float TempRatio = 1.0f;
-    private float CurrentHp;
+    private float CurrentHp = 100.0f;
     private Transform Healthbar;
     // Start is called before the first frame update
     void Start()

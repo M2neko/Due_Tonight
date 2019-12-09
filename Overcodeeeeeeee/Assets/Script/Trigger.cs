@@ -18,9 +18,8 @@ public class Trigger : MonoBehaviour
         if (this.CompareTag("Canvas") && other.CompareTag("Player1"))
         {
             TakeDamage.GetComponent<Damage>().TakeDamageCanvas(other.GetComponent<PlayerController>().IsPlayerShield());
-            //this.enabled = false;
-            //this.GetComponent<SpriteRenderer>().enabled = false;
-            Destroy(this.gameObject);
+            this.enabled = false;
+            this.GetComponent<SpriteRenderer>().enabled = false;
         }
 
         if (this.CompareTag("Wave") && other.CompareTag("Player1"))

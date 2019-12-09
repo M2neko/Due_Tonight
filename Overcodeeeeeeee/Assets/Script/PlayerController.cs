@@ -138,6 +138,11 @@ public class PlayerController : MonoBehaviour
             EndGame.IsEnd = true;
             IsDead = true;
         }
+
+        if (TakeDamage.GetComponent<Damage>().IsPlayer2Dead())
+        {
+            PlayerAnimator.SetFloat("Speed", 0.0f);
+        }
     }
 
     public float GetLeft()

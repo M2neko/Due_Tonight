@@ -132,6 +132,11 @@ public class Player2Controller : MonoBehaviour
             EndGame.IsEnd = true;
             IsDead = true;
         }
+
+        if (TakeDamage.GetComponent<Damage>().IsPlayer1Dead())
+        {
+            PlayerAnimator.SetFloat("Speed", 0.0f);
+        }
     }
 
     public GameObject OtherPlayer()
