@@ -31,7 +31,6 @@ public class NovaGates : MonoBehaviour
 
         foreach (var projectile in projectileList)
         {
-            projectile.GetComponent<Rigidbody>().useGravity = true;
             projectile.transform.position = new Vector3(Random.value * 1.0f, 0.0f, 0.0f);
             projectile.transform.position += pos;
             projectile.GetComponent<SpriteRenderer>().enabled = true;
@@ -39,12 +38,12 @@ public class NovaGates : MonoBehaviour
             if (OtherPlayer.transform.position.x >= Butner.gameObject.transform.position.x)
             {
                 projectile.GetComponent<SpriteRenderer>().flipX = false;
-                projectile.GetComponent<Rigidbody>().velocity = Vector3.up * Random.Range(3.0f, 7.0f) + Vector3.right * Random.Range(3.0f, 7.0f);
+                projectile.GetComponent<Rigidbody2D>().velocity = Vector3.up * Random.Range(3.0f, 7.0f) + Vector3.right * Random.Range(3.0f, 7.0f);
             }
             else
             {
                 projectile.GetComponent<SpriteRenderer>().flipX = true;
-                projectile.GetComponent<Rigidbody>().velocity = Vector3.up * Random.Range(3.0f, 7.0f) + Vector3.left * Random.Range(3.0f, 7.0f);
+                projectile.GetComponent<Rigidbody2D>().velocity = Vector3.up * Random.Range(3.0f, 7.0f) + Vector3.left * Random.Range(3.0f, 7.0f);
             }
         }
     }

@@ -14,5 +14,20 @@ public class Trigger : MonoBehaviour
             this.enabled = false;
             this.GetComponent<SpriteRenderer>().enabled = false;
         }
+
+        if (this.CompareTag("Canvas") && other.CompareTag("Player1"))
+        {
+            TakeDamage.GetComponent<Damage>().TakeDamageCanvas(other.GetComponent<PlayerController>().IsPlayerShield());
+            this.enabled = false;
+            this.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+        if (this.CompareTag("ButtAttack") && other.CompareTag("Player2"))
+        {
+            TakeDamage.GetComponent<Damage>().TakeDamageGate(other.GetComponent<Player2Controller>().IsPlayerShield());
+            this.enabled = false;
+            this.transform.localScale = Vector3.zero;
+            this.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }

@@ -10,7 +10,6 @@ public class ShootGate : MonoBehaviour
     [SerializeField] private GameObject Gate3;
     [SerializeField] private GameObject Gate4;
     [SerializeField] private GameObject Gate5;
-    [SerializeField] private GameObject Gate6;
     private GameObject Gate;
     private GameObject proj;
     private GameObject player;
@@ -27,7 +26,7 @@ public class ShootGate : MonoBehaviour
         }
         pos = Butner.gameObject.transform.position;
         Butner.GetComponents<AudioSource>()[2].Play();
-        switch (Random.Range(1, 7))
+        switch (Random.Range(1, 6))
         {
             case 1:
                 Gate = Gate1;
@@ -43,9 +42,6 @@ public class ShootGate : MonoBehaviour
                 break;
             case 5:
                 Gate = Gate5;
-                break;
-            case 6:
-                Gate = Gate6;
                 break;
             default:
                 Gate = Gate1;

@@ -8,7 +8,6 @@ public class Damage : MonoBehaviour
     [SerializeField] private GameObject RightHealth;
 
     [SerializeField] private float GateDamage = 5.0f;
-    [SerializeField] private float NovaDamage = 5.0f;
     [SerializeField] private float RushDamage = 15.0f;
 
     [SerializeField] private float ThunderDamage = 23.0f;
@@ -25,12 +24,6 @@ public class Damage : MonoBehaviour
     public void TakeDamageGate(bool IsShield)
     {
         var Damage = IsShield ? ShieldMutiplier * GateDamage : GateDamage;
-        RightHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
-    }
-
-    public void TakeDamageNova(bool IsShield)
-    {
-        var Damage = IsShield ? ShieldMutiplier * NovaDamage : NovaDamage;
         RightHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
     }
 
