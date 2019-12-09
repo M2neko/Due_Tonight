@@ -70,11 +70,26 @@ public class Damage : MonoBehaviour
         LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Damage);
     }
 
+    public int ChooseWinner()
+    {
+        var left = LeftHealth.GetComponent<LeftHealthBar>().GetHp();
+        var right = RightHealth.GetComponent<RightHealthBar>().GetHp();
+        if (System.Math.Abs(left - right) < Mathf.Epsilon)
+        {
+            return 3;
+        }
+        if (left > right)
+        {
+            return 1;
+        }
+        if (right > left)
+        {
+            return 2;
+        }
+        return 4;
+    }
+
     public bool IsPlayer1Dead() => LeftHealth.GetComponent<LeftHealthBar>().IsDead();
 
     public bool IsPlayer2Dead() => RightHealth.GetComponent<RightHealthBar>().IsDead();
-
-    public bool ChooseWinner() =>
-        LeftHealth.GetComponent<LeftHealthBar>().GetHp() >
-        RightHealth.GetComponent<RightHealthBar>().GetHp();
 }

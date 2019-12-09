@@ -8,32 +8,39 @@ public class EndGame : MonoBehaviour
     [SerializeField] private GameObject Button;
 
     public static bool IsEnd = false;
+    public static bool IsExpired = false;
 
 
     private void Update()
     {
-        if (IsEnd)
+        if (IsEnd || IsExpired)
         {
             StartCoroutine(StartButton());
-            IsEnd = false;
-        }
-
-        if (Game.isFinish)
-        {
-            StartCoroutine(StartButton());
-            Game.isFinish = false;
         }
     }
 
     private IEnumerator StartButton()
     {
-        if (TakeDamage.GetComponent<Damage>().ChooseWinner())
+        switch (TakeDamage.GetComponent<Damage>().ChooseWinner())
         {
-            // TODO: Winner Player1
-        }
-        else
-        {
-            // TODO: Winner Player2
+            case 1:
+                // TODO: Winner Player1
+                break;
+
+            case 2:
+                // TODO: Winner Player2
+                break;
+
+            case 3:
+                // TODO: Draw
+                break;
+
+            case 4:
+                break;
+
+            default:
+                break;
+
         }
 
         yield return new WaitForSeconds(1);

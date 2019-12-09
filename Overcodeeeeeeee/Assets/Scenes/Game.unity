@@ -1225,6 +1225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e105f63b15abf48eaaad4fced666a51a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TakeDamage: {fileID: 782383917}
   Button: {fileID: 942170405}
 --- !u!1 &533456550
 GameObject:

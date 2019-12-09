@@ -150,9 +150,8 @@ public class Player2Controller : MonoBehaviour
     private bool IsHold()
     {
         return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword || this.IsStart
-            || this.IsShield || ControlWave.IsWave || this.IsDead
-            || player1.GetComponent<PlayerController>().IsPlayerDead()
-            || Game.isFinish;
+            || this.IsShield || ControlWave.IsWave || EndGame.IsEnd
+            || EndGame.IsExpired;
     }
 
     public bool IsPlayerShield() => IsShield;

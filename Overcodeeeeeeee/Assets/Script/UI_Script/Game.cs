@@ -30,9 +30,7 @@ public class Game : MonoBehaviour
 
     private float GameTimer = 0;
 
-    private int ShowTimer = 100;
-
-    public static bool isFinish = false;
+    private int ShowTimer = 10;
 
     void Start()
     {
@@ -79,8 +77,7 @@ public class Game : MonoBehaviour
 
         Button.SetActive(false);
         EndGame.IsEnd = false;
-
-        isFinish = false;
+        EndGame.IsExpired = false;
     }
 
 
@@ -99,7 +96,7 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        if (isStart)
+        if (isStart && !EndGame.IsEnd)
         {
             GameTimer += Time.deltaTime;
             if (GameTimer >= 1)
@@ -111,7 +108,7 @@ public class Game : MonoBehaviour
             if (ShowTimer <= 0)
             {
                 isStart = false;
-                isFinish = true;
+                EndGame.IsExpired = true;
             }
         }
     }
