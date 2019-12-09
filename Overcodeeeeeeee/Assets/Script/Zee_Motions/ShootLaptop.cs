@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootLaptop: MonoBehaviour
+public class ShootLaptop : MonoBehaviour
 {
     [SerializeField] private GameObject Zee;
     [SerializeField] private GameObject Laptop;
@@ -42,10 +42,10 @@ public class ShootLaptop: MonoBehaviour
         if (yesorno)
         {
             track += Time.deltaTime * 5;
-            if(track >= 5.0f)
+            if (track >= 5.0f)
             {
                 Zee.GetComponent<Animator>().SetBool("1", false);
-            } 
+            }
             if (track <= 10.0f)
             {
                 if (left)
