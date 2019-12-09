@@ -11,6 +11,8 @@ TagManager:
   - Player2
   - Laptop
   - Canvas
+  - Wave
+  - Lightning
   layers:
   - Default
   - TransparentFX

@@ -75,7 +75,7 @@ public class ControlWave : MonoBehaviour
                 IsWave = false;
                 IsExist = false;
                 Student.GetComponent<Animator>().SetBool("Wave", false);
-                Destroy(proj);
+                //Destroy(proj);
             }
         }
     }

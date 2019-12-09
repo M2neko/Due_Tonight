@@ -22,10 +22,19 @@ public class Trigger : MonoBehaviour
             this.GetComponent<SpriteRenderer>().enabled = false;
         }
 
+        if (this.CompareTag("Wave") && other.CompareTag("Player1"))
+        {
+            TakeDamage.GetComponent<Damage>().TakeDamageWave(other.GetComponent<PlayerController>().IsPlayerShield());
+        }
+
+        if (this.CompareTag("Lightning") && other.CompareTag("Player2"))
+        {
+            TakeDamage.GetComponent<Damage>().TakeDamageThunder(other.GetComponent<Player2Controller>().IsPlayerShield());
+        }
+
         if (this.CompareTag("ButtAttack") && other.CompareTag("Player2"))
         {
             TakeDamage.GetComponent<Damage>().TakeDamageGate(other.GetComponent<Player2Controller>().IsPlayerShield());
-            this.enabled = false;
             this.transform.localScale = Vector3.zero;
             this.GetComponent<SpriteRenderer>().enabled = false;
         }

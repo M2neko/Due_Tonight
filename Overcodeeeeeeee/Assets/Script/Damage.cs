@@ -14,10 +14,10 @@ public class Damage : MonoBehaviour
     [SerializeField] private float PunchDamage = 10.0f;
 
     [SerializeField] private float LaptopDamage = 10.0f;
-    [SerializeField] private float SwordDamage = 17.0f;
+    [SerializeField] private float SwordDamage = 18.0f;
 
     [SerializeField] private float CanvasDamage = 7.0f;
-    [SerializeField] private float WaveDamage = 6.0f;
+    [SerializeField] private float WaveDamage = 17.0f;
 
     [SerializeField] private float ShieldMutiplier = 0.1f;
 
@@ -65,6 +65,7 @@ public class Damage : MonoBehaviour
     public void TakeDamageWave(bool IsShield)
     {
         var Damage = IsShield ? ShieldMutiplier * WaveDamage : WaveDamage;
+        Damage += Random.Range(-5.0f, 5.0f);
         LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Damage);
     }
 

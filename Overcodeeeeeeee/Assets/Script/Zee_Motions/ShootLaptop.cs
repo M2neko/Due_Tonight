@@ -10,12 +10,12 @@ public class ShootLaptop : MonoBehaviour
     private GameObject player;
     private float track;
     private bool left;
-    private bool yesorno;
+    private bool IsShoot;
     private Vector3 pos;
 
     public void Shoot()
     {
-        if (yesorno)
+        if (IsShoot)
         {
             return;
         }
@@ -34,12 +34,12 @@ public class ShootLaptop : MonoBehaviour
         {
             left = false;
         }
-        yesorno = true;
+        IsShoot = true;
     }
 
     private void Update()
     {
-        if (yesorno)
+        if (IsShoot)
         {
             track += Time.deltaTime * 5;
             if (track >= 5.0f)
@@ -61,7 +61,7 @@ public class ShootLaptop : MonoBehaviour
             {
                 track = 0.0f;
                 proj.SetActive(false);
-                yesorno = false;
+                IsShoot = false;
                 Destroy(proj);
             }
         }
