@@ -2054,6 +2054,7 @@ MonoBehaviour:
   Welcome_Slogan: {fileID: 1353621580}
   TakeDamage: {fileID: 782383917}
   IsStart: 1
+  cam: {fileID: 519420031}
 --- !u!114 &1001785152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2566,6 +2567,7 @@ MonoBehaviour:
   Welcome_Slogan: {fileID: 1353621580}
   TakeDamage: {fileID: 782383917}
   IsStart: 1
+  cam: {fileID: 519420031}
 --- !u!114 &1082452062
 MonoBehaviour:
   m_ObjectHideFlags: 0

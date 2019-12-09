@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject Welcome_Slogan;
     [SerializeField] private GameObject TakeDamage;
     [SerializeField] private bool IsStart = true;
+    [SerializeField] private Camera cam;
     private float xrange;
     private float leftrange;
     private float rightrange;
@@ -202,12 +203,14 @@ public class PlayerController : MonoBehaviour
         {
             if (RushBike.IsRush && !IsMotivate)
             {
+                cam.GetComponent<Cameracontroller>().Shake();
                 TakeDamage.GetComponent<Damage>().TakeDamageRush(IsDefense);
                 IsMotivate = true;
             }
 
             if (SpeedPunch.IsPunch && !IsMotivate)
             {
+                cam.GetComponent<Cameracontroller>().Shake();
                 TakeDamage.GetComponent<Damage>().TakeDamagePunch(IsDefense);
                 IsMotivate = true;
             }
@@ -224,12 +227,14 @@ public class PlayerController : MonoBehaviour
         {
             if (RushBike.IsRush && !IsMotivate)
             {
+                cam.GetComponent<Cameracontroller>().Shake();
                 TakeDamage.GetComponent<Damage>().TakeDamageRush(IsDefense);
                 IsMotivate = true;
             }
 
             if (SpeedPunch.IsPunch && !IsMotivate)
             {
+                cam.GetComponent<Cameracontroller>().Shake();
                 TakeDamage.GetComponent<Damage>().TakeDamagePunch(IsDefense);
                 IsMotivate = true;
             }
