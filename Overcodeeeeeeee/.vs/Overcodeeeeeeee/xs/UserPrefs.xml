@@ -1,20 +1,19 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/LeftHealthBar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Cameracontroller.cs">
     <Files>
       <File FileName="Assets/Script/Butner_Motions/ShootGate.cs" Line="105" Column="1" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="166" Column="42" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="120" Column="1" />
       <File FileName="Assets/Script/Player2Controller.cs" Line="149" Column="6" />
       <File FileName="Assets/Script/LeftHealthBar.cs" Line="34" Column="1" />
-      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="8" Column="48" />
-      <File FileName="Assets/Script/Student_Motions/NewClass.cs" Line="11" Column="2" />
-      <File FileName="Assets/Script/Student_Motions/ControlWave.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/Game.cs" Line="84" Column="44" />
-      <File FileName="Assets/Script/NewClass.cs" Line="88" Column="1" />
-      <File FileName="Assets/Script/Butner_Motions/NovaGates.cs" Line="23" Column="74" />
-      <File FileName="Assets/Script/UI_Script/MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/GameManager.cs" Line="17" Column="20" />
-      <File FileName="Assets/Script/NewClass.cs" Line="24" Column="2" />
-      <File FileName="Assets/Script/HealthbarController.cs" Line="26" Column="1" />
+      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" />
+      <File FileName="Assets/Script/Student_Motions/ControlWave.cs" />
+      <File FileName="Assets/Script/UI_Script/Game.cs" />
+      <File FileName="Assets/Script/Butner_Motions/NovaGates.cs" />
+      <File FileName="Assets/Script/UI_Script/MainMenu.cs" />
+      <File FileName="Assets/Script/UI_Script/GameManager.cs" />
+      <File FileName="Assets/Script/HealthbarController.cs" />
+      <File FileName="Assets/Script/Cameracontroller.cs" Line="41" Column="25" />
+      <File FileName="Assets/Script/Damage.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,7 +26,7 @@
                 <Node name="Student_Motions" expanded="True" />
                 <Node name="UI_Script" expanded="True" />
                 <Node name="Zee_Motions" expanded="True" />
-                <Node name="LeftHealthBar.cs" selected="True" />
+                <Node name="Cameracontroller.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -37,7 +36,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9fe79af1-266c-4f89-9e41-bff9d4daa5b8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="51db4779-4277-4714-8e6f-facd5af29efa" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

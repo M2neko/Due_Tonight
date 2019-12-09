@@ -141,6 +141,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public float GetLeft()
+    {
+        return leftrange;
+    }
+
+    public float GetRight()
+    {
+        return rightrange;
+    }
+
     public GameObject OtherPlayer()
     {
         return player2;
