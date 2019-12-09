@@ -36,9 +36,9 @@ public class Cameracontroller : MonoBehaviour
             Target2 = player2_2;
         }
         this.ManagedCamera = this.gameObject.GetComponent<Camera>();
-        Leftmap = -11.0f;
-        Rightmap = 11.0f;
-        camrange = 6.5f;
+        Leftmap = -10.0f;
+        Rightmap = 10.0f;
+        camrange = 5.3f;
     }
 
     private void LateUpdate()
@@ -93,7 +93,6 @@ public class Cameracontroller : MonoBehaviour
             camleftrange = cameraPosition.x - camrange;
             camrightrange = cameraPosition.x + camrange;
         }
-
         this.ManagedCamera.transform.position = cameraPosition;
     }
 }
