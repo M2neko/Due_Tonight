@@ -81,7 +81,7 @@ public class Damage : MonoBehaviour
         LeftHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
     }
 
-    public bool IsPlayer1Dead() => LeftHealth.GetComponent<RightHealthBar>().IsDead();
+    public bool IsPlayer1Dead() => LeftHealth.GetComponent<LeftHealthBar>().IsDead();
 
     public bool IsPlayer2Dead() => RightHealth.GetComponent<RightHealthBar>().IsDead();
 }

@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private bool IsDown = false;
     private bool IsShield = false;
     private bool IsMotivate = false;
+    private bool IsDead = false;
 
     private void Start()
     {
@@ -134,8 +135,9 @@ public class PlayerController : MonoBehaviour
 
         if (TakeDamage.IsPlayer1Dead())
         {
-            //PlayerAnimator.SetBool("Dead", true);
+            PlayerAnimator.SetBool("Dead", true);
             EndGame.IsEnd = true;
+            IsDead = true;
         }
     }
 
@@ -155,7 +157,7 @@ public class PlayerController : MonoBehaviour
     private bool IsHold()
     {
         return RushBike.IsRush || Light.IsLight || this.IsDown || this.IsStart
-            || SpeedPunch.IsPunch || this.IsShield;
+            || SpeedPunch.IsPunch || this.IsShield || this.IsDead;
     }
 
     public bool IsPlayerShield() => IsShield;

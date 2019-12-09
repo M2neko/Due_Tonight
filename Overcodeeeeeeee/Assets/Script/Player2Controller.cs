@@ -22,6 +22,7 @@ public class Player2Controller : MonoBehaviour
     private bool IsDown = false;
     private bool IsShield = false;
     private bool IsMotivate = false;
+    private bool IsDead = false;
 
     private void Start()
     {
@@ -128,8 +129,9 @@ public class Player2Controller : MonoBehaviour
 
         if (TakeDamage.IsPlayer2Dead())
         {
-            //PlayerAnimator.SetBool("Dead", true);
+            PlayerAnimator.SetBool("Dead", true);
             EndGame.IsEnd = true;
+            IsDead = true;
         }
     }
 
@@ -148,8 +150,8 @@ public class Player2Controller : MonoBehaviour
 
     private bool IsHold()
     {
-        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword
-            || this.IsStart || this.IsShield || ControlWave.IsWave;
+        return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword || this.IsStart
+            || this.IsShield || ControlWave.IsWave || this.IsDead;
     }
 
     public bool IsPlayerShield() => IsShield;
