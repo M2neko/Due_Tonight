@@ -74,7 +74,7 @@ public class Damage : MonoBehaviour
 
     public bool IsPlayer2Dead() => RightHealth.GetComponent<RightHealthBar>().IsDead();
 
-    public bool TimeExpiredWinner() =>
+    public bool ChooseWinner() =>
         LeftHealth.GetComponent<LeftHealthBar>().GetHp() >
         RightHealth.GetComponent<RightHealthBar>().GetHp();
 }

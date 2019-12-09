@@ -32,6 +32,8 @@ public class Game : MonoBehaviour
 
     private int ShowTimer = 100;
 
+    public static bool isFinish = false;
+
     void Start()
     {
 
@@ -77,6 +79,8 @@ public class Game : MonoBehaviour
 
         Button.SetActive(false);
         EndGame.IsEnd = false;
+
+        isFinish = false;
     }
 
 
@@ -107,6 +111,7 @@ public class Game : MonoBehaviour
             if (ShowTimer <= 0)
             {
                 isStart = false;
+                isFinish = true;
             }
         }
     }

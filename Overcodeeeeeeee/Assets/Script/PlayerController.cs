@@ -167,7 +167,8 @@ public class PlayerController : MonoBehaviour
     {
         return RushBike.IsRush || Light.IsLight || this.IsDown || this.IsStart
             || SpeedPunch.IsPunch || this.IsShield || this.IsDead
-            || player2.GetComponent<Player2Controller>().IsPlayerDead();
+            || player2.GetComponent<Player2Controller>().IsPlayerDead()
+            || Game.isFinish;
     }
 
     public bool IsPlayerShield() => IsShield;

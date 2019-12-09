@@ -2,11 +2,12 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Damage.cs">
     <Files>
       <File FileName="Assets/Script/LeftHealthBar.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="185" Column="46" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="211" Column="1" />
-      <File FileName="Assets/Script/Zee_Motions/PerformSword.cs" Line="40" Column="10" />
-      <File FileName="Assets/Script/Trigger.cs" Line="21" Column="24" />
-      <File FileName="Assets/Script/Damage.cs" Line="60" Column="6" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="36" Column="13" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="161" Column="20" />
+      <File FileName="Assets/Script/UI_Script/GameManager.cs" Line="18" Column="6" />
+      <File FileName="Assets/Script/UI_Script/Game.cs" Line="21" Column="1" />
+      <File FileName="Assets/Script/EndGame.cs" Line="31" Column="10" />
+      <File FileName="Assets/Script/Damage.cs" Line="77" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +15,7 @@
           <Node name="Overcodeeeeeeee" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="Zee_Motions" expanded="True" />
+                <Node name="UI_Script" expanded="True" />
                 <Node name="Damage.cs" selected="True" />
               </Node>
             </Node>
