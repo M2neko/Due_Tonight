@@ -132,12 +132,31 @@ public class PlayerController : MonoBehaviour
         }
         this.gameObject.transform.position = targetposition;
 
+<<<<<<< HEAD
         if (TakeDamage.GetComponent<Damage>().IsPlayer1Dead())
         {
             PlayerAnimator.SetBool("Dead", true);
             EndGame.IsEnd = true;
             IsDead = true;
         }
+=======
+        //if (TakeDamage.IsPlayer1Dead())
+        //{
+        //   PlayerAnimator.SetBool("Dead", true);
+        //    EndGame.IsEnd = true;
+        //    IsDead = true;
+        //}
+    }
+
+    public float GetLeft()
+    {
+        return leftrange;
+    }
+
+    public float GetRight()
+    {
+        return rightrange;
+>>>>>>> d06c16292dcb25a0443702e2c717b017d93724e5
     }
 
     public GameObject OtherPlayer()
