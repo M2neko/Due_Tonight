@@ -95,4 +95,12 @@ public class Cameracontroller : MonoBehaviour
         }
         this.ManagedCamera.transform.position = cameraPosition;
     }
+
+    public void Shake()
+    {
+        var cameraPosition = this.ManagedCamera.transform.position;
+        this.ManagedCamera.transform.position = new Vector3(cameraPosition.x - 0.5f, cameraPosition.y);
+        this.ManagedCamera.transform.position = new Vector3(cameraPosition.x + 0.5f, cameraPosition.y);
+        this.ManagedCamera.transform.position = cameraPosition;
+    }
 }
