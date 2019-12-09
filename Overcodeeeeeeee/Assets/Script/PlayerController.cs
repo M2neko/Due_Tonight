@@ -157,10 +157,13 @@ public class PlayerController : MonoBehaviour
     private bool IsHold()
     {
         return RushBike.IsRush || Light.IsLight || this.IsDown || this.IsStart
-            || SpeedPunch.IsPunch || this.IsShield || this.IsDead;
+            || SpeedPunch.IsPunch || this.IsShield || this.IsDead
+            || player2.GetComponent<Player2Controller>().IsPlayerDead();
     }
 
     public bool IsPlayerShield() => IsShield;
+
+    public bool IsPlayerDead() => IsDead;
 
     private IEnumerator StartAnimator()
     {

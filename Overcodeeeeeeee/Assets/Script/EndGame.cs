@@ -13,6 +13,12 @@ public class EndGame : MonoBehaviour
     private void Update()
     {
         if (IsEnd)
-            Button.SetActive(true);
+            StartCoroutine(StartButton());
+    }
+
+    private IEnumerator StartButton()
+    {
+        yield return new WaitForSeconds(1);
+        Button.SetActive(true);
     }
 }

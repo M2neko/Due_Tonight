@@ -151,10 +151,13 @@ public class Player2Controller : MonoBehaviour
     private bool IsHold()
     {
         return this.IsDown || ShootCanvas.IsBullet || PerformSword.IsSword || this.IsStart
-            || this.IsShield || ControlWave.IsWave || this.IsDead;
+            || this.IsShield || ControlWave.IsWave || this.IsDead
+            || player1.GetComponent<PlayerController>().IsPlayerDead();
     }
 
     public bool IsPlayerShield() => IsShield;
+
+    public bool IsPlayerDead() => IsDead;
 
     private IEnumerator StartAnimator()
     {

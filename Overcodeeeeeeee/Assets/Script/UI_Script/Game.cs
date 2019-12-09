@@ -24,6 +24,8 @@ public class Game : MonoBehaviour
     public GameObject Character2_1;
     public GameObject Character2_2;
 
+    public GameObject Button;
+
     private bool isStart = false;
 
     private float GameTimer = 0;
@@ -72,6 +74,8 @@ public class Game : MonoBehaviour
 
         HPBar_1.SetActive(true);
         HPBar_2.SetActive(true);
+
+        Button.SetActive(false);
     }
 
 
