@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    [SerializeField] private GameObject LeftHealth;
+    [SerializeField] private GameObject RightHealth;
+
     [SerializeField] private float GateDamage = 5.0f;
     [SerializeField] private float NovaDamage = 5.0f;
     [SerializeField] private float RushDamage = 15.0f;
@@ -18,15 +21,6 @@ public class Damage : MonoBehaviour
     [SerializeField] private float WaveDamage = 6.0f;
 
     [SerializeField] private float ShieldMutiplier = 0.1f;
-
-    private GameObject LeftHealth;
-    private GameObject RightHealth;
-
-    void Start()
-    {
-        LeftHealth = GameObject.FindGameObjectWithTag("LeftHB");
-        RightHealth = GameObject.FindGameObjectWithTag("RightHB");
-    }
 
     public void TakeDamageGate(bool IsShield)
     {
@@ -60,28 +54,32 @@ public class Damage : MonoBehaviour
     public void TakeDamageLaptop(bool IsShield)
     {
         var Damage = IsShield ? ShieldMutiplier * LaptopDamage : LaptopDamage;
-        LeftHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
+        LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Damage);
     }
 
     public void TakeDamageSword(bool IsShield)
     {
         var Damage = IsShield ? ShieldMutiplier * SwordDamage : SwordDamage;
-        LeftHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
+        LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Damage);
     }
 
     public void TakeDamageCanvas(bool IsShield)
     {
         var Damage = IsShield ? ShieldMutiplier * CanvasDamage : CanvasDamage;
-        LeftHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
+        LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Damage);
     }
 
     public void TakeDamageWave(bool IsShield)
     {
         var Damage = IsShield ? ShieldMutiplier * WaveDamage : WaveDamage;
-        LeftHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
+        LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Damage);
     }
 
     public bool IsPlayer1Dead() => LeftHealth.GetComponent<LeftHealthBar>().IsDead();
 
     public bool IsPlayer2Dead() => RightHealth.GetComponent<RightHealthBar>().IsDead();
+
+    public bool TimeExpiredWinner() =>
+        LeftHealth.GetComponent<LeftHealthBar>().GetHp() >
+        RightHealth.GetComponent<RightHealthBar>().GetHp();
 }

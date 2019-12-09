@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject player2_1;
     [SerializeField] private GameObject player2_2;
     [SerializeField] private GameObject Welcome_Slogan;
+    [SerializeField] private GameObject TakeDamage;
     [SerializeField] private bool IsStart = true;
     private float xrange;
     private float leftrange;
@@ -19,7 +20,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 Change;
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
-    private Damage TakeDamage;
     private bool IsDown = false;
     private bool IsShield = false;
     private bool IsMotivate = false;
@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
         {
             player2 = player2_2;
         }
-        TakeDamage = gameObject.AddComponent<Damage>();
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
         StartCoroutine(StartAnimator());
@@ -133,7 +132,7 @@ public class PlayerController : MonoBehaviour
         }
         this.gameObject.transform.position = targetposition;
 
-        if (TakeDamage.IsPlayer1Dead())
+        if (TakeDamage.GetComponent<Damage>().IsPlayer1Dead())
         {
             PlayerAnimator.SetBool("Dead", true);
             EndGame.IsEnd = true;
@@ -189,14 +188,14 @@ public class PlayerController : MonoBehaviour
             if (RushBike.IsRush && !IsMotivate)
             {
                 Debug.Log("Rush");
-                TakeDamage.TakeDamageRush(IsDefense);
+                TakeDamage.GetComponent<Damage>().TakeDamageRush(IsDefense);
                 IsMotivate = true;
             }
 
             if (SpeedPunch.IsPunch && !IsMotivate)
             {
                 Debug.Log("Punch");
-                TakeDamage.TakeDamagePunch(IsDefense);
+                TakeDamage.GetComponent<Damage>().TakeDamagePunch(IsDefense);
                 IsMotivate = true;
             }
         }
@@ -213,14 +212,14 @@ public class PlayerController : MonoBehaviour
             if (RushBike.IsRush && !IsMotivate)
             {
                 Debug.Log("Rush");
-                TakeDamage.TakeDamageRush(IsDefense);
+                TakeDamage.GetComponent<Damage>().TakeDamageRush(IsDefense);
                 IsMotivate = true;
             }
 
             if (SpeedPunch.IsPunch && !IsMotivate)
             {
                 Debug.Log("Punch");
-                TakeDamage.TakeDamagePunch(IsDefense);
+                TakeDamage.GetComponent<Damage>().TakeDamagePunch(IsDefense);
                 IsMotivate = true;
             }
         }

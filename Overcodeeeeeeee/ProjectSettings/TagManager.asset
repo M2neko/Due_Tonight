@@ -9,6 +9,7 @@ TagManager:
   - RightHB
   - Player1
   - Player2
+  - Laptop
   layers:
   - Default
   - TransparentFX

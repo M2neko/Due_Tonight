@@ -10,6 +10,7 @@ public class Player2Controller : MonoBehaviour
     [SerializeField] private GameObject player2_2;
     [SerializeField] private GameObject player1_1;
     [SerializeField] private GameObject player1_2;
+    [SerializeField] private GameObject TakeDamage;
     [SerializeField] private bool IsStart = true;
     private float xrange;
     private float leftrange;
@@ -18,7 +19,6 @@ public class Player2Controller : MonoBehaviour
     private Vector3 Change;
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
-    private Damage TakeDamage;
     private bool IsDown = false;
     private bool IsShield = false;
     private bool IsMotivate = false;
@@ -37,7 +37,6 @@ public class Player2Controller : MonoBehaviour
         {
             player1 = player1_2;
         }
-        TakeDamage = gameObject.AddComponent<Damage>();
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
         StartCoroutine(StartAnimator());
@@ -127,7 +126,7 @@ public class Player2Controller : MonoBehaviour
         }
         this.gameObject.transform.position = targetposition;
 
-        if (TakeDamage.IsPlayer2Dead())
+        if (TakeDamage.GetComponent<Damage>().IsPlayer2Dead())
         {
             PlayerAnimator.SetBool("Dead", true);
             EndGame.IsEnd = true;

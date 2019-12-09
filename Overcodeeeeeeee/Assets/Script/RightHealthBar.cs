@@ -32,6 +32,11 @@ public class RightHealthBar : MonoBehaviour
         return CurrentHp <= 0.0f;
     }
 
+    public float GetHp()
+    {
+        return this.CurrentHp;
+    }
+
     // Update is called once per frame
     void Update()
     {
