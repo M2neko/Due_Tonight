@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Damage TakeDamage;
     private bool IsDown = false;
     private bool IsShield = false;
+    private bool IsMotivate = false;
 
     private void Start()
     {
@@ -108,7 +109,13 @@ public class PlayerController : MonoBehaviour
             PlayerAnimator.SetBool("Down", false);
             IsDown = false;
         }
+
         Change.x = Input.GetAxisRaw("Horizontal");
+
+        if (IsMotivate && !IsHold())
+        {
+            IsMotivate = false;
+        }
 
         if (!IsHold())
             PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
@@ -124,6 +131,12 @@ public class PlayerController : MonoBehaviour
             targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
         }
         this.gameObject.transform.position = targetposition;
+
+        if (TakeDamage.IsPlayer1Dead())
+        {
+            //PlayerAnimator.SetBool("Dead", true);
+            EndGame.IsEnd = true;
+        }
     }
 
     public GameObject OtherPlayer()
@@ -168,16 +181,42 @@ public class PlayerController : MonoBehaviour
 
         if (other.collider.CompareTag("Player2"))
         {
-            if (RushBike.IsRush)
+            if (RushBike.IsRush && !IsMotivate)
             {
                 Debug.Log("Rush");
                 TakeDamage.TakeDamageRush(IsDefense);
+                IsMotivate = true;
             }
 
-            if (SpeedPunch.IsPunch)
+            if (SpeedPunch.IsPunch && !IsMotivate)
             {
                 Debug.Log("Punch");
                 TakeDamage.TakeDamagePunch(IsDefense);
+                IsMotivate = true;
+            }
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        //Debug.Log("1 is staying");
+
+        var IsDefense = player2.GetComponent<Player2Controller>().IsPlayerShield();
+
+        if (other.collider.CompareTag("Player2"))
+        {
+            if (RushBike.IsRush && !IsMotivate)
+            {
+                Debug.Log("Rush");
+                TakeDamage.TakeDamageRush(IsDefense);
+                IsMotivate = true;
+            }
+
+            if (SpeedPunch.IsPunch && !IsMotivate)
+            {
+                Debug.Log("Punch");
+                TakeDamage.TakeDamagePunch(IsDefense);
+                IsMotivate = true;
             }
         }
     }

@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    [SerializeField] private float GateDamage = 0.0f;
-    [SerializeField] private float NovaDamage = 0.0f;
+    [SerializeField] private float GateDamage = 5.0f;
+    [SerializeField] private float NovaDamage = 5.0f;
     [SerializeField] private float RushDamage = 15.0f;
 
     [SerializeField] private float ThunderDamage = 23.0f;
     [SerializeField] private float PunchDamage = 10.0f;
 
-    [SerializeField] private float LaptopDamage = 0.0f;
-    [SerializeField] private float SwordDamage = 0.0f;
+    [SerializeField] private float LaptopDamage = 10.0f;
+    [SerializeField] private float SwordDamage = 17.0f;
 
-    [SerializeField] private float CanvasDamage = 0.0f;
-    [SerializeField] private float WaveDamage = 0.0f;
+    [SerializeField] private float CanvasDamage = 7.0f;
+    [SerializeField] private float WaveDamage = 6.0f;
 
     [SerializeField] private float ShieldMutiplier = 0.1f;
 
@@ -80,4 +80,8 @@ public class Damage : MonoBehaviour
         var Damage = IsShield ? ShieldMutiplier * WaveDamage : WaveDamage;
         LeftHealth.GetComponent<RightHealthBar>().TakeDamage(Damage);
     }
+
+    public bool IsPlayer1Dead() => LeftHealth.GetComponent<RightHealthBar>().IsDead();
+
+    public bool IsPlayer2Dead() => RightHealth.GetComponent<RightHealthBar>().IsDead();
 }

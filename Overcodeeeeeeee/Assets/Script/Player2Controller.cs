@@ -21,6 +21,7 @@ public class Player2Controller : MonoBehaviour
     private Damage TakeDamage;
     private bool IsDown = false;
     private bool IsShield = false;
+    private bool IsMotivate = false;
 
     private void Start()
     {
@@ -105,6 +106,11 @@ public class Player2Controller : MonoBehaviour
 
         Change.x = Input.GetAxisRaw("Player2Horizontal");
 
+        if (IsMotivate && !IsHold())
+        {
+            IsMotivate = false;
+        }
+
         if (!IsHold())
             PlayerAnimator.SetFloat("Speed", Mathf.Abs(Change.x * Speed));
 
@@ -119,6 +125,12 @@ public class Player2Controller : MonoBehaviour
             targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
         }
         this.gameObject.transform.position = targetposition;
+
+        if (TakeDamage.IsPlayer2Dead())
+        {
+            //PlayerAnimator.SetBool("Dead", true);
+            EndGame.IsEnd = true;
+        }
     }
 
     public GameObject OtherPlayer()

@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/NewClass.cs">
     <Files>
-      <File FileName="Assets/Script/Butner_Motions/ShootGate.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="168" Column="2" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="152" Column="6" />
+      <File FileName="Assets/Script/Butner_Motions/ShootGate.cs" Line="105" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="138" Column="15" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="21" Column="24" />
       <File FileName="Assets/Script/LeftHealthBar.cs" Line="33" Column="6" />
       <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="8" Column="48" />
-      <File FileName="Assets/Script/Student_Motions/NewClass.cs" Line="9" Column="1" />
+      <File FileName="Assets/Script/Student_Motions/NewClass.cs" Line="11" Column="2" />
       <File FileName="Assets/Script/Student_Motions/ControlWave.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/UI_Script/Game.cs" Line="38" Column="1" />
-      <File FileName="Assets/Script/NewClass.cs" Line="28" Column="20" />
+      <File FileName="Assets/Script/NewClass.cs" Line="31" Column="46" />
       <File FileName="Assets/Script/Butner_Motions/NovaGates.cs" Line="23" Column="74" />
+      <File FileName="Assets/Script/UI_Script/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/UI_Script/GameManager.cs" Line="20" Column="1" />
+      <File FileName="Assets/Script/NewClass.cs" Line="7" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
