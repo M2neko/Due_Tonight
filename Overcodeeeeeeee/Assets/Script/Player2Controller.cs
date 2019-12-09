@@ -168,13 +168,31 @@ public class Player2Controller : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("2 is attacked Collision");
+        //Debug.Log("2 is attacked Collision");
 
         var IsDefense = player1.GetComponent<PlayerController>().IsPlayerShield();
 
         if (other.collider.CompareTag("Player1"))
         {
-            
+            if (PerformSword.IsSword && !IsMotivate)
+            {
+                TakeDamage.GetComponent<Damage>().TakeDamageSword(IsDefense);
+                IsMotivate = true;
+            }
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        var IsDefense = player1.GetComponent<PlayerController>().IsPlayerShield();
+
+        if (other.collider.CompareTag("Player1"))
+        {
+            if (PerformSword.IsSword && !IsMotivate)
+            {
+                TakeDamage.GetComponent<Damage>().TakeDamageSword(IsDefense);
+                IsMotivate = true;
+            }
         }
     }
 }

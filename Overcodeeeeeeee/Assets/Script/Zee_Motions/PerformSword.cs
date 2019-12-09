@@ -21,10 +21,7 @@ public class PerformSword : MonoBehaviour
         Zee.GetComponent<Animator>().SetBool("Sword", true);
         OtherPlayer = Zee.GetComponent<Player2Controller>().OtherPlayer();
 
-        //Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 1000);
-
         StartCoroutine(OnSword());
-        //Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 2000);
     }
 
     private IEnumerator OnSword()
@@ -32,6 +29,7 @@ public class PerformSword : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if (OtherPlayer.transform.position.x >= Zee.gameObject.transform.position.x)
         {
+            Zee.GetComponent<BoxCollider2D>().offset = new Vector2(0.35f, -0.1f);
             Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
             for (int i = 0; i < 15; i++)
             {
@@ -42,6 +40,7 @@ public class PerformSword : MonoBehaviour
         }
         else
         {
+            Zee.GetComponent<BoxCollider2D>().offset = new Vector2(-0.35f, -0.1f);
             Zee.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
             for (int i = 0; i < 15; i++)
             {
@@ -58,6 +57,7 @@ public class PerformSword : MonoBehaviour
             mtime += Time.deltaTime;
             if (mtime >= Duration)
             {
+                Zee.GetComponent<BoxCollider2D>().offset = new Vector2(0.0f, -0.02f);
                 IsSword = false;
                 Zee.GetComponent<Animator>().SetBool("Sword", false);
                 mtime = 0.0f;

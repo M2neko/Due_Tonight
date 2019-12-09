@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("1 is attacked");
+        //Debug.Log("1 is attacked");
 
         var IsDefense = player2.GetComponent<Player2Controller>().IsPlayerShield();
 
@@ -197,14 +197,12 @@ public class PlayerController : MonoBehaviour
         {
             if (RushBike.IsRush && !IsMotivate)
             {
-                Debug.Log("Rush");
                 TakeDamage.GetComponent<Damage>().TakeDamageRush(IsDefense);
                 IsMotivate = true;
             }
 
             if (SpeedPunch.IsPunch && !IsMotivate)
             {
-                Debug.Log("Punch");
                 TakeDamage.GetComponent<Damage>().TakeDamagePunch(IsDefense);
                 IsMotivate = true;
             }
@@ -221,14 +219,12 @@ public class PlayerController : MonoBehaviour
         {
             if (RushBike.IsRush && !IsMotivate)
             {
-                Debug.Log("Rush");
                 TakeDamage.GetComponent<Damage>().TakeDamageRush(IsDefense);
                 IsMotivate = true;
             }
 
             if (SpeedPunch.IsPunch && !IsMotivate)
             {
-                Debug.Log("Punch");
                 TakeDamage.GetComponent<Damage>().TakeDamagePunch(IsDefense);
                 IsMotivate = true;
             }
