@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - ButtAttack
+  - LeftHB
+  - RightHB
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

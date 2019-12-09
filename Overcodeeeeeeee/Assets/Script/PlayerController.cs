@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 Change;
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
+    private Damage TakeDamage;
     private bool IsDown = false;
     private bool IsShield = false;
 
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
         {
             player2 = player2_2;
         }
+        TakeDamage = gameObject.AddComponent<Damage>();
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
         StartCoroutine(StartAnimator());
@@ -143,6 +145,8 @@ public class PlayerController : MonoBehaviour
             || SpeedPunch.IsPunch || this.IsShield;
     }
 
+    public bool IsPlayerShield() => IsShield;
+
     private IEnumerator StartAnimator()
     {
         yield return new WaitForSeconds(0.2f);
@@ -154,5 +158,27 @@ public class PlayerController : MonoBehaviour
         if (player1_2.activeInHierarchy)
             this.Welcome_Slogan.SetActive(false);
         this.IsStart = false;
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("1 is attacked");
+
+        var IsDefense = player2.GetComponent<Player2Controller>().IsPlayerShield();
+
+        if (other.collider.CompareTag("Player2"))
+        {
+            if (RushBike.IsRush)
+            {
+                Debug.Log("Rush");
+                TakeDamage.TakeDamageRush(IsDefense);
+            }
+
+            if (SpeedPunch.IsPunch)
+            {
+                Debug.Log("Punch");
+                TakeDamage.TakeDamagePunch(IsDefense);
+            }
+        }
     }
 }

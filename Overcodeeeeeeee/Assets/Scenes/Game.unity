@@ -213,6 +213,8 @@ GameObject:
   - component: {fileID: 90041062}
   - component: {fileID: 90041063}
   - component: {fileID: 90041064}
+  - component: {fileID: 90041065}
+  - component: {fileID: 90041066}
   m_Layer: 0
   m_Name: butt_attack1sprite_6
   m_TagString: ButtAttack
@@ -300,6 +302,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &90041065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90041061}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &90041066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90041061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddbeecc0871f4ccc9f84fed69973cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &99809581
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +338,8 @@ GameObject:
   - component: {fileID: 99809582}
   - component: {fileID: 99809583}
   - component: {fileID: 99809584}
+  - component: {fileID: 99809585}
+  - component: {fileID: 99809586}
   m_Layer: 0
   m_Name: butt_attack1sprite_4
   m_TagString: ButtAttack
@@ -398,6 +427,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &99809585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99809581}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &99809586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99809581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddbeecc0871f4ccc9f84fed69973cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &265818249
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +722,8 @@ GameObject:
   - component: {fileID: 378003883}
   - component: {fileID: 378003884}
   - component: {fileID: 378003885}
+  - component: {fileID: 378003886}
+  - component: {fileID: 378003887}
   m_Layer: 0
   m_Name: butt_attack1sprite_3
   m_TagString: ButtAttack
@@ -755,6 +811,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &378003886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378003882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &378003887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378003882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddbeecc0871f4ccc9f84fed69973cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &379329533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1198,7 @@ GameObject:
   - component: {fileID: 622113656}
   m_Layer: 8
   m_Name: LeftHB
-  m_TagString: Untagged
+  m_TagString: LeftHB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1270,7 +1351,7 @@ GameObject:
   - component: {fileID: 891748862}
   m_Layer: 8
   m_Name: RightHB
-  m_TagString: Untagged
+  m_TagString: RightHB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1646,7 +1727,7 @@ GameObject:
   - component: {fileID: 1001785157}
   m_Layer: 0
   m_Name: Character1_1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2158,7 +2239,7 @@ GameObject:
   - component: {fileID: 1082452066}
   m_Layer: 0
   m_Name: Character1_2
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2652,7 +2733,7 @@ GameObject:
   - component: {fileID: 1174205406}
   m_Layer: 0
   m_Name: Character2_2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3290,6 +3371,8 @@ GameObject:
   - component: {fileID: 1344176376}
   - component: {fileID: 1344176377}
   - component: {fileID: 1344176378}
+  - component: {fileID: 1344176379}
+  - component: {fileID: 1344176380}
   m_Layer: 0
   m_Name: butt_attack1sprite_5
   m_TagString: ButtAttack
@@ -3377,6 +3460,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1344176379
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344176375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1344176380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344176375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddbeecc0871f4ccc9f84fed69973cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1353621580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3723,7 +3831,7 @@ GameObject:
   - component: {fileID: 1618645513}
   m_Layer: 0
   m_Name: Character2_1
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4643,6 +4751,8 @@ GameObject:
   - component: {fileID: 1954904954}
   - component: {fileID: 1954904953}
   - component: {fileID: 1954904955}
+  - component: {fileID: 1954904956}
+  - component: {fileID: 1954904957}
   m_Layer: 0
   m_Name: butt_attack1sprite_1
   m_TagString: ButtAttack
@@ -4730,6 +4840,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1954904956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954904952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1954904957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954904952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddbeecc0871f4ccc9f84fed69973cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029942533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,6 +4913,8 @@ GameObject:
   - component: {fileID: 2057690564}
   - component: {fileID: 2057690565}
   - component: {fileID: 2057690566}
+  - component: {fileID: 2057690567}
+  - component: {fileID: 2057690568}
   m_Layer: 0
   m_Name: butt_attack1sprite_2
   m_TagString: ButtAttack
@@ -4865,3 +5002,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2057690567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057690563}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2057690568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057690563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddbeecc0871f4ccc9f84fed69973cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

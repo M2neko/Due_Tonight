@@ -18,6 +18,7 @@ public class Player2Controller : MonoBehaviour
     private Vector3 Change;
     private Rigidbody2D PlayerRigidbody;
     private Animator PlayerAnimator;
+    private Damage TakeDamage;
     private bool IsDown = false;
     private bool IsShield = false;
 
@@ -34,6 +35,7 @@ public class Player2Controller : MonoBehaviour
         {
             player1 = player1_2;
         }
+        TakeDamage = gameObject.AddComponent<Damage>();
         PlayerAnimator = this.GetComponent<Animator>();
         PlayerRigidbody = this.GetComponent<Rigidbody2D>();
         StartCoroutine(StartAnimator());
@@ -138,11 +140,25 @@ public class Player2Controller : MonoBehaviour
             || this.IsStart || this.IsShield || ControlWave.IsWave;
     }
 
+    public bool IsPlayerShield() => IsShield;
+
     private IEnumerator StartAnimator()
     {
         this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         yield return new WaitForSeconds(3.0f);
         this.GetComponent<Animator>().SetBool("Start", false);
         this.IsStart = false;
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("2 is attacked Collision");
+
+        var IsDefense = player1.GetComponent<PlayerController>().IsPlayerShield();
+
+        if (other.collider.CompareTag("Player1"))
+        {
+            
+        }
     }
 }

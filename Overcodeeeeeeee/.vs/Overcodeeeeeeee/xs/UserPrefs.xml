@@ -1,19 +1,16 @@
 ﻿<Properties StartupConfiguration="{09EC465F-9233-C0B3-0CE9-BB0BDBFB57E8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/UI_Script/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/NewClass.cs">
     <Files>
-      <File FileName="Assets/Script/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Player2Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/HealthbarController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/LeftHealthBar.cs" Line="19" Column="41" />
-      <File FileName="Assets/Script/NewClass.cs" Line="8" Column="33" />
-      <File FileName="Assets/Script/Cameracontroller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/MainMenu.cs" Line="3" Column="19" />
-      <File FileName="Assets/Script/UI_Script/Next1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/GameManager.cs" Line="18" Column="6" />
-      <File FileName="Assets/Script/UI_Script/Game.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/BgMusic.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/Next2.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/UI_Script/Shake.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Butner_Motions/ShootGate.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="168" Column="2" />
+      <File FileName="Assets/Script/Player2Controller.cs" Line="152" Column="6" />
+      <File FileName="Assets/Script/LeftHealthBar.cs" Line="33" Column="6" />
+      <File FileName="Assets/Script/Student_Motions/ShootCanvas.cs" Line="8" Column="48" />
+      <File FileName="Assets/Script/Student_Motions/NewClass.cs" Line="9" Column="1" />
+      <File FileName="Assets/Script/Student_Motions/ControlWave.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/UI_Script/Game.cs" Line="38" Column="1" />
+      <File FileName="Assets/Script/NewClass.cs" Line="28" Column="20" />
+      <File FileName="Assets/Script/Butner_Motions/NovaGates.cs" Line="23" Column="74" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,10 +18,12 @@
           <Node name="Overcodeeeeeeee" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="UI_Script" expanded="True">
-                  <Node name="GameManager.cs" selected="True" />
-                </Node>
+                <Node name="Butner_Motions" expanded="True" />
+                <Node name="Mccoy_Motions" expanded="True" />
+                <Node name="Student_Motions" expanded="True" />
+                <Node name="UI_Script" expanded="True" />
                 <Node name="Zee_Motions" expanded="True" />
+                <Node name="NewClass.cs" selected="True" />
               </Node>
             </Node>
           </Node>
