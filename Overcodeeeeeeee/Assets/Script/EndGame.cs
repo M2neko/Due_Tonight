@@ -31,24 +31,24 @@ public class EndGame : MonoBehaviour
         {
             case 1:
                 this.GetComponent<AudioSource>().Play();
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(1);
                 Player1Winner.SetActive(true);
                 // TODO: Winner Player1
                 break;
 
             case 2:
                 this.GetComponent<AudioSource>().Play();
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(1);
                 Player2Winner.SetActive(true);
                 // TODO: Winner Player2
                 break;
 
             case 3:
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(1);
                 // TODO: Draw
                 break;
         }
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         Button.SetActive(true);
     }
 }
