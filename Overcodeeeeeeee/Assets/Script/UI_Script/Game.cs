@@ -33,7 +33,7 @@ public class Game : MonoBehaviour
 
     private float GameTimer = 0;
 
-    private int ShowTimer = 100;
+    private int ShowTimer = 10;
 
     void Start()
     {

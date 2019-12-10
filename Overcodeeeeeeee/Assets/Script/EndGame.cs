@@ -30,23 +30,42 @@ public class EndGame : MonoBehaviour
         switch (TakeDamage.GetComponent<Damage>().ChooseWinner())
         {
             case 1:
+                // A Win, B Dead
                 this.GetComponents<AudioSource>()[0].Play();
                 yield return new WaitForSeconds(1);
                 Player1Winner.SetActive(true);
                 break;
 
             case 2:
+                // A Win, B Alive
+                yield return new WaitForSeconds(0.5f);
+                //this.GetComponents<AudioSource>()[2].Play();
+                yield return new WaitForSeconds(0.5f);
+                Player1Winner.SetActive(true);
+                break;
+
+            case 3:
+                // B Win, A Dead
                 this.GetComponents<AudioSource>()[0].Play();
                 yield return new WaitForSeconds(1);
                 Player2Winner.SetActive(true);
                 break;
 
-            case 3:
-                yield return new WaitForSeconds(1);
+            case 4:
+                // B Win, A Alive
+                yield return new WaitForSeconds(0.5f);
+                //this.GetComponents<AudioSource>()[2].Play();
+                yield return new WaitForSeconds(0.5f);
+                Player2Winner.SetActive(true);
+                break;
+
+            case 5:
+                // Draw
                 this.GetComponents<AudioSource>()[1].Play();
+                yield return new WaitForSeconds(1);
                 break;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         Button.SetActive(true);
     }
 }

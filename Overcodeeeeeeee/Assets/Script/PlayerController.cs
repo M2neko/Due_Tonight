@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
             IsDead = true;
         }
 
-        if (TakeDamage.GetComponent<Damage>().IsPlayer2Dead())
+        if (EndGame.IsEnd || EndGame.IsExpired)
         {
             PlayerAnimator.SetFloat("Speed", 0.0f);
         }

@@ -75,22 +75,31 @@ public class Damage : MonoBehaviour
         var left = LeftHealth.GetComponent<LeftHealthBar>().GetHp();
         var right = RightHealth.GetComponent<RightHealthBar>().GetHp();
 
+        var dead1 = LeftHealth.GetComponent<LeftHealthBar>().IsDead();
+        var dead2 = RightHealth.GetComponent<RightHealthBar>().IsDead();
+
         //Debug.Log(left);
         //Debug.Log(right);
 
         if (System.Math.Abs(left - right) < Mathf.Epsilon)
         {
-            return 3;
+            return 5;
         }
         if (left > right)
         {
-            return 1;
+            if (dead1)
+                return 1;
+            else
+                return 2;
         }
         if (right > left)
         {
-            return 2;
+            if (dead2)
+                return 3;
+            else
+                return 4;
         }
-        return 4;
+        return 6;
     }
 
     public bool IsPlayer1Dead() => LeftHealth.GetComponent<LeftHealthBar>().IsDead();
