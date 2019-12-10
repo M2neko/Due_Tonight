@@ -20,6 +20,9 @@ public class EndGame : MonoBehaviour
     [SerializeField] private GameObject KO;
     [SerializeField] private GameObject Draw;
 
+    [SerializeField] private GameObject Left_die;
+    [SerializeField] private GameObject Right_die;
+
     public static bool IsEnd = false;
     public static bool IsExpired = false;
     public static bool IsFinish = false;
@@ -42,6 +45,7 @@ public class EndGame : MonoBehaviour
             case 1:
                 // A Win, B Dead
                 KO.SetActive(true);
+                Right_die.SetActive(true);
                 this.GetComponents<AudioSource>()[0].Play();
                 yield return new WaitForSeconds(2);
                 if (Character1_1.activeInHierarchy)
@@ -49,6 +53,7 @@ public class EndGame : MonoBehaviour
                 if (Character1_2.activeInHierarchy)
                     Player2Winner.SetActive(true);
                 KO.SetActive(false);
+                Right_die.SetActive(false);
                 break;
 
             case 2:
@@ -65,6 +70,7 @@ public class EndGame : MonoBehaviour
             case 3:
                 // B Win, A Dead
                 KO.SetActive(true);
+                Left_die.SetActive(true);
                 this.GetComponents<AudioSource>()[0].Play();
                 yield return new WaitForSeconds(2);
                 if (Character2_1.activeInHierarchy)
@@ -72,6 +78,7 @@ public class EndGame : MonoBehaviour
                 if (Character2_2.activeInHierarchy)
                     Player4Winner.SetActive(true);
                 KO.SetActive(false);
+                Left_die.SetActive(false);
                 break;
 
             case 4:
