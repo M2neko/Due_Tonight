@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Overcode.unity
     guid: 12dd0806fd0904925aa73d0525be272f
+  - enabled: 1
+    path: Assets/Scenes/Controller&Keyboard.unity
+    guid: c6c4de641029f490ba0c36316c1fe7a9
   m_configObjects: {}

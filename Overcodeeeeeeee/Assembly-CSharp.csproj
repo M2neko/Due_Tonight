@@ -76,7 +76,6 @@
     <Compile Include="Assets\Script\Cameracontroller.cs" />
     <Compile Include="Assets\Script\Damage.cs" />
     <Compile Include="Assets\Script\EndGame.cs" />
-    <Compile Include="Assets\Script\HealthbarController.cs" />
     <Compile Include="Assets\Script\LeftHealthBar.cs" />
     <Compile Include="Assets\Script\Mccoy_Motions\Light.cs" />
     <Compile Include="Assets\Script\Mccoy_Motions\SpeedPunch.cs" />
