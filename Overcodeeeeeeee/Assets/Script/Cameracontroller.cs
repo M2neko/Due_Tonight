@@ -56,7 +56,7 @@ public class Cameracontroller : MonoBehaviour
             camrightrange = cameraPosition.x + camrange;
         }
 
-        else if (target2Position.x <= camleftrange)
+        if (target2Position.x <= camleftrange)
         {
             var move = camleftrange - target2Position.x;
             cameraPosition = new Vector3(cameraPosition.x - move, cameraPosition.y, cameraPosition.z);
@@ -64,7 +64,7 @@ public class Cameracontroller : MonoBehaviour
             camrightrange = cameraPosition.x + camrange;
         }
 
-        else if (target1Position.x >= camrightrange)
+        if (target1Position.x >= camrightrange)
         {
             var move = target1Position.x - camrightrange;
             cameraPosition = new Vector3(cameraPosition.x + move, cameraPosition.y, cameraPosition.z);
@@ -72,7 +72,7 @@ public class Cameracontroller : MonoBehaviour
             camrightrange = cameraPosition.x + camrange;
         }
 
-        else if (target2Position.x >= camrightrange)
+        if (target2Position.x >= camrightrange)
         {
             var move = target2Position.x - camrightrange;
             cameraPosition = new Vector3(cameraPosition.x + move, cameraPosition.y, cameraPosition.z);
@@ -87,7 +87,7 @@ public class Cameracontroller : MonoBehaviour
             camrightrange = cameraPosition.x + camrange;
         }
 
-        else if (camrightrange >= Rightmap)
+        if (camrightrange >= Rightmap)
         {
             cameraPosition = new Vector3(Rightmap - camrange, cameraPosition.y, cameraPosition.z);
             camleftrange = cameraPosition.x - camrange;
