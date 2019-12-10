@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e292dc9cd69c4ec38085edc7de958b9, type: 3}
   m_Name: 
@@ -2247,14 +2247,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftHealth: {fileID: 622113652}
   RightHealth: {fileID: 891748858}
-  GateDamage: 5
-  RushDamage: 15
-  ThunderDamage: 23
-  PunchDamage: 10
+  GateDamage: 8
+  RushDamage: 30
+  ThunderDamage: 49.5
+  PunchDamage: 8
   LaptopDamage: 10
-  SwordDamage: 17
-  CanvasDamage: 7
-  WaveDamage: 6
+  SwordDamage: 10
+  CanvasDamage: 15
+  WaveDamage: 15
   ShieldMutiplier: 0.1
 --- !u!4 &782383919
 Transform:
@@ -3454,7 +3454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e29cecc7db34ee5a2a941afdea773a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.8
+  delay: 1.2
   proj: {fileID: 1891700723}
   range: 0.8
 --- !u!82 &1082452065

@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         xrange = Playground.GetComponent<BoxCollider2D>().size.x * 15;
-        leftrange = Playground.transform.position.x - xrange;
-        rightrange = Playground.transform.position.x + xrange;
+        leftrange = Playground.transform.position.x - xrange + 0.1f;
+        rightrange = Playground.transform.position.x + xrange - 0.1f;
         if (player2_1.activeInHierarchy)
         {
             player2 = player2_1;
@@ -130,6 +130,10 @@ public class PlayerController : MonoBehaviour
         if (this.gameObject.transform.position.x >= rightrange)
         {
             targetposition = new Vector3(rightrange, targetposition.y, targetposition.z);
+        }
+        if (this.gameObject.transform.position.y < -5.0f)
+        {
+            targetposition = new Vector3(targetposition.x, -3.665f, targetposition.z);
         }
         this.gameObject.transform.position = targetposition;
 
