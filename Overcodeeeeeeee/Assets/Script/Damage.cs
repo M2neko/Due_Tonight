@@ -74,6 +74,10 @@ public class Damage : MonoBehaviour
     {
         var left = LeftHealth.GetComponent<LeftHealthBar>().GetHp();
         var right = RightHealth.GetComponent<RightHealthBar>().GetHp();
+
+        //Debug.Log(left);
+        //Debug.Log(right);
+
         if (System.Math.Abs(left - right) < Mathf.Epsilon)
         {
             return 3;
