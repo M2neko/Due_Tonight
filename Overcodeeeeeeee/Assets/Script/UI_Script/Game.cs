@@ -26,6 +26,8 @@ public class Game : MonoBehaviour
 
     public GameObject Win_1;
     public GameObject Win_2;
+    public GameObject Win_3;
+    public GameObject Win_4;
 
     public GameObject Button;
 
@@ -80,6 +82,8 @@ public class Game : MonoBehaviour
 
         Win_1.SetActive(false);
         Win_2.SetActive(false);
+        Win_3.SetActive(false);
+        Win_4.SetActive(false);
 
         Button.SetActive(false);
         EndGame.IsEnd = false;
