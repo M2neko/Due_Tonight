@@ -87,14 +87,14 @@ public class Damage : MonoBehaviour
         }
         if (left > right)
         {
-            if (dead1)
+            if (dead2)
                 return 1;
             else
                 return 2;
         }
         if (right > left)
         {
-            if (dead2)
+            if (dead1)
                 return 3;
             else
                 return 4;
