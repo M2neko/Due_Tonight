@@ -70,6 +70,13 @@ public class Damage : MonoBehaviour
         LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Damage);
     }
 
+    public void TakeDamageContact(bool IsShield)
+    {
+        var Damage = IsShield ? ShieldMutiplier * WaveDamage : WaveDamage;
+        Damage += Random.Range(-5.0f, 5.0f);
+        LeftHealth.GetComponent<LeftHealthBar>().TakeDamage(Time.deltaTime * Damage);
+    }
+
     public int ChooseWinner()
     {
         var left = LeftHealth.GetComponent<LeftHealthBar>().GetHp();

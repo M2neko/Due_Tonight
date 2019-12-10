@@ -39,4 +39,12 @@ public class Trigger : MonoBehaviour
             this.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (this.CompareTag("Wave") && other.CompareTag("Player1"))
+        {
+            TakeDamage.GetComponent<Damage>().TakeDamageContact(other.GetComponent<PlayerController>().IsPlayerShield());
+        }
+    }
 }
