@@ -15,7 +15,8 @@ public class ShootGate : MonoBehaviour
     private GameObject player;
     private float track;
     private bool left;
-    public static bool IsShoot;
+    public static bool IsShoot = false;
+    public static bool IsDestroy = false;
     private Vector3 pos;
 
     public void Shoot()
@@ -70,6 +71,14 @@ public class ShootGate : MonoBehaviour
 
     private void Update()
     {
+        if (IsDestroy)
+        {
+            track = 0.0f;
+            Destroy(proj);
+            IsDestroy = false;
+            IsShoot = false;
+        }
+
         if (IsShoot)
         {
             track += Time.deltaTime * 5;

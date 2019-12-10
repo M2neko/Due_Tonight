@@ -35,8 +35,8 @@ public class Trigger : MonoBehaviour
         if (this.CompareTag("ButtAttack") && other.CompareTag("Player2"))
         {
             TakeDamage.GetComponent<Damage>().TakeDamageGate(other.GetComponent<Player2Controller>().IsPlayerShield());
-            this.transform.localScale = Vector3.zero;
-            this.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(this.gameObject);
+            ShootGate.IsDestroy = true;
         }
     }
 
