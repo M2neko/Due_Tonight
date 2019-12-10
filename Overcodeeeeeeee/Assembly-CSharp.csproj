@@ -82,6 +82,7 @@
     <Compile Include="Assets\Script\Mccoy_Motions\SpeedPunch.cs" />
     <Compile Include="Assets\Script\Player2Controller.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Script\Reference\ReferenceTreeEditor.cs" />
     <Compile Include="Assets\Script\RightHealthBar.cs" />
     <Compile Include="Assets\Script\Student_Motions\ControlWave.cs" />
     <Compile Include="Assets\Script\Student_Motions\ShootCanvas.cs" />
