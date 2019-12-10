@@ -20,12 +20,48 @@ This is the final project for Team **OverCode**.
 
 ## Summary ##
 
-**A paragraph-length pitch for your game.**
+    Due Tonight is an one-on-one fighting game based on two teams of professor and student. 
+    Students need to fight with professor to get an extension for their homework, and 
+    professors should avoid that happens. Characters have different attack skills which 
+    may come from some personal characteristics in reality. 
 
 ## Gameplay explanation ##
 
 **In this section, explain how the game should be played. Treat this as a manual within a game. It is encouraged to explain the button mappings and the most optimal gameplay strategy.**
 
+* Core game mechanice: This game needs two players for each round. The basic action includes attacking, protecting, jumping.
+* Goals: Players who choose student team need to defeat professor team to win an extension for homework. 
+* Controls:
+
+    Xbox Controller(recommend):
+    
+        Left Stick, Left bumper, Right bumper for movement.
+        
+        'A' for shield skills, 'Y' and 'B' for two attack skills.
+        
+        'X' for extra attack skills(only available to certain characters).
+    
+    Keyboard:
+    
+        Left Player:
+        
+            'W''A''S''D' for movement.
+            
+            Left Shift and Control for two attack skills.
+            
+            Option for shield skills.
+            
+            Space for extra attack skill.
+            
+        Right Player:
+        
+            '⬆️''⬇️''⬅️''➡️' for movement.
+            
+            'J' and 'K' for two attack skills.
+            
+            'L' for shield skills.
+            
+* User Experience: Players should follow the steps of menu. Choosing one character from each team, and then choose a background to start fighting. Each round has 100 seconds to fight. If one of them dies, this round will end immediately. Players can decide whether play again or quit game.
 
 # Main Roles #
 
@@ -68,11 +104,16 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## Audio
 
+* The background music is a cyberpunk style clip. This clip contains strong rhythm and suitable for a fighting game atmosphere.
+ (1) [ Amoebacrew - Cyberpunk https://youtu.be/Ju8z7Ecp1iY ]
+* Special thanks to Professor McCoy and Zee for their contribution for recording audio. Those audios from McCoy and Zee are applied to opening animations and attack skills.
+  Other audio sources for characters come from the website (2) [Free Sound Effects https://www.freesoundeffects.com]
+* Implementation:
+  
+
 **List your assets including their sources and licenses.**
 
 **Describe the implementation of your audio system.**
-
-**Document the sound style.** 
 
 ## Gameplay Testing
 
@@ -89,8 +130,6 @@ You should replay any **bold text** with your relevant information. Liberally us
 **Include links to your presskit materials and trailer.**
 
 **Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
-
-
 
 ## Game Feel
 
