@@ -79,6 +79,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 ## User Interface
 
 **Describe your user interface and how it relates to gameplay. This can be done via the template.**
+* The user interface of Due Tonight is designded according to the basic game logic. The game is composed of six scenes that connected by scripts. Players need to choose their characters and background before the battle starts. The combat mode contains a timer and two healthbar of characters. After players make their choice, the healthbar will appear accordingly. 
 
 ## Movement/Physics
 
@@ -86,7 +87,8 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## Animation and Visuals
 
-**List your assets including their sources and licenses.**
+* The art of Due Tonight are designed and created by Jinghan Zhang.
+* The overall visual feel of the game in 2D pixel style. The story of the game is happened in the campus of UC Davis, so the two backgrounds are inspired by the building of campus, the Memorial Union and the Shield's Library. And the four characters are based on McCoy, Zee, Butner, and one normal student. 
 
 **Describe how your work intersects with game feel, graphic design, and world-building. Include your visual style guide if one exists.**
 
@@ -108,12 +110,8 @@ You should replay any **bold text** with your relevant information. Liberally us
  (1) [ Amoebacrew - Cyberpunk https://youtu.be/Ju8z7Ecp1iY ]
 * Special thanks to Professor McCoy and Zee for their contribution for recording audio. Those audios from McCoy and Zee are applied to opening animations and attack skills.
   Other audio sources for characters come from the website (2) [Free Sound Effects https://www.freesoundeffects.com]
-* Implementation:
-  
-
-**List your assets including their sources and licenses.**
-
-**Describe the implementation of your audio system.**
+* Implementation: Add audio listener to gameobjects and evoke specific audio clips when the game receive different inputs.
+Save all the audio files in scripts as AudioSource, and the volume can be adjusted. The function from component can used to control the plat and stop of audio. If the audio will have a delay with the effect we need, we can make the audio play a little earlier to solve this problem. 
 
 ## Gameplay Testing
 
