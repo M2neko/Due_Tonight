@@ -67,6 +67,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 ## User Interface
 
 The user interface of Due Tonight is designded according to the basic game logic. The game is composed of six scenes that connected by scripts. 
+![scene](scene.png)
  - Scene1: Main Menu: contains Start , Quit, Overcode, Controller & Keyboard four buttons.
  'Start' is the link to next game scene which allow players to choose two characters.
  'Controller & Keyboard' can link to the controller and keyboard guide scene.
@@ -97,15 +98,16 @@ The user interface of Due Tonight is designded according to the basic game logic
 ## Animation and Visuals
 
 * We chose to use 2D pixel art for our game and it has a simple, retro type of feel for video game. The overall scene with graphic design elements is interact with players efficiently. According to narrative design, the story of this game is happened in the campus of UC Davis, so the two backgrounds are inspired by the buildings of campus, Memorial Union and the Shield's Library. The four characters are based on McCoy, Zee, Butner, and one normal student. All characters have different animation controllers in Unity due to large amount of actions and movements.
+![character](charOverview.png)
+![background](BGOverview.png)
 * Ruike Qiu and Jason Zhou worked with each other to finish the basic movement and the animation which would make the movement animation smooth because we need to make the time when to change the image of the character accurate.
+![Animation Controller](animation.png)
 * The art of Due Tonight are designed and created by Jinghan Zhang.
-
-**Describe how your work intersects with game feel, graphic design, and world-building.**
 
 [Contributer: Ruike Qiu, Jason Zhou, Jinghan Zhang]
 
 ## Input
-
+![](key.png)
 **Describe the default input configuration.**
 
 **Add an entry for each platform or input style your project supports.**
@@ -113,9 +115,20 @@ The user interface of Due Tonight is designded according to the basic game logic
  [Contributer: Zheng Wang, Bingwei Wang]
  
 ## Game Logic
-we used the object pooling method we learned from exercise 5 to finish butner's shoot gate ability. And we design a damage engine with serilizedfield of each damage for different ability which would allow us to test the game and modify to balance the player. And we keep tracking the healthbar controller to see if there's a winner for the whole game logic.
+
+* General: For a fighting game, the basic components includes characters, background, healthbar and a timer. 
+![game](game.png)
+* Scene: Our game includes two scenes for players to interact and choose their characters and background. 
+* Timer: We chose 100s as the duration for one round, according to some classical fighting games.
+* Game manager: The most important game logic in our game is to decided various results of the battle, deciding the winner, K.O or draw. I used several SerializeField to managed different game objects. This part is finished in [EndGame.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/e24b55683341bb6b5205ebb09476c874e7503a91/Overcodeeeeeeee/Assets/Script/EndGame.cs#L1-L106).
+* Healthbar and Damage: These are the two main parts which will influence player experience. We used the object pooling method
+we learned from exercise 5 to finish butner's shoot gate ability. And we designed a damage engine with serilizedfield of each 
+damage for different ability which would allow us to test the game and modify to balance the player. And we keep tracking the
+healthbar controller to see if there's a winner for the whole game logic.
+![damage](damage.png)
+The script is [Damage.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/e24b55683341bb6b5205ebb09476c874e7503a91/Overcodeeeeeeee/Assets/Script/Damage.cs#L1-L115)
+
  [Contributer: Bingwei Wang, Ruike Qiu]
-**Document what game states and game data you managed and what design patterns you used to complete your task.**
 
 # Sub-Roles
 
