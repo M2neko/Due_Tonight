@@ -67,13 +67,16 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## User Interface
 
-The user interface of Due Tonight is designed and developed according to the basic game logic. The game is composed of six scenes that connected by scripts. 
+The user interface of Due Tonight is designed and developed according to the basic game logic. The game is composed of six scenes that connected by scripts. The standard resolution we used is 1600 * 900.
 ![scene](scene.png)
  - Scene1: Main Menu: contains Start , Quit, Overcode, Controller & Keyboard four buttons.
  'Start' is the link to next game scene which allow players to choose two characters.
  'Controller & Keyboard' can link to the controller and keyboard guide scene.
  'Overcode' can link to team roles page.
  'Quit' is to quit game.
+ 
+  ![mainmenu](mainmenu.gif)
+  
  Each button has different colors and effects.
  - Scene2: Choose two characters, and go to next scene. Save player's choices for Scene4.
  - Scene3: Choose background, and go to next scene. Save player's choice for Scene4.
@@ -89,18 +92,19 @@ The user interface of Due Tonight is designed and developed according to the bas
 
 **Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
 * As a fighting game, characters in the game must have basic movements for left, right, jump and squat down to avoid attack. The command pattern exercise in exercise 1 help us to separate movement for each button. There are two scripts, PlayerController and Player2Controller use to control the different characters in left and right. Each character has different skills, so each of them has script to manage the physics and motion. In order to improve the diversity of the player experience, the motion direction, force, duration time and some other factors are all various. For example the Rushbike skill for Butner, basically is adding certain force to the rigidbody and transform its position during the process. [Scipt RushBike.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Butner_Motions/RushBike.cs#L1-L55)
+![bike](rushbike.gif)
 
 * We use the build in add velocity to move the character left and right. And we use add force to make the player jump although that looks weird, it works fine! And shooting prefab, I chose to move the transform position of the prefab to move more smoothly. That's mostly standard physics model i believe, but I think the most interesting part is that we simulated the thunder motion by fliping the x axis and y axis 2 times per frame which would make thunder look real. 
 
 * In the system of game damage, we use the collision as the way to check whether the character hit each other successfully. 
 This an efficient way for the checking of damage, but it also make the character 'Zee' too powerful [Script of Zee](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Zee_Motions/PerformSword.cs#L1-L67), since checking will happen at the whole time that 'Zee' using the sword skills and we make the scale of the skill objects a little large, some times people cannot tell whether they were hit. Since we need to check the collision, we also add mass on each character. And we need to add a floor at the bottom of the background to prevent the charactor from falling down.
+![sword](sword.gif)
 
-* For basic physics we used rigidbody2d like the exercise 1 did which could privide us basic physics like the gravity, and we set the z rotation to be frozen, and because we are using add force to simulate the jump of the player, we can just modify the mass and gravity scale in rigidbody2d which could directly change the ratio that player jump and the time they return to ground.
+* For basic physics we used Rigidbody2D like the exercise 1 did which could provide us basic physics like the gravity, and we set the z rotation to be frozen, and because we are using add force to simulate the jump of the player, we can just modify the mass and gravity scale in Rigidbody2D which could directly change the ratio that player jump and the time they return to ground.
 
 * We also keep the projectiles and other ability that player generate be on the top layer which will avoid it be covered by either the background or the player
 
 ![rigidbody](rigidbody2d.png)
-
 
 
  [Contributors: Jason Zhou, Bingwei Wang]
