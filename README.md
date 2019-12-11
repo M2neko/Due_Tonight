@@ -112,7 +112,7 @@ The user interface of Due Tonight is designded according to the basic game logic
  [Contributer: Zheng Wang, Bingwei Wang]
  
 ## Game Logic
-
+we used the object pooling method we learned from exercise 5 to finish butner's shoot gate ability. And we design a damage engine with serilizedfield of each damage for different ability which would allow us to test the game and modify to balance the player. And we keep tracking the healthbar controller to see if there's a winner for the whole game logic.
  [Contributer: Bingwei Wang, Ruike Qiu]
 **Document what game states and game data you managed and what design patterns you used to complete your task.**
 
