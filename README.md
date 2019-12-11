@@ -145,7 +145,7 @@ The script is [Damage.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/
 * Special thanks to Professor McCoy and Zee for their contribution for recording audio. Those audios from McCoy and Zee are applied to opening animations and attack skills.
   Other audio sources for characters come from the website (2) [Free Sound Effects https://www.freesoundeffects.com]
 * Implementation: Add audio listener to gameobjects and evoke specific audio clips when the game receive different inputs.
-Save all the audio files in scripts as AudioSource, and the volume can be adjusted. The function from component can used to control the plat and stop of audio. If the audio will have a delay with the effect we need, we can make the audio play a little earlier to solve this problem. For the background music, because it will not stop unless players quit game, I used [DontDestroyOnLoad](https://github.com/M2neko/ECS_189L_Final_Project/blob/5e299246b82745e5bb877facb62f7c7dab997bbf/Overcodeeeeeeee/Assets/Script/UI_Script/BgMusic.cs#L30) to make the music keeps playing.
+Save all the audio files in scripts as [AudioSource](https://github.com/M2neko/ECS_189L_Final_Project/blob/a44591bf4ce994b135ce62f3261ba819591c93f1/Overcodeeeeeeee/Assets/Script/EndGame.cs#L49), and the volume can be adjusted. The function from component can used to control the play and stop of audio. If the audio will have a delay with the effect we need, we can make the audio play a little earlier to solve this problem. For the background music, because it will not stop unless players quit game, I used [DontDestroyOnLoad](https://github.com/M2neko/ECS_189L_Final_Project/blob/5e299246b82745e5bb877facb62f7c7dab997bbf/Overcodeeeeeeee/Assets/Script/UI_Script/BgMusic.cs#L30) to make the music keeps playing.
 
 ## Gameplay Testing
 
@@ -155,18 +155,28 @@ Save all the audio files in scripts as AudioSource, and the volume can be adjust
 
 ## Narrative Design
 
-**Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
-The way we show the narrative in our game is dividing players into two groups which one of them are students while the other are professors which follow the narrative that students fight against professors for extension. And we recorded the voice line from professor mccoy and zee which makes the narrative more reliable. We also combine the element of due(canvas) into the students' ability and the logism(for ecs154) into butner(who taught that class)'s ability. And when we declare the winner, if the student win, we would display that students dont have to submit the assignment 5 but if the professor win, we would display that students need to finish the exercise 5 this night which indeed follow the narrative.
+* The way we show the narrative in our game is setting the background in our campus, and dividing players into two groups 
+which one of them are students while the other are professors which follow the narrative that students fight against 
+professors for extension. And we recorded the voice line from professor mccoy and zee which makes the narrative more reliable.
+We also combine the elements of due(Canvas) into the students' ability and the Logism(form ecs154) into butner(who taught that 
+class)'s ability. When we declare the winner, if the student K.O professor, we would display the text that students do not 
+need to submit their ex5 today. On the contrary, if the professor K.O student, we would display that students need to finish homework tonight. The characters, background, and short texts all provide supports for the narrative design. 
+![twoteams](twoteams.png)
+![ko](ko1.png)
+![ko](ko2.png)
 
 ## Press Kit and Trailer
-* Press Kit materials:
-* Link to trailer: [Due Tonight Trailer](https://www.youtube.com/watch?v=FFGYx54-IqI)
+
+* Press Kit trailer: [Due Tonight Trailer](https://www.youtube.com/watch?v=FFGYx54-IqI)
 * Because Due Tonight is a fighting game, the trailer shows the fundamental gameplay scenes. And I also chose to include
-unique attack skills in the trailer. I used screenrecording to record the battle and cutted those clips using Adobe Premiere.
-The background music of the trailer is the same with the background music of our game, which I think is very appealing. Thanks for all the audio contributers for our game.
+unique attack skills in the trailer. I used QuickTime Player to screenrecord the game and usd Adobe Premiere to cutted and comnined those clips. The background music of the trailer is the same with the background music of our game, which I think is very appealing. Thanks for all the audio contributers for our game.
+![trailer](trailer.png)
 
 ## Game Feel
 
-**Document what you added to and how you tweaked your game to improve its game feel.**
-Overall the game feel is great due to the test we did ourselves and the feedback from professor and other students, but we improved the game feel by modifing some damage value of the ability which will make the game more balanced, and that would make the player more interested in the game. And we designed the game not requiring high skill for player to play so that not a professional player would enjoy this game as well. For improvment, I would work more on the camera movement which could make the fightming more realistic and cooler
+* Overall the game feel is great due to the test we did ourselves and the feedback from professor and other students, but we 
+improved the game feel by modifing some damage values of the ability which will make the game balanced, and that would make
+the player more interested in the game. And we designed the game not requiring high skill for player to play so that not a 
+professional player would enjoy this game as well. For improvment, I would work more on the camera movement which could make
+the fighting more realistic and cooler.
 
