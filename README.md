@@ -153,3 +153,5 @@ The background music of the trailer is the same with the background music of our
 ## Game Feel
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
+Overall the game feel is great due to the test we did ourselves and the feedback from professor and other students, but we improved the game feel by modifing some damage value of the ability which will make the game more balanced, and that would make the player more interested in the game. And we designed the game not requiring high skill for player to play so that not a professional player would enjoy this game as well. For improvment, I would work more on the camera movement which could make the fightming more realistic and cooler
+
