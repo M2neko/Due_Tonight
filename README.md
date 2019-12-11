@@ -1,29 +1,11 @@
-# ECS_189L_Final_Project
-
-This is the final project for Team **OverCode**.
-
-# Main Role
-* Animation and Visuals :     Ruike Qiu
-* Game Logic :               Bingwei Wang
-* User Interface :            Jinghan Zhang
-* Input :                     Zheng Wang
-* Movement/Physics :          Jason Zhou
-
-# Sub-Role
-* Gameplay Testing :          Zheng Wang
-* Press Kit and Trailer :     Bingwei Wang
-* Audio :                     Jinghan Zhang
-* Narrative Design :          Ruike Qiu
-* Game Feel :                 Jason Zhou
-
 # Game Basic Information #
 
 ## Summary ##
 
     Due Tonight is an one-on-one fighting game based on two teams of professor and student. 
-    Students need to fight with professor to get an extension for their homework, and 
-    professors should avoid that happens. Characters have different attack skills which 
-    may come from some personal characteristics in reality. 
+    Students from UC Davis are under great pressure, so they want to fight with professor 
+    to get an extension for their homework. But professors should avoid that happens. Characters
+    have different attack skills which may come from some personal characteristics in reality. 
 
 ## Gameplay explanation ##
 
@@ -61,9 +43,15 @@ This is the final project for Team **OverCode**.
             
             'L' for shield skills.
             
-* User Experience: Players should follow the steps of menu. Choosing one character from each team, and then choose a background to start fighting. Each round has 100 seconds to fight. If one of them dies, this round will end immediately. Players can decide whether play again or quit game.
+* User Experience: Players should follow the steps of menu. Choosing one character from each team, and then choose a background to start fighting. Each round has 100 seconds to fight. If one of them dies, this round will end immediately. Players can decide whether to play again or quit game.
 
 # Main Roles #
+
+* Animation and Visuals :     Ruike Qiu
+* Game Logic :               Bingwei Wang
+* User Interface :            Jinghan Zhang
+* Input :                     Zheng Wang
+* Movement/Physics :          Jason Zhou
 
 Your goal is to relate the work of your role and sub-role in terms of the content of the course. Please look at the role sections below for specific instructions for each role.
 
@@ -78,19 +66,39 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## User Interface
 
-**Describe your user interface and how it relates to gameplay. This can be done via the template.**
-* The user interface of Due Tonight is designded according to the basic game logic. The game is composed of six scenes that connected by scripts. Players need to choose their characters and background before the battle starts. The combat mode contains a timer and two healthbar of characters. After players make their choice, the healthbar will appear accordingly. 
-
+The user interface of Due Tonight is designded according to the basic game logic. The game is composed of six scenes that connected by scripts. 
+ - Scene1: Main Menu: contains Start , Quit, Overcode, Controller & Keyboard four buttons.
+ 'Start' is the link to next game scene which allow players to choose two characters.
+ 'Controller & Keyboard' can link to the controller and keyboard guide scene.
+ 'Overcode' can link to team roles page.
+ 'Quit' is to quit game.
+ Each button has different colors and effects.
+ - Scene2: Choose two characters, and go to next scene.
+ - Scene3: Choose background, and go to next scene. 
+ - Scene4: Game, connected with Scene3. There is a timer and two healthbar for this scene. Healthbars and characters will appear according to players' choices. We used images to make the color of healthbar and it will change according to characters' health remain. After one round ends, this scene also can link to Scene2 for players to play again, or back to Scene1 Main Menu and quit the game. If one player is die before the timer stops, this round will end immediately with a big K.O image. And we also included a 'draw' image for different cases. 
+ - Scene5: Team credit page, connected with Main Menu.
+ - Scene6: 'Controller & Keyboard', connected with Main Menu.
+ 
+ [UI script example](https://github.com/M2neko/ECS_189L_Final_Project/blob/5e299246b82745e5bb877facb62f7c7dab997bbf/Overcodeeeeeeee/Assets/Script/UI_Script/Game.cs#L1-L126)
+ 
+ The free font we used for our game: [Noise Machine by Darrell Flood](https://www.fontspace.com/category/electric)
+ 
+ [Contributer: Jinghan Zhang, Zheng Wang]
+ 
 ## Movement/Physics
 
 **Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
 
+ [Contributer: Jason Zhou, Bingwei Wang]
+ 
 ## Animation and Visuals
 
+* We chose to use 2D pixel art for our game and it has a simple, retro type of feel for video game. The overall scene with graphic design elements is interact with players efficiently. According to narrative design, the story of this game is happened in the campus of UC Davis, so the two backgrounds are inspired by the buildings of campus, Memorial Union and the Shield's Library. The four characters are based on McCoy, Zee, Butner, and one normal student. All characters have different animation controllers in Unity due to large amount of actions and movements.
 * The art of Due Tonight are designed and created by Jinghan Zhang.
-* The overall visual feel of the game in 2D pixel style. The story of the game is happened in the campus of UC Davis, so the two backgrounds are inspired by the building of campus, the Memorial Union and the Shield's Library. And the four characters are based on McCoy, Zee, Butner, and one normal student. 
 
-**Describe how your work intersects with game feel, graphic design, and world-building. Include your visual style guide if one exists.**
+**Describe how your work intersects with game feel, graphic design, and world-building.**
+
+[Contributer: Ruike Qiu, Jason Zhou, Jinghan Zhang]
 
 ## Input
 
@@ -98,11 +106,20 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Add an entry for each platform or input style your project supports.**
 
+ [Contributer: Zheng Wang, Bingwei Wang]
+ 
 ## Game Logic
 
+ [Contributer: Bingwei Wang, Ruike Qiu]
 **Document what game states and game data you managed and what design patterns you used to complete your task.**
 
 # Sub-Roles
+
+* Gameplay Testing :          Zheng Wang
+* Press Kit and Trailer :     Bingwei Wang
+* Audio :                     Jinghan Zhang
+* Narrative Design :          Ruike Qiu
+* Game Feel :                 Jason Zhou
 
 ## Audio
 
@@ -111,7 +128,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 * Special thanks to Professor McCoy and Zee for their contribution for recording audio. Those audios from McCoy and Zee are applied to opening animations and attack skills.
   Other audio sources for characters come from the website (2) [Free Sound Effects https://www.freesoundeffects.com]
 * Implementation: Add audio listener to gameobjects and evoke specific audio clips when the game receive different inputs.
-Save all the audio files in scripts as AudioSource, and the volume can be adjusted. The function from component can used to control the plat and stop of audio. If the audio will have a delay with the effect we need, we can make the audio play a little earlier to solve this problem. 
+Save all the audio files in scripts as AudioSource, and the volume can be adjusted. The function from component can used to control the plat and stop of audio. If the audio will have a delay with the effect we need, we can make the audio play a little earlier to solve this problem. For the background music, because it will not stop unless players quit game, I used [DontDestroyOnLoad](https://github.com/M2neko/ECS_189L_Final_Project/blob/5e299246b82745e5bb877facb62f7c7dab997bbf/Overcodeeeeeeee/Assets/Script/UI_Script/BgMusic.cs#L30) to make the music keeps playing.
 
 ## Gameplay Testing
 
@@ -124,10 +141,11 @@ Save all the audio files in scripts as AudioSource, and the volume can be adjust
 **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
 ## Press Kit and Trailer
-
-**Include links to your presskit materials and trailer.**
-
-**Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
+* Press Kit materials:
+* Link to trailer: [Due Tonight Trailer](https://www.youtube.com/watch?v=FFGYx54-IqI)
+* Because Due Tonight is a fighting game, the trailer shows the fundamental gameplay scenes. And I also chose to include
+unique attack skills in the trailer. I used screenrecording to record the battle and cutted those clips using Adobe Premiere.
+The background music of the trailer is the same with the background music of our game, which I think is very appealing. Thanks for all the audio contributers for our game.
 
 ## Game Feel
 
