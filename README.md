@@ -107,9 +107,24 @@ The user interface of Due Tonight is designded according to the basic game logic
 
 ## Input
 ![](key.png)
-**Describe the default input configuration.**
 
-**Add an entry for each platform or input style your project supports.**
+We use button to change scene.
+
+We ue pikmini's send message way to choose charactor and gamebackground.
+
+The default game play input is on the keyboard：
+* 'W''A''S''D' for left charactor movement.
+* '⬆️''⬇️''⬅️''➡️' for movement.
+* 'Left Shift' and 'Control' for two attack skills of left charactors.
+* 'J' and 'K' for two attack skills of right charactors.
+* 'Option' for left shield skills and 'L' for shield skills. 
+* 'Space' for the special Nova Gates skill of Professor Butterner
+     
+We also use xbox one controllers as a way to input, we recomand this ways in game play:
+* Left Stick, Left bumper, Right bumper for movement.
+* 'A' for shield skills, 'Y' and 'B' for two attack skills.
+* 'X' for for the special Nova Gates skill of Professor Butterner
+    
 
  [Contributers: Zheng Wang, Bingwei Wang]
  
