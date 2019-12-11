@@ -25,12 +25,16 @@ public class Cameracontroller : MonoBehaviour
 
     private void LateUpdate()
     {
-        distance = Mathf.Abs(Target1.transform.position.x - Target1.GetComponent<PlayerController>().OtherPlayer().gameObject.transform.position.x);
+        distance = Mathf.Abs(Target1.transform.position.x - Target1.GetComponent<PlayerController>().OtherPlayer().transform.position.x);
         var rate = distance / 9.21f;
         var view = rate * 50;
         if (view <= 50)
         {
             view = 50;
+        }
+        if (view >= 70)
+        {
+            view = 70;
         }
         ManagedCamera.fieldOfView = view;
     }

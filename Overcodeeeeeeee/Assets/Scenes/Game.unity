@@ -1547,15 +1547,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e292dc9cd69c4ec38085edc7de958b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player1_1: {fileID: 1001785145}
   player1_2: {fileID: 1082452055}
-  player2_1: {fileID: 1618645503}
-  player2_2: {fileID: 1174205398}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2817,7 +2815,6 @@ MonoBehaviour:
   Welcome_Slogan: {fileID: 1353621580}
   TakeDamage: {fileID: 782383917}
   IsStart: 1
-  cam: {fileID: 519420031}
 --- !u!114 &1001785152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3330,7 +3327,6 @@ MonoBehaviour:
   Welcome_Slogan: {fileID: 1353621580}
   TakeDamage: {fileID: 782383917}
   IsStart: 1
-  cam: {fileID: 519420031}
 --- !u!114 &1082452062
 MonoBehaviour:
   m_ObjectHideFlags: 0
