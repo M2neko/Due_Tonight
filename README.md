@@ -95,6 +95,14 @@ The user interface of Due Tonight is designed and developed according to the bas
 * In the system of game damage, we use the collision as the way to check whether the character hit each other successfully. 
 This an efficient way for the checking of damage, but it also make the character 'Zee' too powerful [Script of Zee](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Zee_Motions/PerformSword.cs#L1-L67), since checking will happen at the whole time that 'Zee' using the sword skills and we make the scale of the skill objects a little large, some times people cannot tell whether they were hit. Since we need to check the collision, we also add mass on each character. And we need to add a floor at the bottom of the background to prevent the charactor from falling down.
 
+* For basic physics we used rigidbody2d like the exercise 1 did which could privide us basic physics like the gravity, and we set the z rotation to be frozen, and because we are using add force to simulate the jump of the player, we can just modify the mass and gravity scale in rigidbody2d which could directly change the ratio that player jump and the time they return to ground.
+
+* We also keep the projectiles and other ability that player generate be on the top layer which will avoid it be covered by either the background or the player
+
+![rigidbody](rigidbody2d.png)
+
+
+
  [Contributors: Jason Zhou, Bingwei Wang]
  
 ## Animation and Visuals
