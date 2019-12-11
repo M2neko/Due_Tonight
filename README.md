@@ -3,9 +3,11 @@
 ## Summary ##
 
     Due Tonight is an one-on-one fighting game based on two teams of professor and student. 
-    Students from UC Davis are under great pressure, so they want to fight with professor 
-    to get an extension for their homework. But professors should avoid that happens. Characters
-    have different attack skills which may come from some personal characteristics in reality. 
+    Students from UC Davis are under great study pressure, so they want to fight with professors 
+    in order to get an extension for their homework. But professors should avoid that happens. 
+    Characters have different attack skills which may come from some personal characteristics 
+    in reality. This game is connected to our daily lives, especially those students and profressors
+    from UCD Computer Science department.
 
 ## Gameplay explanation ##
 
@@ -66,7 +68,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## User Interface
 
-The user interface of Due Tonight is designded according to the basic game logic. The game is composed of six scenes that connected by scripts. 
+The user interface of Due Tonight is designded and developed according to the basic game logic. The game is composed of six scenes that connected by scripts. 
 ![scene](scene.png)
  - Scene1: Main Menu: contains Start , Quit, Overcode, Controller & Keyboard four buttons.
  'Start' is the link to next game scene which allow players to choose two characters.
@@ -74,10 +76,10 @@ The user interface of Due Tonight is designded according to the basic game logic
  'Overcode' can link to team roles page.
  'Quit' is to quit game.
  Each button has different colors and effects.
- - Scene2: Choose two characters, and go to next scene.
- - Scene3: Choose background, and go to next scene. 
- - Scene4: Game, connected with Scene3. There is a timer and two healthbar for this scene. Healthbars and characters will appear according to players' choices. We used images to make the color of healthbar and it will change according to characters' health remain. After one round ends, this scene also can link to Scene2 for players to play again, or back to Scene1 Main Menu and quit the game. If one player is die before the timer stops, this round will end immediately with a big K.O image. And we also included a 'draw' image for different cases. 
- - Scene5: Team credit page, connected with Main Menu.
+ - Scene2: Choose two characters, and go to next scene. Save player's choices for Scene4.
+ - Scene3: Choose background, and go to next scene. Save player's choice for Scene4.
+ - Scene4: Game scene, connected with Scene3. There is a timer of 100 seconds and two healthbar for this scene. Healthbars and characters will appear according to players' choices from scene2 and 3. We used images to make the color of healthbar and it will change according to the remaining of characters' health. After one round ends, this scene also can back to Scene2 for players to play again and make their choices of characters and background, or back to the main menu of Scene1 and quit the game. If one player is die before the timer stops, this round will end immediately with a big K.O image. And we also included a 'draw' image for different cases. 
+ - Scene5: Team credit page, connected with Main Menu. This page has a simple layout to show the main roles and sub roles of our team.
  - Scene6: 'Controller & Keyboard', connected with Main Menu.
  
  [UI script example](https://github.com/M2neko/ECS_189L_Final_Project/blob/5e299246b82745e5bb877facb62f7c7dab997bbf/Overcodeeeeeeee/Assets/Script/UI_Script/Game.cs#L1-L126)
@@ -89,10 +91,12 @@ The user interface of Due Tonight is designded according to the basic game logic
 ## Movement/Physics
 
 **Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
+* As a fighting game, characters in the game must have basic movements for left, right, jump and squat down to avoid attack. The command pattern exersice in exercise 1 help us to separate movemebt for each button. There are two scripts, PlayerController and Player2Controller use to control the different characters in left and right. Each character has different skills, so each of them has script to manage the physics and motion. In order to improve the diversity of the player experience, the motion direction, force, duration time and some other factors are all various. For example the Rushbike skill for Butner, basically is adding certain force to the rigidbody and transform its position during the process. [Scipt RushBike.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Butner_Motions/RushBike.cs#L1-L55)
 
 * We use the build in add velocity to move the character left and right. And we use add force to make the player jump although that looks weird, it works fine! And shooting prefab, I chose to move the transform position of the prefab to move more smoothly. That's mostly standard physics model i believe, but I think the most interesting part is that we simulated the thunder motion by fliping the x axis and y axis 2 times per frame which would make thunder look real. 
 
-* In the game damage logic, we use the collision as the way to check whether the charactor hit each other. This a good way to check, but it also make 'Zee' too much powerful, since checking will happen at the whole time that 'Zee' using the sword skills and we make the scale of the skill objects a little large, some times people cannot tell whether they were hit. Since we need to check the collision, we also add mass on each charactor so, we need to add a floor at the botton of the background to prevent the charactor from falling down.
+* In the system of game damage, we use the collision as the way to check whether the charactor hit each other successfully. 
+This an efficient way for the checking of damage, but it also make the character 'Zee' too powerful [Script of Zee](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Zee_Motions/PerformSword.cs#L1-L67), since checking will happen at the whole time that 'Zee' using the sword skills and we make the scale of the skill objects a little large, some times people cannot tell whether they were hit. Since we need to check the collision, we also add mass on each charactor. And we need to add a floor at the botton of the background to prevent the charactor from falling down.
 
  [Contributers: Jason Zhou, Bingwei Wang]
  
@@ -108,23 +112,10 @@ The user interface of Due Tonight is designded according to the basic game logic
 [Contributers: Ruike Qiu, Jason Zhou, Jinghan Zhang]
 
 ## Input
+
+* As a fighting game, the input button is critical to players' overall gaming experience. Because we created four basic movements to each characters, and at least two attack skills and one shield skills, there are many buttons players need to use during the battle. Keyboard is not a recommended choice for control since one keyboard for two players are too small. So we changed the setting of Xbox controller and connect it with our game to improve user experience. 
 ![](key.png)
-
-We use build in buttons to change scene and choose charactor and gamebackground.
-
-The default game play input is on the keyboard：
-* 'W''A''S''D' for left charactor movement.
-* '⬆️''⬇️''⬅️''➡️' for movement.
-* 'Left Shift' and 'Control' for two attack skills of left charactors.
-* 'J' and 'K' for two attack skills of right charactors.
-* 'Option' for left shield skills and 'L' for shield skills. 
-* 'Space' for the special Nova Gates skill of Professor Butterner
-     
-We also use xbox one controllers as a way to input, we recomand this ways in game play:
-* Left Stick, Left bumper, Right bumper for movement.
-* 'A' for shield skills, 'Y' and 'B' for two attack skills.
-* 'X' for for the special Nova Gates skill of Professor Butterner
-    
+* The image above is the default input configuration. Players can check the Controller & Keyboard scene from the Main menu. We only can use left mouse button to click on the screen to change scenes and choose characters or background of battle.
 
  [Contributers: Zheng Wang, Bingwei Wang]
  
@@ -132,7 +123,7 @@ We also use xbox one controllers as a way to input, we recomand this ways in gam
 
 * General: For a fighting game, the basic components includes characters, background, healthbar and a timer. 
 ![game](game.png)
-* Scene: Our game includes two scenes for players to interact and choose their characters and background. 
+* Scene: There are six scenes overall. Players can interact with scene2 and scene3 to choose their characters and background. And then go to scene 4 for fighting. 
 * Timer: We chose 100s as the duration for one round, according to some classical fighting games.
 * Game manager: The most important game logic in our game is to decided various results of the battle, deciding the winner, K.O or draw. I used several SerializeField to managed different game objects. This part is finished in [EndGame.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/e24b55683341bb6b5205ebb09476c874e7503a91/Overcodeeeeeeee/Assets/Script/EndGame.cs#L1-L106).
 * Healthbar and Damage: These are the two main parts which will influence player experience. We used the object pooling method
@@ -163,15 +154,12 @@ Save all the audio files in scripts as [AudioSource](https://github.com/M2neko/E
 
 ## Gameplay Testing
 
-**Add a link to the full results of your gameplay tests.**
+* Link to test result: https://github.com/M2neko/ECS_189L_Final_Project/blob/master/Gametesting.pdf
 
-https://github.com/M2neko/ECS_189L_Final_Project/blob/master/Gametesting.pdf
-
-**Summarize the key findings from your gameplay tests.**
-
-* Most people like our animation and charactor design. 
-* The game balance system still need to justify, some characters are too powerful, and some are too week.
-* Some movement are weird, we may need some other physical functions to fix it.
+* Summarize
+    * Most participants like our animation and character design. 
+    * The game balance system still need to justify, some characters are too powerful, and some of them are too weak.
+    * Some movements look weird, we may need other physical functions to fix them.
 
 ## Narrative Design
 
@@ -189,14 +177,13 @@ need to submit their ex5 today. On the contrary, if the professor K.O student, w
 
 * Press Kit trailer: [Due Tonight Trailer](https://www.youtube.com/watch?v=FFGYx54-IqI)
 * Because Due Tonight is a fighting game, the trailer shows the fundamental gameplay scenes. And I also chose to include
-unique attack skills in the trailer. I used QuickTime Player to screenrecord the game and used Adobe Premiere to cutted and comnined those clips. The background music of the trailer is the same with the background music of our game, which I think is very appealing. The trailer starts with some special audios of our game. Thanks for all the audio contributers for our game!
+unique attack skills in the trailer as the main part. I used QuickTime Player to screenrecord the game and used Adobe Premiere to cutted and comnined those clips. The background music of the trailer is the same with the background music of our game, which I think is very appealing. The trailer starts with some special audios of our game. Thanks for all the audio contributers for our game!
 ![trailer](trailer.png)
 
 ## Game Feel
 
-* Overall the game feel is great due to the test we did ourselves and the feedback from professor and other students, but we 
-improved the game feel by modifing some damage values of the ability which will make the game balanced, and that would make
-the player more interested in the game. And we designed the game not requiring high skill for player to play so that not a 
-professional player would enjoy this game as well. For improvment, I would work more on the camera movement which could make
-the fighting more realistic and cooler.
+* Our game is related to students' life in UC Davis, which has been described in Narrative Design. From the visual arts to the sound effects, player from UCD can feel the connection to their daily lives. Overall the game feel is great due to the test we did ourselves and the feedback from professor and other students, but we improved the game feel by modifing some damage values of the ability which will make the game balanced, and that would make the player more interested in the game. And we designed the game not requiring high skill for player to play so that not a professional player would enjoy this game as well. For improvment, I would work more on the camera movement which could make the fighting more realistic and cooler.
 
+* After the game testing and summarize from our own gaming experience, we realized that 100 seconds for one round may be too long for our game. Most of the players will end game in less than 50s because one of them dies, and "K.O" always happens. Since we did not finish a perfect damage control and skill management, this might be one of the important parts to improve in the future. 
+
+* We aim to make the gameplay of the movement smooth. Several animations have been applied to different characters. However, because we lack of the knowledge of Unity2D physics, there are still have some weired motions that we do not have time to optimize.
