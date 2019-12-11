@@ -142,6 +142,7 @@ Save all the audio files in scripts as AudioSource, and the volume can be adjust
 ## Narrative Design
 
 **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
+The way we show the narrative in our game is dividing players into two groups which one of them are students while the other are professors which follow the narrative that students fight against professors for extension. And we recorded the voice line from professor mccoy and zee which makes the narrative more reliable. We also combine the element of due(canvas) into the students' ability and the logism(for ecs154) into butner(who taught that class)'s ability. And when we declare the winner, if the student win, we would display that students dont have to submit the assignment 5 but if the professor win, we would display that students need to finish the exercise 5 this night which indeed follow the narrative.
 
 ## Press Kit and Trailer
 * Press Kit materials:
