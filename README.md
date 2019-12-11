@@ -97,6 +97,7 @@ The user interface of Due Tonight is designded according to the basic game logic
 ## Animation and Visuals
 
 * We chose to use 2D pixel art for our game and it has a simple, retro type of feel for video game. The overall scene with graphic design elements is interact with players efficiently. According to narrative design, the story of this game is happened in the campus of UC Davis, so the two backgrounds are inspired by the buildings of campus, Memorial Union and the Shield's Library. The four characters are based on McCoy, Zee, Butner, and one normal student. All characters have different animation controllers in Unity due to large amount of actions and movements.
+* Ruike Qiu and Jason Zhou worked with each other to finish the basic movement and the animation which would make the movement animation smooth because we need to make the time when to change the image of the character accurate.
 * The art of Due Tonight are designed and created by Jinghan Zhang.
 
 **Describe how your work intersects with game feel, graphic design, and world-building.**
