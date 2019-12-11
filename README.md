@@ -149,9 +149,11 @@ Save all the audio files in scripts as [AudioSource](https://github.com/M2neko/E
 ## Gameplay Testing
 
 **Add a link to the full results of your gameplay tests.**
-
+https://github.com/M2neko/ECS_189L_Final_Project/blob/master/Gametesting.pdf
 **Summarize the key findings from your gameplay tests.**
-
+* Most people like our animation and charactor design. 
+* The game balance system still need to justify, some characters are too powerful, and some are too week.
+* Some movement are weird, we may need some other physical functions to fix it.
 ## Narrative Design
 
 * The way we show the narrative in our game is setting the background in our campus, and dividing players into two groups 
