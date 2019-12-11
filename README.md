@@ -91,7 +91,6 @@ The user interface of Due Tonight is designed and developed according to the bas
  
 ## Movement/Physics
 
-**Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
 * As a fighting game, characters in the game must have basic movements for left, right, jump and squat down to avoid attack. The command pattern exercise in exercise 1 help us to separate movement for each button. There are two scripts, PlayerController and Player2Controller use to control the different characters in left and right. Each character has different skills, so each of them has script to manage the physics and motion. In order to improve the diversity of the player experience, the motion direction, force, duration time and some other factors are all various. For example the Rushbike skill for Butner, basically is adding certain force to the rigidbody and transform its position during the process. [Scipt RushBike.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Butner_Motions/RushBike.cs#L1-L55)
 
 ![bike](rushbike.gif)
