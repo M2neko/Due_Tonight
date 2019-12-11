@@ -2,8 +2,8 @@
 
 ## Summary ##
 
-    Due Tonight is an one-on-one fighting game based on two teams of professor and student. 
-    Students from UC Davis are under great study pressure, so they want to fight with professors 
+    Due Tonight is a one-on-one fighting game based on two teams of professor and student. 
+    Students from UC Davis are under high study pressure, so they want to fight with professors 
     in order to get an extension for their homework. But professors should avoid that happens. 
     Characters have different attack skills which may come from some personal characteristics 
     in reality. This game is connected to our daily lives, especially those students and professors
@@ -67,11 +67,11 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## User Interface
 
-The user interface of Due Tonight is designed and developed according to the basic game logic. The game is composed of six scenes that connected by scripts. The standard resolution we used is 1600 * 900.
+The user interface of Due Tonight is designed and developed according to the basic game logic. The game is composed of six scenes connected by scripts. The standard resolution we used is 1600 * 900.
 ![scene](scene.png)
  * Scene1: Main Menu: contains Start , Quit, Overcode, Controller & Keyboard four buttons.
  
-      * 'Start' is the link to next game scene which allow players to choose two characters.
+      * 'Start' is the link to next game scene which allows players to choose two characters.
       * 'Controller & Keyboard' can link to the controller and keyboard guide scene.
       * 'Overcode' can link to team roles page.
       * 'Quit' is to quit game.
@@ -79,9 +79,9 @@ The user interface of Due Tonight is designed and developed according to the bas
   ![mainmenu](mainmenu.gif)
   
  Each button has different colors and effects.
- * Scene2: Choose two characters, and go to next scene. Save player's choices for Scene4.
- * Scene3: Choose background, and go to next scene. Save player's choice for Scene4.
- * Scene4: Game scene, connected with Scene3. There is a timer of 100 seconds and two healthbar for this scene. Healthbars and characters will appear according to players' choices from scene2 and 3. We used images to make the color of healthbar and it will change according to the remaining of characters' health. After one round ends, this scene also can back to Scene2 for players to play again and make their choices of characters and background, or back to the main menu of Scene1 and quit the game. If one player is die before the timer stops, this round will end immediately with a big K.O image. And we also included a 'draw' image for different cases. 
+ * Scene2: Choose two characters, and go to the next scene. Save player's choices for Scene4.
+ * Scene3: Choose background, and go to the next scene. Save player's choice for Scene4.
+ * Scene4: Game scene, connected with Scene3. There is a timer of 100 seconds and two healthbar for this scene. Healthbars and characters will appear according to players' choices from scene2 and 3. We used images to make the color of healthbar and it will change according to the remaining of characters' health. After one round ends, this scene also can back to Scene2 for players to play again and make their choices of characters and background, or back to the main menu of Scene1 and quit the game. If one player dies before the timer stops, this round will end immediately with a big K.O image. And we also included a 'draw' image for different cases. 
  * Scene5: Team credit page, connected with Main Menu. This page has a simple layout to show the main roles and sub roles of our team.
  * Scene6: 'Controller & Keyboard', connected with Main Menu.
  
@@ -91,11 +91,11 @@ The user interface of Due Tonight is designed and developed according to the bas
  
 ## Movement/Physics
 
-* As a fighting game, characters in the game must have basic movements for left, right, jump and squat down to avoid attack. The command pattern exercise in exercise 1 help us to separate movement for each button. There are two scripts, PlayerController and Player2Controller use to control the different characters in left and right. Each character has different skills, so each of them has script to manage the physics and motion. In order to improve the diversity of the player experience, the motion direction, force, duration time and some other factors are all various. For example the Rushbike skill for Butner, basically is adding certain force to the rigidbody and transform its position during the process. [Scipt RushBike.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Butner_Motions/RushBike.cs#L1-L55)
+* As a fighting game, characters in the game must have basic movements for left, right, jump and squat down to avoid attack. The command pattern exercise in exercise 1 helps us to separate movement for each button. There are two scripts, PlayerController and Player2Controller use to control the different characters in left and right. Each character has different skills, so each of them has script to manage the physics and motion. In order to improve the diversity of the player experience, the motion direction, force, duration time and some other factors are all various. For example the Rushbike skill for Butner, basically is adding certain force to the rigidbody and transform its position during the process. [Scipt RushBike.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Butner_Motions/RushBike.cs#L1-L55)
 
 ![bike](rushbike.gif)
 
-* We use the build in add velocity to move the character left and right. And we use add force to make the player jump although that looks weird, it works fine! And shooting prefab, I chose to move the transform position of the prefab to move more smoothly. That's mostly standard physics model i believe, but I think the most interesting part is that we simulated the thunder motion by fliping the x axis and y axis 2 times per frame which would make thunder look real. 
+* We use the build-in add velocity to move the character left and right. And we use add force to make the player jump although that looks weird, it works fine! And shooting prefab, I chose to move the transform position of the prefab to move more smoothly. That's mostly standard physics model i believe, but I think the most interesting part is that we simulated the thunder motion by fliping the x axis and y axis 2 times per frame which would make thunder look real. 
 
 * In the system of game damage, we use the collision as the way to check whether the character hit each other successfully. 
 This an efficient way for the checking of damage, but it also make the character 'Zee' too powerful [Script of Zee](https://github.com/M2neko/ECS_189L_Final_Project/blob/f56a53ae7db1aa7fc21f237ca9a6ae091fc1b7d7/Overcodeeeeeeee/Assets/Script/Zee_Motions/PerformSword.cs#L1-L67), since checking will happen at the whole time that 'Zee' using the sword skills and we make the scale of the skill objects a little large, some times people cannot tell whether they were hit. Since we need to check the collision, we also add mass on each character. And we need to add a floor at the bottom of the background to prevent the charactor from falling down.
@@ -104,7 +104,7 @@ This an efficient way for the checking of damage, but it also make the character
 
 * For basic physics we used Rigidbody2D like the exercise 1 did which could provide us basic physics like the gravity, and we set the z rotation to be frozen, and because we are using add force to simulate the jump of the player, we can just modify the mass and gravity scale in Rigidbody2D which could directly change the ratio that player jump and the time they return to ground.
 
-* We also keep the projectiles and other ability that player generate be on the top layer which will avoid it be covered by either the background or the player
+* We also keep the projectiles and other ability that player generate be on the top layer which will avoid it be covered by either the background or the player.
 
 ![rigidbody](rigidbody2d.png)
 
@@ -133,16 +133,15 @@ This an efficient way for the checking of damage, but it also make the character
  
 ## Game Logic
 
-* General: For a fighting game, the basic components includes characters, background, healthbar and a timer. Movement and damage is critical to game experience.
+* General: For a fighting game, the basic components include characters, background, healthbar, and a timer. Movement and damage are critical to game experience.
 ![game](game.png)
 * Scene: There are six scenes overall. Players can interact with scene2 and scene3 to choose their characters and background. And then go to scene 4 for fighting. 
-* Timer: We chose 100s as the duration for one round, according to some classical fighting games.
-* Game manager: The most important game logic in our game is to decided various results of the battle, deciding the winner, K.O or draw. I used several SerializeField to managed different game objects. And I list many cases to display different images and declare winner. This part is finished in [EndGame.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/e24b55683341bb6b5205ebb09476c874e7503a91/Overcodeeeeeeee/Assets/Script/EndGame.cs#L1-L106).
-* Skill: I decided to give each character two skills in order to make our game more worth playing. Also they have one shield skills to reduce damage which is controlled by the shield multiplier. Character 'Zee' is more powerful than others because I used [Random.Range](https://github.com/M2neko/ECS_189L_Final_Project/blob/e77f2d826e6e4ff1fd36407a485e47eac3af8894/Overcodeeeeeeee/Assets/Script/Damage.cs#L53-L58) to make her sword skill has the opportunities to have higher damage than normal. Some other skills' damage might have small adjustment because of the [Random.Range](https://github.com/M2neko/ECS_189L_Final_Project/blob/e77f2d826e6e4ff1fd36407a485e47eac3af8894/Overcodeeeeeeee/Assets/Script/Damage.cs#L66-L78) as well.  
-* Healthbar and Damage: These are the two main parts which will influence our fhghting game. We used the object pooling method
-we learned from exercise 5 to finish butner's shoot gate ability. And we designed a damage engine with serilizedfield of each 
-damage for different ability which would allow us to test the game and modify to balance the player. And we keep tracking the
-healthbar controller to see if there's a winner for the whole game logic.
+* Timer: We chose 100s as the duration for one round, according to some classic fighting games.
+* Game manager: The most important game logic in our game is to decided various results of the battle, deciding the winner, K.O or draw. I used several SerializeField to managed different game objects. And I list many cases to display different images and declare the winner. This part is finished in [EndGame.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/e24b55683341bb6b5205ebb09476c874e7503a91/Overcodeeeeeeee/Assets/Script/EndGame.cs#L1-L106).
+* Skill: I decided to give each character two skills in order to make our game more worth playing. Also, they have one shield skill to reduce the damage which is controlled by the shield multiplier. Character 'Zee' is more powerful than others because I used [Random.Range](https://github.com/M2neko/ECS_189L_Final_Project/blob/e77f2d826e6e4ff1fd36407a485e47eac3af8894/Overcodeeeeeeee/Assets/Script/Damage.cs#L53-L58) to make her sword skill has the opportunities to have higher damage than normal. Some other skills' damage might have small adjustment because of the [Random.Range](https://github.com/M2neko/ECS_189L_Final_Project/blob/e77f2d826e6e4ff1fd36407a485e47eac3af8894/Overcodeeeeeeee/Assets/Script/Damage.cs#L66-L78) as well.  
+* Healthbar and Damage: These are the two main parts which will influence our fighting game. We used the object pooling method
+we learned from exercise 5 to finish Butner's shoot gate ability. And we designed a damage engine with serilizedfield of each 
+damage for different ability which would allow us to test the game and modify it to balance the power of player. And we keep tracking the healthbar controller to see if there's a winner for the end of game.
 ![damage](damage.png)
 The script is [Damage.cs](https://github.com/M2neko/ECS_189L_Final_Project/blob/e24b55683341bb6b5205ebb09476c874e7503a91/Overcodeeeeeeee/Assets/Script/Damage.cs#L1-L115)
 
@@ -186,7 +185,7 @@ Save all the audio files in scripts as [AudioSource](https://github.com/M2neko/E
 
 * Press Kit trailer: [Due Tonight Trailer](https://www.youtube.com/watch?v=FFGYx54-IqI)
 * Because Due Tonight is a fighting game, the trailer shows the fundamental gameplay scenes. And I also chose to include
-unique attack skills in the trailer as the main part. I used QuickTime Player to screenrecord the game and used Adobe Premiere to cut and combine those clips. The background music of the trailer is the same with the background music of our game, which I think is very appealing. The trailer starts with some special audios of our game. Thanks for all the audio contributors for our game!
+unique attack skills in the trailer as the main part. I used QuickTime Player to screenrecord the game and used Adobe Premiere to cut and combine those clips. The background music of the trailer is the same as the background music of our game, which I think is very appealing. The trailer starts with some special audios of our game. Thanks for all the audio contributors for our game!
 * For more press kit materials, I will choose to describe the narrative design of our game, the core game mechanics, and include the image of our game art. These are the most attractive part of our game.
 ![trailer](trailer.png)
 
